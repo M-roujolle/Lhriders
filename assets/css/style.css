@@ -1,0 +1,43 @@
+.principalePict {
+    background: no-repeat center/100% url("../img/pexels-photo-379419.jpeg");
+    color: orangered;
+    height: 30rem;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.principalePictLegis {
+    background: no-repeat center/100% url("../img/legis.jpeg");
+    color: orangered;
+    height: 30rem;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.principalePictConsEnt {
+    background: no-repeat center/100% url("../img/conseilsentretient.jpeg");
+    height: 30rem;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.logo {
+    height: 5rem;
+}
+
+.selectColor {
+    background-color: black;
+    color: orangered;
+}
+
+.nav {
+    position: absolute;
+    top: 500px;
+
+}
+
+.navColor {
+    background-color: black;
+
+}
