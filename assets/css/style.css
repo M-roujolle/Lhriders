@@ -21,6 +21,13 @@
     background-size: cover;
 }
 
+.principalePictContact {
+    background: no-repeat center/100% url("../img/contactus.jpg");
+    height: 30rem;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 
 .logo {
     height: 5rem;

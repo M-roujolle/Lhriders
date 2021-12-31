@@ -72,20 +72,25 @@ require "data/data.php";
         <?php } ?>
     </div>
 
-    <h3 class="text-center mt-5 pt-5 pb-5 selectColor">Sélections de vidéos présenté par Hight Side</h3>
+    <h3 class="text-center mt-5 pt-5 pb-5 selectColor">Sélections de vidéos présentées par High Side</h3>
+
 
     <?php foreach ($vidConsEnt as $key => $value) { ?>
+        <div class="d-flex justiy-content-between">
 
-        <div class="d-flex justiy-content-end">
-            <div class="card mb-3 embed-responsive embed-responsive-16by9 mt-5" style="max-width: 900px;">
-                <iframe class="embed-responsive-item" src="<?= $value["iframe"] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="card-body">
-                    <h5 class="card-title"><?= $value["name"] ?></h5>
-                    <p class="card-text"><?= $value["description"] ?></p>
+            <div class="card-body pt-5">
+                <div class="card mb-3 embed-responsive embed-responsive-16by9 mt-5" style="max-width: 800px;">
+                    <p><?= $value["iframe"] ?></p>
                 </div>
+                <h5 class="card-title"><?= $value["name"] ?></h5>
+                <p class="card-text"><?= $value["description"] ?></p>
             </div>
         </div>
     <?php } ?>
+
+
+
+
     <!-- FOOTER----------------------------------------------------------------------------------------------------------------------------------------->
 
     <footer>
@@ -93,7 +98,7 @@ require "data/data.php";
 
             <ul class="list-inline">
                 <li class="list-inline-item">
-                    <p>Contact -</p>
+                    <a class="nav-link active text-white" aria-current="page" href="indexPageContact.php">Contact -</a>
                 </li>
                 <li class="list-inline-item">
                     <p>Conditions génerales d'utilisation -</p>

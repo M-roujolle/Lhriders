@@ -94,7 +94,7 @@ require "data/data.php";
 
             <ul class="list-inline">
                 <li class="list-inline-item">
-                    <p>Contact -</p>
+                    <a class="nav-link active text-white" aria-current="page" href="indexPageContact.php">Contact -</a>
                 </li>
                 <li class="list-inline-item">
                     <p>Conditions génerales d'utilisation -</p>

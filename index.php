@@ -23,7 +23,7 @@ require "data/data.php";
     <nav class="navbar navbar-expand-lg navbar-light sticky-top navColor">
         <div class="container-fluid">
             <img class="logo" src="assets/img/logomoto.png">
-            <a class="navbar-brand text-white ps-1" href="#">MotoPoto</a>
+            <a class="navbar-brand text-white ps-1" href="index.php">MotoPoto</a>
             <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -169,10 +169,9 @@ require "data/data.php";
 
     <footer>
         <div class="footer-basic mt-5 text-center selectColor pb-5 pt-5">
-
             <ul class="list-inline">
                 <li class="list-inline-item">
-                    <p>Contact -</p>
+                    <a class="nav-link active text-white" aria-current="page" href="indexPageContact.php">Contact -</a>
                 </li>
                 <li class="list-inline-item">
                     <p>Conditions génerales d'utilisation -</p>
