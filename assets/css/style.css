@@ -52,6 +52,14 @@
 
 }
 
+.principalePictBalades {
+    background: no-repeat center/100% url("../img/balades.jpg");
+    height: 30rem;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
 
 .logo {
     height: 5rem;

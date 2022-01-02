@@ -57,7 +57,7 @@ require "data/data.php";
 
         </div>
     </div>
-    <h2 class="text-center selectColor pt-5 pb-5">Nos 10 conseils pour rouler serein</h2>
+    <h2 class="text-center pt-5 pb-5">Nos 10 conseils pour rouler serein</h2>
 
 
     <div class="row justify-content-evenly gy-5 m-0 text-center">
@@ -75,21 +75,20 @@ require "data/data.php";
     <h3 class="text-center mt-5 pt-5 pb-5 selectColor">Sélections de vidéos présentées par High Side</h3>
 
 
-    <?php foreach ($vidConsEnt as $key => $value) { ?>
-        <div class="d-flex justiy-content-between">
+    <div class="d-flex flex-wrap m-0 ps-5">
+        <?php foreach ($vidConsEnt as $key => $value) { ?>
+            <div class="d-flex justiy-content-evenly">
+                <div class="card-body pt-5">
+                    <div class="card mb-3 embed-responsive embed-responsive-16by9" style="max-width: 500px;">
+                        <p><?= $value["iframe"] ?></p>
+                        <h5 class="card-title"><?= $value["name"] ?></h5>
+                        <p class="card-text"><?= $value["description"] ?></p>
+                    </div>
 
-            <div class="card-body pt-5">
-                <div class="card mb-3 embed-responsive embed-responsive-16by9 mt-5" style="max-width: 800px;">
-                    <p><?= $value["iframe"] ?></p>
                 </div>
-                <h5 class="card-title"><?= $value["name"] ?></h5>
-                <p class="card-text"><?= $value["description"] ?></p>
             </div>
-        </div>
-    <?php } ?>
-
-
-
+        <?php } ?>
+    </div>
 
     <!-- FOOTER----------------------------------------------------------------------------------------------------------------------------------------->
 

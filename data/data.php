@@ -264,9 +264,9 @@ $consEnt = [
 $vidConsEnt = [
     [
         "id" => 1,
-        "iframe" => '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AYdaDcOIcVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-        "name" => "La vidange",
-        "description" => "Tuto mécanique : Faire sa vidange",
+        "iframe" => '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/JUnt9_nikjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        "name" => "Maitrise",
+        "description" => "Maitriser sa moto sur route",
 
     ],
     [
@@ -277,9 +277,9 @@ $vidConsEnt = [
     ],
     [
         "id" => 3,
-        "iframe" => '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/QFrbFGOM1JU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-        "name" => "Les plaquettes de freins",
-        "description" => "Tuto mécanique : Changer ses plaquettes de freins",
+        "iframe" => '<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KMr1niXyNro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+        "name" => "Piloter une moto sur route",
+        "description" => "Tuto mécanique: Piloter sa moto",
 
     ],
     [

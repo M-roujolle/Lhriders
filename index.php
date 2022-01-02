@@ -52,24 +52,19 @@ require "data/data.php";
     <div class="principalePict">
         <div class="text-center pt-4">
             <h1>Bienvenue sur le site MotoPoto</h1>
-            <h2 class="text-white pt-5 ps-5 pe-5">
-                Besoin d’évasion ? Notre site te fournira le nécessaire pour partir en roadtrip moto l’esprit tranquille ! Que tu cherches une balade d’une heure à la mer ou une virée de deux jours en Normandie, Moto Poto te met à disposition de nombreux itinériaires. Et si tu as l’âme d’un baroudeur-organisateur, tu peux créer ton propre itinéraire !
-                Alors, prêt pour l’aventure avec Moto Poto ? </h2>
         </div>
     </div>
 
     <!-- DECRIPTION DU SITE----------------------------------------------------------------------------------------------------------------->
 
     <div class="mt-5 row text-center m-0">
-        <div class="row">
-            <div class="col col-lg-12">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae quisquam optio provident qui blanditiis assumenda sapiente excepturi cumque accusamus reiciendis. Placeat numquam nobis minima recusandae natus, corporis tempore necessitatibus totam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum doloremque quam libero id ab, animi minus repellat quae eum. Perspiciatis eaque vitae aspernatur minus veniam iure odit eveniet tempore tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illum fuga quod quibusdam provident, optio sit ipsam veniam. Aut amet reprehenderit ullam sequi perferendis blanditiis sint doloremque asperiores mollitia dolorem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia reiciendis, nesciunt consequatur sint autem aliquid dolorum voluptatem nam distinctio quos accusamus saepe eligendi corporis assumenda consectetur deleniti unde architecto dolorem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis ut reprehenderit cum eveniet rerum mollitia provident perspiciatis sequi vero quod dolores, earum praesentium, velit animi veniam tempora esse id sed! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt dolore architecto, illo facilis id iure, quam magnam similique possimus a facere atque sunt quidem hic adipisci aperiam. Officiis, vero! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa minus molestiae, in ullam tenetur, quod inventore voluptate veniam quas commodi at iste fugiat esse nostrum optio nulla repudiandae, voluptas reiciendis?</p>
-            </div>
-        </div>
+        <h2 class="pt-5 ps-5 pe-5 pb-5">
+            Besoin d’évasion ? Notre site te fournira le nécessaire pour partir en roadtrip moto l’esprit tranquille ! Que tu cherches une balade d’une heure à la mer ou une virée de deux jours en Normandie, Moto Poto te met à disposition de nombreux itinériaires. Et si tu as l’âme d’un baroudeur-organisateur, tu peux créer ton propre itinéraire !
+            Alors, prêt pour l’aventure avec Moto Poto ? </h2>
     </div>
 
     <!-- CATEGORIES DE MOTARD ---------------------------------------------------------------------------------------------------------->
-
+    <h1 class="text-center pb-5 selectColor pt-5">A qui s'adresse ce site ? </h1>
     <div class="row justify-content-evenly m-0">
         <?php foreach ($typeOfBikers as $key => $value) { ?>
             <div class="card mb-3 mt-5 border border-white" style="max-width: 600px;">
@@ -90,6 +85,7 @@ require "data/data.php";
 
     <!----EXEMPLES DE SORTIES---------------------------------------------------------------------------------------------------------------------------->
 
+    <h1 class="text-center pb-5 selectColor pt-5 mt-5">Les meilleures balades du mois !</h1>
     <div class="mt-5 m-0 embed-responsive embed-responsive-21by9 text-center">
         <div class="card mb-3 border border-white">
             <iframe class="embed-responsive-item ps-5 pe-5" src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d170283.30542303357!2d0.1723767354338723!3d49.61787872433235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e0!4m3!3m2!1d49.5198283!2d0.073906!4m3!3m2!1d49.706238899999995!2d0.206483!5e0!3m2!1sfr!2sfr!4v1640514599438!5m2!1sfr!2sfr" loading="lazy"></iframe>

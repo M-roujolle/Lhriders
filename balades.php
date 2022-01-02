@@ -49,21 +49,20 @@ require "data/data.php";
             </div>
         </div>
     </nav>
-    <div class="principalePict">
+    <div class="principalePictBalades">
         <div class="text-center pt-4">
-            <h1>Bienvenue sur le site MotoPoto</h1>
-            <h2 class="text-white pt-5">
-                Besoin d’évasion ? Notre site te fournira le nécessaire pour partir en roadtrip moto l’esprit tranquille ! Que tu cherches une balade d’une heure à la mer ou une virée de deux jours en Normandie, Moto Poto te met à disposition de nombreux itinériaires. Et si tu as l’âme d’un baroudeur-organisateur, tu peux créer ton propre itinéraire !
-                Alors, prêt pour l’aventure avec Moto Poto ? </h2>
+            <h1 class="text-center"> Plus qu’une balade : une aventure</h1>
         </div>
     </div>
 
     <!-- boucles roadMaps------------------------------------------------------------------------------------------------------------------------>
 
-    <div class="mt-5 m-0 embed-responsive embed-responsive-21by9 text-center">
+    <h2 class="text-center pb-5 pt-5"">
+        Que diriez-vous d'une balade moto sur les plus belles routes de Normandie ? Pour une sortie improvisée ou longuement préparée, faites l'expérience de la liberté.</h2>
+    <div class=" mt-5 m-0 embed-responsive embed-responsive-21by9 text-center">
         <?php foreach ($roadMaps as $key => $value) { ?>
             <div class="card mb-3 border border-white">
-                <iframe class="embed-responsive-item ps-5 pe-5" src="<?= $value["iframe"] ?>" loading="lazy"></iframe>
+                <p><?= $value["iframe"] ?></p>
                 <div class="card-body">
                     <h5 class="card-title"><?= $value["name"] ?></h5>
 
@@ -89,36 +88,36 @@ require "data/data.php";
                 </div>
             </div>
         <?php } ?>
-    </div>
-
-
-    <!-- FOOTER----------------------------------------------------------------------------------------------------------------------------------------->
-
-    <footer>
-        <div class="footer-basic mt-5 text-center selectColor pb-5 pt-5">
-
-            <ul class="list-inline">
-                <li class="list-inline-item">
-                    <a class="nav-link active text-white" aria-current="page" href="contact.php">Contact</a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="nav-link active text-white" aria-current="page" href="cgu.php">Conditions génerales d'utilisation</a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="nav-link active text-white" aria-current="page" href="mentionslegales.php">Mentions Légales</a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="nav-link active text-white" aria-current="page" href="cookies.php">Cookies</a>
-                </li>
-            </ul>
-            <p class="copyright">©Moto Poto 2022</p>
         </div>
-    </footer>
+
+
+        <!-- FOOTER----------------------------------------------------------------------------------------------------------------------------------------->
+
+        <footer>
+            <div class="footer-basic mt-5 text-center selectColor pb-5 pt-5">
+
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a class="nav-link active text-white" aria-current="page" href="contact.php">Contact</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="nav-link active text-white" aria-current="page" href="cgu.php">Conditions génerales d'utilisation</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="nav-link active text-white" aria-current="page" href="mentionslegales.php">Mentions Légales</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="nav-link active text-white" aria-current="page" href="cookies.php">Cookies</a>
+                    </li>
+                </ul>
+                <p class="copyright">©Moto Poto 2022</p>
+            </div>
+        </footer>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>

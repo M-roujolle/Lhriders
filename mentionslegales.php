@@ -55,7 +55,7 @@
     <div class="mt-5 row text-center m-0">
         <div class="row">
             <div class="col col-lg-12">
-                <div class="text-center  pb-5">
+                <div class="pb-5">
                     <p>Conformément aux dispositions des Articles 6-III et 19 de la Loi n°2004-575 du 21 juin 2004 pour
                         la
                         Confiance dans l’économie numérique, dite L.C.E.N., il est porté à la connaissance des

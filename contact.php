@@ -96,7 +96,7 @@ require("controllers/controllercontact.php");
                                     $arrayError["mail"] ?? " ";
                                     ?>
                                 </span>
-                                <input value="<?= isset($_POST["mail"]) ? htmlspecialchars($_POST["mail"]) : "" ?>" name=" mail" type="mail" class="form-control w-75" id="mail" placeholder="Ex : monmail@mail.fr...">
+                                <input value="<?= isset($_POST["mail"]) ? htmlspecialchars($_POST["mail"]) : "" ?>" name=" mail" type="mail" class="form-control w-75" id="mail" placeholder="Ex : nom.prénom@mail.fr...">
                             </div>
                             <div class="mt-1">
                                 <label for="inputPassword6" class="col-form-label">Sujet :</label><span class="text-danger">
