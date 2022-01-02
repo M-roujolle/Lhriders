@@ -70,13 +70,13 @@
                     présentes CGU.
                 </p>
             </div>
-            <div class="text-center pb-5 fw-bold"> Article 1 : LES MENTIONS LEGALES :<br>
+            <div class="text-center pb-5 fw-bold"> Article 1 - LES MENTIONS LEGALES :<br>
                 L’édition et la direction de la publication du site http://motopoto.fr/ est assurée par Maxime Roujolle,
                 domicilié 1295 Route du Hameau d'Enfer.
                 Le numéro de téléphone est 0660769121
                 Adresse e-mail roujolle.maxime@gmail.com.</div>
 
-            <div class="text-center  pb-5 fw-bold"> ARTICLE 2 : ACCES AU SITE :<br>
+            <div class="text-center  pb-5 fw-bold"> ARTICLE 2 - ACCES AU SITE :<br>
                 Le site http://motopoto.fr/ permet à l'Utilisateur un accès gratuit aux services suivants :
                 Organisation d'un itinéraire de balades pour motards.
                 Le site est accessible gratuitement en tout lieu à tout Utilisateur ayant un accès à Internet. Tous les
@@ -97,11 +97,11 @@
                 L'Utilisateur a la possibilité de contacter le site par messagerie électronique à l’adresse email de
                 l’éditeur communiqué à l’ARTICLE 1.</div>
 
-            <div class="text-center  pb-5 fw-bold"> ARTICLE 3 : COLLECTE DES DONNEES :<br>
+            <div class="text-center  pb-5 fw-bold"> ARTICLE 3 - COLLECTE DES DONNEES :<br>
                 Le site est exempté de déclaration à la Commission Nationale Informatique et Libertés (CNIL) dans la
                 mesure où il ne collecte aucune donnée concernant les Utilisateurs.</div>
 
-            <div class="text-center  pb-5 fw-bold"> ARTICLE 4 : PROPRIETE INTELLECTUELLE :<br>
+            <div class="text-center  pb-5 fw-bold"> ARTICLE 4 - PROPRIETE INTELLECTUELLE :<br>
                 Les marques, logos, signes ainsi que tous les contenus du site (textes, images, son…) font l'objet
                 d'une protection par le Code de la propriété intellectuelle et plus particulièrement par le droit d'auteur.
                 L'Utilisateur doit solliciter l'autorisation préalable du site pour toute reproduction, publication, copie des
@@ -113,7 +113,7 @@
                 Il est rappelé conformément à l’article L122-5 du Code de propriété intellectuelle que l’Utilisateur qui
                 reproduit, copie ou publie le contenu protégé doit citer l’auteur et sa source.
             </div>
-            <div class="text-center  pb-5 fw-bold"> ARTICLE 5 : RESPONSABILITE :<br>
+            <div class="text-center  pb-5 fw-bold"> ARTICLE 5 - RESPONSABILITE :<br>
                 Les sources des informations diffusées sur le site http://motopoto.fr/ sont réputées fiables mais le site
                 ne garantit pas qu’il soit exempt de défauts, d’erreurs ou d’omissions.
                 Les informations communiquées sont présentées à titre indicatif et général sans valeur contractuelle.
@@ -130,12 +130,12 @@
                 La responsabilité du site ne peut être engagée en cas de force majeure ou du fait imprévisible et
                 insurmontable d'un tiers.
             </div>
-            <div class="text-center  pb-5 fw-bold"> ARTICLE 6 : LIENS HYPERTEXTES :<br>
+            <div class="text-center  pb-5 fw-bold"> ARTICLE 6 - LIENS HYPERTEXTES :<br>
                 Des liens hypertextes peuvent être présents sur le site. L’Utilisateur est informé qu’en cliquant sur ces
                 liens, il sortira du site http://motopoto.fr/. Ce dernier n’a pas de contrôle sur les pages web sur
                 lesquelles aboutissent ces liens et ne saurait, en aucun cas, être responsable de leur contenu.
             </div>
-            <div class="text-center  pb-5 fw-bold"> ARTICLE 7 : PUBLICATIONS PAR L'UTILISATEUR :<br>
+            <div class="text-center  pb-5 fw-bold"> ARTICLE 7 - PUBLICATIONS PAR L'UTILISATEUR :<br>
                 Le site permet aux membres de publier les contenus suivants :
                 <li>Itinéraires soerties motos</li>
                 Dans ses publications, le membre s’engage à respecter les règles de la Netiquette (règles de bonne
@@ -156,7 +156,7 @@
                 Le contenu de l'Utilisateur peut être à tout moment et pour n'importe quelle raison supprimé ou modifié
                 par le site, sans préavis.
             </div>
-            <div class="text-center  pb-5 fw-bold"> ARTICLE 8 : DROIT APPLICABLE ET JURUDICTION COMPETENTE :<br>
+            <div class="text-center  pb-5 fw-bold"> ARTICLE 8 - DROIT APPLICABLE ET JURUDICTION COMPETENTE :<br>
                 La législation française s'applique au présent contrat. En cas d'absence de résolution amiable d'un
                 litige né entre les parties, les tribunaux français seront seuls compétents pour en connaître.
                 Pour toute question relative à l’application des présentes CGU, vous pouvez joindre l’éditeur aux
@@ -182,10 +182,7 @@
                     <a class="nav-link active text-white" aria-current="page" href="mentionslegales.php">Mentions Légales</a>
                 </li>
                 <li class="list-inline-item">
-                    <p> Donées personnelles</p>
-                </li>
-                <li class="list-inline-item">
-                    <p> Gestion des cookies</p>
+                    <a class="nav-link active text-white" aria-current="page" href="cookies.php">Cookies</a>
                 </li>
             </ul>
             <p class="copyright">©Moto Poto 2022</p>

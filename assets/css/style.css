@@ -44,6 +44,14 @@
 
 }
 
+.principalePictCookies {
+    background: no-repeat center/100% url("../img/cookies.jpeg");
+    height: 30rem;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
 
 .logo {
     height: 5rem;

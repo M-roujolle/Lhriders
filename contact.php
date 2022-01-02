@@ -153,16 +153,13 @@ require("controllers/controllercontact.php");
                         <a class="nav-link active text-white" aria-current="page" href="contact.php">Contact</a>
                     </li>
                     <li class="list-inline-item">
-                        <p>Conditions génerales d'utilisation</p>
+                        <a class="nav-link active text-white" aria-current="page" href="cgu.php">Conditions génerales d'utilisation</a>
                     </li>
                     <li class="list-inline-item">
                         <a class="nav-link active text-white" aria-current="page" href="mentionslegales.php">Mentions Légales</a>
                     </li>
                     <li class="list-inline-item">
-                        <p> Donées personnelles</p>
-                    </li>
-                    <li class="list-inline-item">
-                        <p> Gestion des cookies</p>
+                        <a class="nav-link active text-white" aria-current="page" href="cookies.php">Cookies</a>
                     </li>
                 </ul>
                 <p class="copyright">©Moto Poto 2022</p>
