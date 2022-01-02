@@ -28,6 +28,22 @@
     background-size: cover;
 }
 
+.principalePictMentionsLegales {
+    background: no-repeat center/100% url("../img/mentionslegales.jpeg");
+    height: 30rem;
+    background-attachment: fixed;
+    background-size: cover;
+    color: orangered;
+}
+
+.principalePictCgu {
+    background: no-repeat center/100% url("../img/cgu.jpeg");
+    height: 30rem;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
 
 .logo {
     height: 5rem;

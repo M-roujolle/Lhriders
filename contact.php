@@ -1,5 +1,5 @@
 <?php
-require("controllers/controllerIndexPageContact.php");
+require("controllers/controllercontact.php");
 ?>
 
 <!DOCTYPE html>
@@ -76,7 +76,7 @@ require("controllers/controllerIndexPageContact.php");
                     <h1 class="text-center pt-5 mb-5">Formulaire de Contact</h1>
 
 
-                    <form action="indexPageContact.php" method="POST" class="ps-3 pe-3">
+                    <form action="contact.php" method="POST" class="ps-3 pe-3">
 
                         <div class="mb-3">
                             <label for="nom" class="form-label">Nom : </label><span class="text-danger">
@@ -150,19 +150,19 @@ require("controllers/controllerIndexPageContact.php");
 
                 <ul class="list-inline">
                     <li class="list-inline-item">
-                        <a class="nav-link active text-white" aria-current="page" href="indexPageContact.php">Contact -</a>
+                        <a class="nav-link active text-white" aria-current="page" href="contact.php">Contact</a>
                     </li>
                     <li class="list-inline-item">
-                        <p>Conditions génerales d'utilisation -</p>
+                        <p>Conditions génerales d'utilisation</p>
                     </li>
                     <li class="list-inline-item">
-                        <p> Mentions Légales -</p>
+                        <a class="nav-link active text-white" aria-current="page" href="mentionslegales.php">Mentions Légales</a>
                     </li>
                     <li class="list-inline-item">
-                        <p> Donées personnelles -</p>
+                        <p> Donées personnelles</p>
                     </li>
                     <li class="list-inline-item">
-                        <p> Gestion des cookies -</p>
+                        <p> Gestion des cookies</p>
                     </li>
                 </ul>
                 <p class="copyright">©Moto Poto 2022</p>

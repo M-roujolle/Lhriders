@@ -94,13 +94,13 @@ require "data/data.php";
 
             <ul class="list-inline">
                 <li class="list-inline-item">
-                    <a class="nav-link active text-white" aria-current="page" href="indexPageContact.php">Contact -</a>
+                    <a class="nav-link active text-white" aria-current="page" href="contact.php">Contact</a>
                 </li>
                 <li class="list-inline-item">
-                    <p>Conditions génerales d'utilisation -</p>
+                    <p>Conditions génerales d'utilisation</p>
                 </li>
                 <li class="list-inline-item">
-                    <p> Mentions Légales -</p>
+                    <a class="nav-link active text-white" aria-current="page" href="mentionslegales.php">Mentions Légales</a>
                 </li>
                 <li class="list-inline-item">
                     <p> Donées personnelles -</p>
