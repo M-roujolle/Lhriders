@@ -57,67 +57,51 @@ require "data/data.php";
 
     <!-- boucles roadMaps------------------------------------------------------------------------------------------------------------------------>
 
-    <h2 class="text-center pb-5 pt-5"">
+    <h2 class="text-center pt-5 ms-5 me-5">
         Que diriez-vous d'une balade moto sur les plus belles routes de Normandie ? Pour une sortie improvisée ou longuement préparée, faites l'expérience de la liberté.</h2>
-    <div class=" mt-5 m-0 embed-responsive embed-responsive-21by9 text-center">
+
+    <div class="row justify-content-evenly m-0 pt-5 pb-5 text-center">
         <?php foreach ($roadMaps as $key => $value) { ?>
-            <div class="card mb-3 border border-white">
-                <p><?= $value["iframe"] ?></p>
-                <div class="card-body">
-                    <h5 class="card-title"><?= $value["name"] ?></h5>
-
-                    <!-- Button trigger modal1 -->
-                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal1">+ d'infos</button>
-
-                    <!-- Modal1 -->
-                    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel"><?= $value["name"] ?></h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <?= $value["description"] ?> <div class="modal-footer">
-                                        <p><?= $value["information"] ?></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="col-lg-6">
+                <div class="card mb-5 bg-secondary text-white">
+                    <div class="card-body">
+                        <div class="container">
+                            <?= $value["iframe"] ?> </div>
+                        <h5 class="card-title pt-3"><?= $value["name"] ?></h5>
+                        <p class="card-text"><?= $value["description"] ?></p>
                     </div>
                 </div>
             </div>
         <?php } ?>
+    </div>
+
+    <!-- FOOTER----------------------------------------------------------------------------------------------------------------------------------------->
+
+    <footer>
+        <div class="footer-basic mt-5 text-center selectColor pb-5 pt-5">
+
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a class="nav-link active text-white" aria-current="page" href="contact.php">Contact</a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="nav-link active text-white" aria-current="page" href="cgu.php">Conditions génerales d'utilisation</a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="nav-link active text-white" aria-current="page" href="mentionslegales.php">Mentions Légales</a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="nav-link active text-white" aria-current="page" href="cookies.php">Cookies</a>
+                </li>
+            </ul>
+            <p class="copyright">©Moto Poto 2022</p>
         </div>
-
-
-        <!-- FOOTER----------------------------------------------------------------------------------------------------------------------------------------->
-
-        <footer>
-            <div class="footer-basic mt-5 text-center selectColor pb-5 pt-5">
-
-                <ul class="list-inline">
-                    <li class="list-inline-item">
-                        <a class="nav-link active text-white" aria-current="page" href="contact.php">Contact</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="nav-link active text-white" aria-current="page" href="cgu.php">Conditions génerales d'utilisation</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="nav-link active text-white" aria-current="page" href="mentionslegales.php">Mentions Légales</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="nav-link active text-white" aria-current="page" href="cookies.php">Cookies</a>
-                    </li>
-                </ul>
-                <p class="copyright">©Moto Poto 2022</p>
-            </div>
-        </footer>
+    </footer>
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

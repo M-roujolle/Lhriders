@@ -57,7 +57,7 @@ require("controllers/controllercontact.php");
 
     <?php if (!empty($_POST) && empty($arrayError)) { ?>
 
-        <div class="text-center pt-5">
+        <div class="text-center pt-5 ms-5 me-5">
             <h1>Voici votre demande, nous vous en remercions. Nous allons vous contacter dans les plus bref délais :<h1><br>
                     <p>Votre nom : "<?= htmlspecialchars($_POST['nom']); ?>"</p>
                     <p>Votre prénom : "<?= htmlspecialchars($_POST['prenom']); ?>"</p>

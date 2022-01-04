@@ -13,7 +13,7 @@ require "data/data.php";
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <title>Conseils / Entretient</title>
+    <title>Conseils / Entretien</title>
 </head>
 
 <body>
@@ -39,7 +39,7 @@ require "data/data.php";
                         <a class="nav-link active text-white" href="legislation.php">Législation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="conseils.php">Conseils / Entretient</a>
+                        <a class="nav-link active text-white" href="conseils.php">Conseils / Entretien</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -52,7 +52,7 @@ require "data/data.php";
 
     <div class="principalePictConsEnt">
         <div class="text-center pt-4 text-white">
-            <h1>Conseils pour bien débuter et entretient</h1>
+            <h1>Conseils pour bien débuter et entretien</h1>
             <p>Tout motard qui se respect menage sa monture ! Tu trouveras ici des astuces et conseils pour organiser, préparer et anticiper au mieux tes promenades. N'oublies jamais que le risque zéro n'existe pas ! </p>
 
         </div>
@@ -71,24 +71,26 @@ require "data/data.php";
             </div>
         <?php } ?>
     </div>
+    <p class="text-center pt-4">Source: https://www.motoblouz.com/enjoytheride/conseils-moto/10459-conseils-jeune-permis-moto-2017-04-14</p>
 
-    <h3 class="text-center mt-5 pt-5 pb-5 selectColor">Sélections de vidéos présentées par High Side</h3>
+    <h3 class="text-center mt-5 pt-3 pb-3 selectColor">Sélections de vidéos présentées par High Side</h3>
 
 
-    <div class="d-flex flex-wrap m-0 ps-5">
+    <div class="row justify-content-evenly m-0 pt-5 pb-2 text-center">
         <?php foreach ($vidConsEnt as $key => $value) { ?>
-            <div class="d-flex justiy-content-evenly">
-                <div class="card-body pt-5">
-                    <div class="card mb-3 embed-responsive embed-responsive-16by9" style="max-width: 500px;">
-                        <p><?= $value["iframe"] ?></p>
-                        <h5 class="card-title"><?= $value["name"] ?></h5>
+            <div class="col-lg-4">
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <div class="container">
+                            <?= $value["iframe"] ?> </div>
+                        <h5 class="card-title pt-3"><?= $value["name"] ?></h5>
                         <p class="card-text"><?= $value["description"] ?></p>
                     </div>
-
                 </div>
             </div>
         <?php } ?>
     </div>
+    <p class="text-center">Source: https://www.youtube.com/c/HighSide-officiel</p>
 
     <!-- FOOTER----------------------------------------------------------------------------------------------------------------------------------------->
 
