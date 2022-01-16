@@ -58,15 +58,6 @@
                                 </span>
                                 <input value="<?= isset($_POST["mail"]) ? htmlspecialchars($_POST["mail"]) : "" ?>" name=" mail" type="mail" class="form-control w-75" id="mail" placeholder="Ex : nom.prénom@mail.fr...">
                             </div>
-
-                            <div class="mt-1">
-                                <p>Veuillez décrire votre demande :</p>
-                                <label for="inputPassword6" class="col-form-label"></label><span class="text-danger">
-                                    <?=
-                                    $arrayError["story"] ?? "";
-                                    ?>
-                                </span>
-                            </div>
                             <div class="mb-3 form-check ms-1">
                                 <input type="checkbox" class="form-check-input" name="checkBox" id="checkBox">
                                 <label class="form-check-label" for="checkBox">Accepter les CGU</label><span class="text-danger">
