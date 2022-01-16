@@ -58,19 +58,7 @@
                                 </span>
                                 <input value="<?= isset($_POST["mail"]) ? htmlspecialchars($_POST["mail"]) : "" ?>" name=" mail" type="mail" class="form-control w-75" id="mail" placeholder="Ex : nom.prénom@mail.fr...">
                             </div>
-                            <div class="mt-1">
-                                <label for="inputPassword6" class="col-form-label">Sujet :</label><span class="text-danger">
-                                    <?=
-                                    $arrayError["select"] ?? "";
-                                    ?>
-                                </span>
-                                <select for="select" name="select" required class="form-select w-75">
-                                    <option selected value="0">Selectionner votre sujet</option>
-                                    <option value="1">Un problème sur le site ?</option>
-                                    <option value="2">Besoin d'informations ?</option>
-                                    <option value="3">Autres</option>
-                                </select>
-                            </div>
+
                             <div class="mt-1">
                                 <p>Veuillez décrire votre demande :</p>
                                 <label for="inputPassword6" class="col-form-label"></label><span class="text-danger">
@@ -78,8 +66,6 @@
                                     $arrayError["story"] ?? "";
                                     ?>
                                 </span>
-
-                                <textarea id="story" name="story" required rows="10" cols="38"><?= isset($_POST["story"]) ? htmlspecialchars($_POST["story"]) : "" ?></textarea>
                             </div>
                             <div class="mb-3 form-check ms-1">
                                 <input type="checkbox" class="form-check-input" name="checkBox" id="checkBox">

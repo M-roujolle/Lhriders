@@ -38,7 +38,7 @@
                     </li>
                 </ul>
                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <a class="nav-link active text-white"><i class="bi bi-person-circle fs-3"></i></a>
+                    <a class="nav-link active text-white">Connexion / S'inscrire <i class="bi bi-person-circle fs-3"></i></a>
                 </button>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Ex : balade le havre..." aria-label="Search">
@@ -74,7 +74,9 @@
                     L’Utilisateur pourra désactiver ces cookies par l’intermédiaire des paramètres figurant au sein de son
                     logiciel de navigation.</div>
 
-                <p>Rédigé sur http://legalplace.fr</p>
+                <p>
+                    <a href="http://legalplace.fr">Rédigé sur legalplace</a>
+                </p>
             </div>
         </div>
     </div>
