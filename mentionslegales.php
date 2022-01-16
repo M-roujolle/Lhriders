@@ -34,9 +34,12 @@
                         <a class="nav-link active text-white" href="legislation.php">Législation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="conseils.php">Conseils / Entretient</a>
+                        <a class="nav-link active text-white" href="conseils.php">Conseils / Entretien</a>
                     </li>
                 </ul>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <a class="nav-link active text-white"><i class="bi bi-person-circle fs-3"></i></a>
+                </button>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Ex : balade le havre..." aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Valider</button>
@@ -105,6 +108,32 @@
                     motopoto.fr accessible à la rubrique "Gestion des Cookies"
                 </div>
                 <p>Rédigé sur http://legalplace.fr</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL ------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> Connexion / Inscription</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <input type="text" class="form-control" placeholder="Pseudo" name="login">
+                        <input type="password" class="form-control mt-3" placeholder="Mot de passe" name="password">
+                        <input class="mt-3 btn btn-outline-primary text-center" type="submit" value="Connexion" name="connexion">
+                        <div class="pt-2">
+                            <label for="checkbox">Se souvenir de moi</label> <input value="1" id="checkbox" type="checkbox" name="checkbox">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="inscription.php">S'inscrire</a>
+                </div>
             </div>
         </div>
     </div>

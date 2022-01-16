@@ -16,6 +16,7 @@ require "data/data.php";
 </head>
 
 <body>
+
     <!-- NAVBAR------------------------------------------------------------------------------------------------------------------------->
 
     <nav class="navbar navbar-expand-lg navbar-light sticky-top navColor">
@@ -37,9 +38,12 @@ require "data/data.php";
                         <a class="nav-link active text-white" href="legislation.php">Législation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="conseils.php">Conseils / Entretient</a>
+                        <a class="nav-link active text-white" href="conseils.php">Conseils / Entretien</a>
                     </li>
                 </ul>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <a class="nav-link active text-white"><i class="bi bi-person-circle fs-3"></i></a>
+                </button>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Ex : balade le havre..." aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Valider</button>
@@ -47,6 +51,7 @@ require "data/data.php";
             </div>
         </div>
     </nav>
+
     <div class="principalePictLegis">
         <h1 class="text-center pt-3 pb-3"> Pourquoi connaitre la législation Française ?</h1>
     </div>
@@ -87,6 +92,35 @@ require "data/data.php";
         </div>
     <?php } ?>
 
+
+    <!-- MODAL ------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> Connexion / Inscription</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <input type="text" class="form-control" placeholder="Pseudo" name="login">
+                        <input type="password" class="form-control mt-3" placeholder="Mot de passe" name="password">
+                        <input class="mt-3 btn btn-outline-primary text-center" type="submit" value="Connexion" name="connexion">
+                        <div class="pt-2">
+                            <label for="checkbox">Se souvenir de moi</label> <input value="1" id="checkbox" type="checkbox" name="checkbox">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="inscription.php">S'inscrire</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="text-center" href="https://balades-moto.com/declarer-balade-moto-quels-cas/#:~:text=La%20d%C3%A9claration%20est%20obligatoire%20pour,tout%20simplement%20g%C3%AAner%20la%20circulation."> Source : balades-moto.com </a>
+
+
     <!-- FOOTER----------------------------------------------------------------------------------------------------------------------------------------->
 
     <footer>
@@ -109,6 +143,8 @@ require "data/data.php";
             <p class="copyright">©Moto Poto 2022</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
 
 </body>
 

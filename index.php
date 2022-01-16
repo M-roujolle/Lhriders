@@ -1,6 +1,5 @@
 <?php
 require "data/data.php";
-
 ?>
 
 <!DOCTYPE html>
@@ -42,6 +41,9 @@ require "data/data.php";
                         <a class="nav-link active text-white" href="conseils.php">Conseils / Entretien</a>
                     </li>
                 </ul>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <a class="nav-link active text-white ps-4">Connexion / S'inscrire <i class="bi bi-person-circle fs-3"></i></a>
+                </button>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Ex : balade le havre..." aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Valider</button>
@@ -113,64 +115,6 @@ require "data/data.php";
     </div>
 
 
-    <!-- <div class="mt-5 m-0 embed-responsive embed-responsive-21by9 text-center">
-        <div class="card mb-3 border border-white">
-
-            <iframe class="ps-5 pe-5" src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d170283.30542303357!2d0.1723767354338723!3d49.61787872433235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e0!4m3!3m2!1d49.5198283!2d0.073906!4m3!3m2!1d49.706238899999995!2d0.206483!5e0!3m2!1sfr!2sfr!4v1640514599438!5m2!1sfr!2sfr" loading="lazy"></iframe>
-            <div class="card-body">
-                <h5 class="card-title">Le Havre - Etretat</h5> -->
-
-    <!-- Button trigger modal1 -->
-    <!-- <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal1">+ d'infos</button> -->
-
-    <!-- Modal1 -->
-    <!-- <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Tracé Le Havre - Etretat</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">Départ plage du Havre, direction la plage d'Etretat en longeant la cote.</div>
-                            <div class="modal-footer">
-                                <p>Durée: 28 min - Distance: 25 km - Carburant: 3€78</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
-    <!-- <div class="card mb-3 border border-white">
-            <iframe class="embed-responsive-item ps-5 pe-5" src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d303056.4278321444!2d-0.26696282377997804!3d49.32134997719644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d49.368962499999995!2d0.08255849999999999!4m5!1s0x47e02fb4d0175873%3A0x804e323e8564bbf9!2s174%20Bd%20Amiral%20Mouchez%2C%2076600%20Le%20Havre!3m2!1d49.487765599999996!2d0.1496996!5e0!3m2!1sfr!2sfr!4v1641199815897!5m2!1sfr!2sfr" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            <div class="card-body">
-                <h5 class="card-title pt-3 pb-3">Le Havre - Deauville</h5> -->
-
-    <!-- Button trigger modal2 -->
-    <!-- <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal2">+ d'infos</button> -->
-
-    <!-- Modal2 -->
-    <!-- <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel1">Tracé Le Havre - Deauville</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Départ station essence total, direction la plage de deauville en longeant la cote. Le pont de Normandie est gratuit pour les motos ;)</div>
-                            <div class="modal-footer">
-                                <p>Durée: 52 min - Distance: 44 km - Carburant: 4€62</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
     <!-- SHOW YOUR BIKE --------------------------------------------------------------------------------------------------------------------------->
 
     <h2 class="text-center pb-3 selectColor pt-3 mb-5">Montre nous ta moto ici !</h2>
@@ -186,6 +130,32 @@ require "data/data.php";
             </div>
         <?php } ?>
 
+    </div>
+
+    <!-- MODAL ------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> Connexion / Inscription</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <input type="text" class="form-control" placeholder="Pseudo" name="login">
+                        <input type="password" class="form-control mt-3" placeholder="Mot de passe" name="password">
+                        <input class="mt-3 btn btn-outline-primary text-center" type="submit" value="Connexion" name="connexion">
+                        <div class="pt-2">
+                            <label for="checkbox">Se souvenir de moi</label> <input value="1" id="checkbox" type="checkbox" name="checkbox">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="inscription.php">S'inscrire</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- FOOTER----------------------------------------------------------------------------------------------------------------------------------------->
