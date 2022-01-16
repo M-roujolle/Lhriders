@@ -118,8 +118,9 @@ require "data/data.php";
             </div>
         </div>
     </div>
-    <a class="text-center" href="https://balades-moto.com/declarer-balade-moto-quels-cas/#:~:text=La%20d%C3%A9claration%20est%20obligatoire%20pour,tout%20simplement%20g%C3%AAner%20la%20circulation."> Source : balades-moto.com </a>
-
+    <p class="text-center">
+        <a href="https://balades-moto.com/declarer-balade-moto-quels-cas/#:~:text=La%20d%C3%A9claration%20est%20obligatoire%20pour,tout%20simplement%20g%C3%AAner%20la%20circulation."> Source: balades-moto.com </a>
+    </p>
 
     <!-- FOOTER----------------------------------------------------------------------------------------------------------------------------------------->
 

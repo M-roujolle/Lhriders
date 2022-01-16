@@ -60,7 +60,7 @@ require "data/data.php";
 
         </div>
     </div>
-    <h2 class="text-center pt-5 pb-5">Nos 10 conseils pour rouler serein</h2>
+    <h2 class="text-center pt-5 pb-5">10 conseils pour rouler serein</h2>
 
 
     <div class="row justify-content-evenly gy-5 m-0 text-center">
@@ -74,7 +74,9 @@ require "data/data.php";
             </div>
         <?php } ?>
     </div>
-    <p class="text-center pt-4">Source: https://www.motoblouz.com/enjoytheride/conseils-moto/10459-conseils-jeune-permis-moto-2017-04-14</p>
+    <p class="text-center pt-5">
+        <a href="https://www.motoblouz.com/enjoytheride/conseils-moto/10459-conseils-jeune-permis-moto-2017-04-14">Source: Motoblouz</a>
+    </p>
 
     <h3 class="text-center mt-5 pt-3 pb-3 selectColor">Sélections de vidéos présentées par High Side</h3>
 
@@ -93,7 +95,9 @@ require "data/data.php";
             </div>
         <?php } ?>
     </div>
-    <p class="text-center">Source: https://www.youtube.com/c/HighSide-officiel</p>
+    <p class="text-center">
+        <a href="https://www.youtube.com/c/HighSide-officiel">Source: High side</a>
+    </p>
 
     <!-- MODAL ------------------------------------------------------------------------------------------------------------------------------------------->
 
