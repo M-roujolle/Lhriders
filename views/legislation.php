@@ -1,5 +1,5 @@
 <?php
-require "data/data.php";
+require "../data/data.php";
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ require "data/data.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <title>Législation</title>
 </head>
@@ -21,24 +21,24 @@ require "data/data.php";
 
     <nav class="navbar navbar-expand-lg navbar-light sticky-top navColor">
         <div class="container-fluid">
-            <img class="logo" src="assets/img/logomoto.png">
-            <a class="navbar-brand text-white ps-1" href="index.php">MotoPoto</a>
+            <img class="logo" src="../assets/img/logomoto.png">
+            <a class="navbar-brand text-white ps-1" href="home.php">MotoPoto</a>
             <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="index.php">Accueil</a>
+                        <a class="nav-link active text-white" aria-current="page" href="./home.php">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="balades.php">Balades</a>
+                        <a class="nav-link active text-white" href="./balades.php">Balades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="legislation.php">Législation</a>
+                        <a class="nav-link active text-white" href="./legislation.php">Législation</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="conseils.php">Conseils / Entretien</a>
+                        <a class="nav-link active text-white" href="./conseils.php">Conseils / Entretien</a>
                     </li>
                 </ul>
                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -80,7 +80,7 @@ require "data/data.php";
         <div class="card mb-3 ms-5 me-5 border border-success" style="max-width: 50 rem;">
             <div class="row g-0 pt-5">
                 <div class="col-md-4">
-                    <img src="<?= $value["pictures"] ?>" class="img-fluid rounded-start ms-5 pb-5" alt="...">
+                    <img src="../<?= $value["pictures"] ?>" class="img-fluid rounded-start ms-5 pb-5" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -113,7 +113,7 @@ require "data/data.php";
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="inscription.php">S'inscrire</a>
+                    <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="./inscription.php">S'inscrire</a>
                 </div>
             </div>
         </div>
@@ -129,16 +129,16 @@ require "data/data.php";
 
             <ul class="list-inline">
                 <li class="list-inline-item">
-                    <a class="nav-link active text-white" aria-current="page" href="contact.php">Contact</a>
+                    <a class="nav-link active text-white" aria-current="page" href="./contact.php">Contact</a>
                 </li>
                 <li class="list-inline-item">
-                    <a class="nav-link active text-white" aria-current="page" href="cgu.php">Conditions génerales d'utilisation</a>
+                    <a class="nav-link active text-white" aria-current="page" href="./cgu.php">Conditions génerales d'utilisation</a>
                 </li>
                 <li class="list-inline-item">
-                    <a class="nav-link active text-white" aria-current="page" href="mentionslegales.php">Mentions Légales</a>
+                    <a class="nav-link active text-white" aria-current="page" href="./mentionslegales.php">Mentions Légales</a>
                 </li>
                 <li class="list-inline-item">
-                    <a class="nav-link active text-white" aria-current="page" href="cookies.php">Cookies</a>
+                    <a class="nav-link active text-white" aria-current="page" href="./cookies.php">Cookies</a>
                 </li>
             </ul>
             <p class="copyright">©Moto Poto 2022</p>
