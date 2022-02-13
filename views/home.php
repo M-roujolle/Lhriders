@@ -69,7 +69,7 @@ require "../data/data.php";
     <h3 class="text-center pb-3 selectColor pt-3">A qui s'adresse ce site ? </h3>
     <div class="row justify-content-evenly m-0">
         <?php foreach ($typeOfBikers as $key => $value) { ?>
-            <div class="card mb-3 mt-5 border border-white" style="max-width: 600px;">
+            <div class="card mb-3 mt-5 border border-white shadow" style="max-width: 600px;">
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src="../<?= $value["pictures"] ?>" class="img-fluid rounded-start" alt="...">
@@ -91,7 +91,7 @@ require "../data/data.php";
 
     <div class="row justify-content-evenly m-0 pt-5 pb-5 text-center">
         <div class="col-lg-6">
-            <div class="card me-3">
+            <div class="card me-3 shadow">
                 <div class="card-body">
                     <div class="container">
                         <iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d165494.3020424753!2d0.005009196031334846!3d49.600606928838886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x47e017c3893f4e43%3A0x40c14484fb684d0!2zw4l0cmV0YXQ!3m2!1d49.707006899999996!2d0.2055978!4m5!1s0x47e02f2395218b7d%3A0x5bc1867aaf33af12!2sLe%20Havre!3m2!1d49.494369999999996!2d0.107929!5e0!3m2!1sfr!2sfr!4v1641322911920!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -103,7 +103,7 @@ require "../data/data.php";
         </div>
         <div class="col-lg-6">
             <div class="card">
-                <div class="card-body pb-1">
+                <div class="card-body pb-1 shadow">
                     <div class="container">
                         <iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d96754.84563822209!2d0.11648729571700778!3d49.36730581701161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x47e1d4bac4578671%3A0x40c14484fbcf150!2sDeauville!3m2!1d49.353975999999996!2d0.075122!4m5!1s0x47e02f2395218b7d%3A0x5bc1867aaf33af12!2sLe%20Havre!3m2!1d49.494369999999996!2d0.107929!5e0!3m2!1sfr!2sfr!4v1641323825931!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
@@ -146,9 +146,6 @@ require "../data/data.php";
                         <input type="text" class="form-control" placeholder="Pseudo" name="login">
                         <input type="password" class="form-control mt-3" placeholder="Mot de passe" name="password">
                         <input class="mt-3 btn btn-outline-primary text-center" type="submit" value="Connexion" name="connexion">
-                        <div class="pt-2">
-                            <label for="checkbox">Se souvenir de moi</label> <input value="1" id="checkbox" type="checkbox" name="checkbox">
-                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">

@@ -1,5 +1,5 @@
 <?php
-require("../controllers/controllercontact.php");
+require("../controllers/controller_contact.php");
 ?>
 
 <!DOCTYPE html>
@@ -126,9 +126,6 @@ require("../controllers/controllercontact.php");
                         <input type="text" class="form-control" placeholder="Pseudo" name="login">
                         <input type="password" class="form-control mt-3" placeholder="Mot de passe" name="password">
                         <input class="mt-3 btn btn-outline-primary text-center" type="submit" value="Connexion" name="connexion">
-                        <div class="pt-2">
-                            <label for="checkbox">Se souvenir de moi</label> <input value="1" id="checkbox" type="checkbox" name="checkbox">
-                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">

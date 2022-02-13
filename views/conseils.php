@@ -65,7 +65,7 @@ require "../data/data.php";
 
     <div class="row justify-content-evenly gy-5 m-0 text-center">
         <?php foreach ($consEnt as $key => $value) { ?>
-            <div class="card" style="width: 18rem;">
+            <div class="card shadow" style="width: 18rem;">
                 <img src="../<?= $value["pictures"] ?>" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"><?= $value["name"] ?></h5>
@@ -85,7 +85,7 @@ require "../data/data.php";
         <?php foreach ($vidConsEnt as $key => $value) { ?>
             <div class="col-lg-4">
                 <div class="card mb-5">
-                    <div class="card-body">
+                    <div class="card-body shadow">
                         <div class="container">
                             <?= $value["iframe"] ?> </div>
                         <h5 class="card-title pt-3"><?= $value["name"] ?></h5>
@@ -113,9 +113,6 @@ require "../data/data.php";
                         <input type="text" class="form-control" placeholder="Pseudo" name="login">
                         <input type="password" class="form-control mt-3" placeholder="Mot de passe" name="password">
                         <input class="mt-3 btn btn-outline-primary text-center" type="submit" value="Connexion" name="connexion">
-                        <div class="pt-2">
-                            <label for="checkbox">Se souvenir de moi</label> <input value="1" id="checkbox" type="checkbox" name="checkbox">
-                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">

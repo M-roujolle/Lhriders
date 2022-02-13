@@ -66,12 +66,14 @@ require "../data/data.php";
         Que diriez-vous d'une balade moto sur les plus belles routes de Normandie ? Pour une sortie improvisée ou longuement préparée, faites l'expérience de la liberté.</h2>
 
     <div class="row justify-content-evenly m-0 pt-5 pb-5 text-center">
+
         <?php foreach ($roadMaps as $key => $value) { ?>
             <div class="col-lg-6">
                 <div class="card mb-5 bg-secondary text-white">
                     <div class="card-body">
                         <div class="container">
-                            <?= $value["iframe"] ?> </div>
+                            <?= $value["iframe"] ?>
+                        </div>
                         <h5 class="card-title pt-3"><?= $value["name"] ?></h5>
                         <p class="card-text"><?= $value["description"] ?></p>
                     </div>
@@ -94,9 +96,6 @@ require "../data/data.php";
                         <input type="text" class="form-control" placeholder="Pseudo" name="login">
                         <input type="password" class="form-control mt-3" placeholder="Mot de passe" name="password">
                         <input class="mt-3 btn btn-outline-primary text-center" type="submit" value="Connexion" name="connexion">
-                        <div class="pt-2">
-                            <label for="checkbox">Se souvenir de moi</label> <input value="1" id="checkbox" type="checkbox" name="checkbox">
-                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -105,83 +104,6 @@ require "../data/data.php";
             </div>
         </div>
     </div>
-
-
-    <!-- test---------------- -->
-
-    <table class="table">
-        <thead>
-            <tr>
-
-                <th>id</th>
-                <th>nom</th>
-                <th>prenom</th>
-                <th>mail</th>
-            </tr>
-
-
-        </thead>
-
-        <tbody>
-
-        </tbody>
-        <!-- test bdd--------------------------------------------------------------- -->
-        <?php foreach ($allUsersArray as $users) { ?>
-            <tr>
-                <td scope="row"><?= $users['user_id'] ?></td>
-                <td><?= $users['user_lastname'] ?></td>
-                <td><?= $users['user_firstname'] ?></td>
-                <td><?= $users['user_mail'] ?></td>
-            </tr>
-        <?php } ?>
-        <!-- test bdd ------------------------------------------------------------------->
-
-        </tbody>
-
-
-    </table>
-
-
-
-    test ride ------------------------------------
-
-    <table class="table">
-        <thead>
-            <tr>
-
-                <th>id</th>
-                <th>nom</th>
-                <th>prenom</th>
-                <th>mail</th>
-            </tr>
-
-
-        </thead>
-
-        <tbody>
-
-        </tbody>
-        <!-- test bdd--------------------------------------------------------------- -->
-        <?php foreach ($allRideArray as $ride) { ?>
-            <tr>
-                <td scope="row"><?= $ride['ride_id'] ?></td>
-                <td><?= $ride['ride_iframe'] ?></td>
-                <td><?= $ride['ride_title'] ?></td>
-                <td><?= $ride['ride_description'] ?></td>
-                <td><?= $ride['ride_kilometre'] ?></td>
-                <td><?= $ride['ride_price'] ?></td>
-                <td><?= $ride['ride_participants'] ?></td>
-                <td><?= $ride['ride_hours'] ?></td>
-                <td><?= $ride['ride_meeting'] ?></td>
-            </tr>
-        <?php } ?>
-        <!-- test bdd ------------------------------------------------------------------->
-
-        </tbody>
-
-
-    </table>
-
 
     <h2 class="text-center pt-5 ms-5 me-5">
         Que diriez-vous d'une balade moto sur les plus belles routes de Normandie ? Pour une sortie improvisée ou longuement préparée, faites l'expérience de la liberté.</h2>
@@ -192,7 +114,8 @@ require "../data/data.php";
                 <div class="card mb-5 bg-secondary text-white">
                     <div class="card-body">
                         <div class="container">
-                            <?= $ride["ride_iframe"] ?> </div>
+                            <?= $ride["ride_iframe"] ?>
+                        </div>
                         <h5 class="card-title pt-3"><?= $ride["ride_title"] ?></h5>
                         <p class="card-text"><?= $ride["ride_description"] ?></p>
                     </div>
@@ -200,9 +123,6 @@ require "../data/data.php";
             </div>
         <?php } ?>
     </div>
-
-
-
 
 
 
