@@ -47,13 +47,15 @@ require '../controllers/controller_inscription.php'
                         <a class="nav-link active text-white" href="./conseils.php">Conseils / Entretien</a>
                     </li>
                 </ul>
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <a class="nav-link active text-white ps-4">Connexion / S'inscrire <i class="bi bi-person-circle fs-3"></i></a>
-                </button>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Ex : Le havre" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Valider</button>
-                </form>
+                <?php if (isset($_SESSION["id"])) { ?>
+                    <a class="abutton" href="logout.php">Se déconnecter</a>
+                <?php } else { ?>
+
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a class="nav-link active text-white ps-4">Connexion / Inscription <i class="bi bi-person-circle fs-3"></i></a>
+                    </button>
+                <?php } ?>
+
             </div>
         </div>
     </nav>
@@ -62,7 +64,12 @@ require '../controllers/controller_inscription.php'
             <h1>Inscrivez vous ici pour pouvoir créer vos propres balades !</h1>
         </div>
     </div>
-    <a class="btn btn-danger mt-2 ms-2" href="listusers.php"><i class="bi bi-arrow-return-left"></i>liste utilisateur</a>
+
+
+    <?php if (isset($_SESSION["id"]) && $_SESSION["role"] == "1") { ?>
+        <a class="btn btn-danger mt-2 ms-2" href="listusers.php"><i class="bi bi-arrow-return-left"></i>liste utilisateur</a>
+    <?php } ?>
+
 
     <!-- Formulaire de contact-------------------------------------------------------------------------------------------->
 

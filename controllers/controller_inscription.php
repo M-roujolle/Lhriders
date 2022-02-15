@@ -3,6 +3,7 @@ require '../config.php';
 require '../models/DataBase.php';
 require '../models/Users.php';
 
+session_start();
 // var_dump($_POST);
 
 
@@ -87,8 +88,8 @@ if (!empty($_POST)) {
         $prenom = htmlspecialchars(trim($_POST["prenom"]));
         $nom = htmlspecialchars(trim($_POST["nom"]));
         $mail = htmlspecialchars(trim($_POST["mail"]));
-        $motdepasse = htmlspecialchars(trim($_POST["motdepasse"]));
-        $insert->insertUser($_POST["pseudo"], $_POST["prenom"], $_POST["nom"], $_POST["mail"], $_POST["motdepasse"]);
+        $motdepasse = password_hash($_POST["motdepasse"], PASSWORD_BCRYPT);
+        $insert->insertUser($pseudo, $prenom, $nom, $mail, $motdepasse);
         $alert = "";
     }
 }

@@ -14,7 +14,7 @@ require '../controllers/controller_listusers.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../assets/js/script.js"></script>
-    <title>Document</title>
+    <title>Liste des utilisateurs</title>
 </head>
 
 <body>
@@ -31,6 +31,7 @@ require '../controllers/controller_listusers.php';
                     <th>MOT DE PASSE</th>
                     <th>VALIDATION</th>
                     <th>ROLE</th>
+                    <th>MODIFIER</th>
                     <th>SUPPRIMER</th>
                 </tr>
             </thead>
@@ -45,6 +46,9 @@ require '../controllers/controller_listusers.php';
                         <td><?= $users['user_password'] ?></td>
                         <td><?= $users['user_validate'] ?></td>
                         <td><?= $users['role_id'] ?></td>
+                        <td><a class="btn btn-primary" href="modifuser.php?id=<?= $users["user_id"] ?>">
+                                Modifier
+                            </a></td>
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal<?= $users["user_id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -57,7 +61,10 @@ require '../controllers/controller_listusers.php';
                                         Etes vous certain de vouloir supprimer cet utilisateur ?
                                     </div>
                                     <div class="modal-footer">
-                                        <a href="http://motopoto.fr/Moto%20poto%20V4/views/listusers.php?id=<?= $users["user_id"] ?>" class="btn btn-danger btn-sm">Supprimer</a>
+                                        <form action="" method="POST">
+                                            <input type="hidden" value="<?= $users["user_id"] ?>" name="user_id">
+                                            <button type="submit" name="idsupp" class="btn btn-danger">Supprimer</button>
+                                        </form>
                                         <a href="listusers.php" class="btn btn-primary btn-sm">Retour</a>
                                     </div>
                                 </div>

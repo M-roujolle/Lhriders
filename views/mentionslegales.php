@@ -1,3 +1,41 @@
+<?php
+require '../controllers/controller_users.php';
+
+session_start();
+// on verifie si post login, password et connexikon sont dispo
+if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
+
+    // si login et password ne sont pas vide
+    if (!empty($_POST["login"]) && !empty($_POST["password"])) {
+        $user = new Users;
+
+        $existUser = $user->verifUserExist($_POST["login"])["utilisateur"];
+
+        if ($existUser === "1") {
+
+            // on stock notre mdp dans $userPassword
+            $userPassword = $user->verifPassword($_POST["login"])["user_password"];
+
+            // function php qui verfie le mdp avec le mdp hashé
+            if (password_verify($_POST["password"], $userPassword)) {
+                $_SESSION = $user->getUser($_POST["login"]);
+                // var_dump($_SESSION);
+            } else {
+                $errormessage = "Pseudo ou mot de passe invalide";
+                $errorConnect = true;
+            }
+        } else {
+            $errormessage = "Pseudo ou mot de passe invalide";
+            $errorConnect = true;
+        }
+    } else {
+        $errormessage = "Veuillez remplir les champs 'login' et 'password'";
+        $errorConnect = true;
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -8,6 +46,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Mentions Légales</title>
 </head>
 
@@ -37,13 +76,15 @@
                         <a class="nav-link active text-white" href="./conseils.php">Conseils / Entretien</a>
                     </li>
                 </ul>
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <a class="nav-link active text-white">Connexion / S'inscrire <i class="bi bi-person-circle fs-3"></i></a>
-                </button>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Ex : balade le havre..." aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Valider</button>
-                </form>
+                <?php if (isset($_SESSION["id"])) { ?>
+                    <a class="abutton" href="logout.php">Se déconnecter</a>
+                <?php } else { ?>
+
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a class="nav-link active text-white ps-4">Connexion / Inscription <i class="bi bi-person-circle fs-3"></i></a>
+                    </button>
+                <?php } ?>
+
             </div>
         </div>
     </nav>
@@ -160,6 +201,14 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script>
+        if (<?= $errorConnect ?? false ?>)
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: '<?= $errormessage ?>',
+            })
     </script>
 </body>
 

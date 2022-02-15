@@ -106,3 +106,13 @@
 .shadow {
     box-shadow: 10px 20px 5px;
 }
+
+.abutton {
+    display: block;
+    color: white;
+    background-color: orangered;
+    border-radius: 5rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    margin-right: 1rem;
+}

@@ -52,7 +52,7 @@ class Users extends DataBase
         }
     }
 
-    // fonction pour verifier si le mail est deja existant
+    // fonction pour verifier si le pseudo est deja existant
     public function checkFreePseudo(string $pseudo): bool
     {
         $db = $this->connectDb();
@@ -75,6 +75,63 @@ class Users extends DataBase
         $requete = $db->prepare($query);
         $requete->bindValue(":id", $id, PDO::PARAM_INT);
         return $requete->execute();
+    }
+    public function getOneUser($id)
+    {
+        $db = $this->connectDb();
+        $query = "SELECT * FROM `pro_users` WHERE `user_id` = :id";
+        $requete = $db->prepare($query);
+        $requete->bindValue(":id", $id, PDO::PARAM_STR);
+        $requete->execute();
+        return $requete->fetch();
+    }
+    // pour recuperer le speudo du user pour la connexion
+    public function getUser($pseudo)
+    {
+        $db = $this->connectDb();
+        $query = "SELECT user_id AS 'id',user_pseudo AS 'pseudo',user_firstname AS 'prénom',user_lastname AS 'nom',user_mail AS 'mail',user_validate AS 'validation',role_id AS 'role' FROM `pro_users` WHERE `user_pseudo` = :pseudo";
+        $requete = $db->prepare($query);
+        $requete->bindValue(":pseudo", $pseudo, PDO::PARAM_STR);
+        $requete->execute();
+        return $requete->fetch(PDO::FETCH_ASSOC);
+    }
+    public function modifyUser($pseudo, $prenom, $nom, $mail, $motdepasse, $id)
+    {
+        $db = $this->connectDb();
+        $query = 'UPDATE `pro_users` 
+        SET `user_pseudo` = :pseudo, `user_firstname` = :firstname, `user_lastname` = :lastname, `user_mail` = :mail, `user_password` = :password 
+        WHERE  `user_id`= :id';
+        $requete = $db->prepare($query);
+        $requete->bindValue(":pseudo", $pseudo, PDO::PARAM_STR);
+        $requete->bindValue(":firstname", $prenom, PDO::PARAM_STR);
+        $requete->bindValue(":lastname", $nom, PDO::PARAM_STR);
+        $requete->bindValue(":mail", $mail, PDO::PARAM_STR);
+        $requete->bindValue(":password", $motdepasse, PDO::PARAM_STR);
+        $requete->bindValue(":id", $id, PDO::PARAM_INT);
+        return $requete->execute();
+    }
+
+    public function verifUserExist(string $pseudo)
+    {
+        $db = $this->connectDb();
+        // count permet de retourner 1 ou 0 - 1 l'user exist et 0 il n'existe pas 
+        $query = "SELECT COUNT(`user_pseudo`) AS utilisateur FROM `pro_users`
+WHERE `user_pseudo` = :pseudo";
+        $requete = $db->prepare($query);
+        $requete->bindValue(":pseudo", $pseudo, PDO::PARAM_STR);
+        $requete->execute();
+        return $requete->fetch();
+    }
+
+    public function verifPassword(string $pseudo)
+    {
+        $db = $this->connectDb();
+        $query = "SELECT user_password FROM pro_users
+WHERE user_pseudo = :pseudo";
+        $requete = $db->prepare($query);
+        $requete->bindValue(":pseudo", $pseudo, PDO::PARAM_STR);
+        $requete->execute();
+        return $requete->fetch();
     }
 }
 
