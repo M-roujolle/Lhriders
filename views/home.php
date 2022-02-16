@@ -54,6 +54,9 @@ require "../controllers/controller_home.php";
                     </button>
                 <?php } ?>
 
+                <?php if (isset($_SESSION["id"]) && $_SESSION["role"] == "1") { ?>
+                    <a href="listusers.php">MODE ADMIN</a>
+                <?php } ?>
             </div>
         </div>
     </nav>

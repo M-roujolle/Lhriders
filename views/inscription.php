@@ -67,7 +67,9 @@ require '../controllers/controller_inscription.php'
 
 
     <?php if (isset($_SESSION["id"]) && $_SESSION["role"] == "1") { ?>
-        <a class="btn btn-danger mt-2 ms-2" href="listusers.php"><i class="bi bi-arrow-return-left"></i>liste utilisateur</a>
+        <div class="text-center">
+            <a class="btn btn-danger mt-2 ms-2" href="listusers.php">Aller à liste des utilisateurs</a>
+        </div>
     <?php } ?>
 
 

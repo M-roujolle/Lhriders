@@ -19,7 +19,7 @@ require '../controllers/controller_listusers.php';
 
 <body>
     <h1 class="text-center mb-5 mt-2">Liste des utilisateurs</h1>
-    <div class="container">
+    <div class="container d-flex justify-content-center">
         <table class="table table-striped table-dark">
             <thead>
                 <tr>
@@ -81,8 +81,9 @@ require '../controllers/controller_listusers.php';
             </tbody>
         </table>
     </div>
-    <a class="btn btn-danger mt-2 ms-2" href="inscription.php"><i class="bi bi-arrow-return-left"></i> Retour à l'inscription</a>
-
+    <div class="text-center">
+        <a class="btn btn-danger mt-2 ms-2" href="inscription.php"><i class="bi bi-arrow-return-left"></i> Retour à l'inscription</a>
+    </div>
 </body>
 
 </html>
