@@ -17,8 +17,6 @@ require '../controllers/controller_inscription.php'
     <script src="../assets/js/script.js"></script>
 
 
-
-
     <title>Inscription</title>
 </head>
 
@@ -54,11 +52,37 @@ require '../controllers/controller_inscription.php'
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <a class="nav-link active text-white ps-4">Connexion / Inscription <i class="bi bi-person-circle fs-3"></i></a>
                     </button>
-                <?php } ?>
 
+                <?php } ?>
+                <?php if (isset($_SESSION["id"]) && $_SESSION["role"] == "1") { ?>
+                    <a href="listusers.php">MODE ADMIN</a>
+                <?php } ?>
             </div>
         </div>
     </nav>
+    <!-- MODAL ------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> Connexion / Inscription</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <input type="text" class="form-control" placeholder="Pseudo" name="login">
+                        <input type="password" class="form-control mt-3" placeholder="Mot de passe" name="password">
+                        <input class="mt-3 btn btn-outline-primary text-center" type="submit" value="Connexion" name="connexion">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="./inscription.php">S'inscrire</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="principalePictInscription">
         <div class="text-center pt-4">
             <h1>Inscrivez vous ici pour pouvoir créer vos propres balades !</h1>
@@ -122,7 +146,7 @@ require '../controllers/controller_inscription.php'
                                 $arrayError["motdepasse"] ?? " ";
                                 ?>
                             </span>
-                            <input value="<?= isset($_POST["motdepasse"]) ? htmlspecialchars($_POST["motdepasse"]) : "" ?>" name=" motdepasse" type="mail" class="form-control col-12" id="motdepasse" placeholder="Saisissez votre mot de passe">
+                            <input value="<?= isset($_POST["motdepasse"]) ? htmlspecialchars($_POST["motdepasse"]) : "" ?>" name=" motdepasse" type="password" class="form-control col-12" id="motdepasse" placeholder="Saisissez votre mot de passe">
                         </div>
                         <div class="mb-3 form-check ms-1">
                             <input type="checkbox" class="form-check-input" name="checkBox" id="checkBox">
@@ -144,6 +168,7 @@ require '../controllers/controller_inscription.php'
             </div>
         </div>
     </div>
+
 
 
 

@@ -2,8 +2,6 @@
 require '../config.php';
 require '../models/DataBase.php';
 require '../models/Users.php';
-
-session_start();
 // var_dump($_POST);
 
 
@@ -11,10 +9,43 @@ $regexNom = "/^[a-zA-Zàáâäãåąčćęèéêëėįìíîïłńòóôöõøù
 $regexPseudo = "/^([a-zA-Z0-9-_]{2,36})$/u";
 // $rexgexMail = "/^([a-z.-]+)@([a-z]+).([a-z]){2,4}$/u";
 
+session_start();
+
+// on verifie si post login, password et connexikon sont dispo
+if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
+
+    // si login et password ne sont pas vide
+    if (!empty($_POST["login"]) && !empty($_POST["password"])) {
+        $user = new Users;
+
+        $existUser = $user->verifUserExist($_POST["login"])["utilisateur"];
+
+        if ($existUser === "1") {
+
+            // on stock notre mdp dans $userPassword
+            $userPassword = $user->verifPassword($_POST["login"])["user_password"];
+
+            // function php qui verfie le mdp avec le mdp hashé
+            if (password_verify($_POST["password"], $userPassword)) {
+                $_SESSION = $user->getUser($_POST["login"]);
+                // var_dump($_SESSION);
+            } else {
+                $errormessage = "Pseudo ou mot de passe invalide";
+                $errorConnect = true;
+            }
+        } else {
+            $errormessage = "Pseudo ou mot de passe invalide";
+            $errorConnect = true;
+        }
+    } else {
+        $errormessage = "Veuillez remplir les champs 'login' et 'password'";
+        $errorConnect = true;
+    }
+}
+
 $arrayError = [];
 
 if (!empty($_POST)) {
-
 
     if (isset($_POST["prenom"])) {
         if (empty($_POST["prenom"])) {
@@ -77,7 +108,7 @@ if (!empty($_POST)) {
             $arrayError["pseudo"] = "Veuillez saisir votre pseudo";
         } elseif (!preg_match($regexPseudo, $_POST["pseudo"])) {;
             $arrayError["pseudo"] = "Format invalide";
-        } elseif (!$userMail->checkFreePseudo($_POST['pseudo'])) {
+        } elseif (!$userPseudo->checkFreePseudo($_POST['pseudo'])) {
             $arrayError["pseudo"] = "Ce pseudo est déjà utilisé";
         }
     }

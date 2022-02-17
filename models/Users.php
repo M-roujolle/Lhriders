@@ -79,7 +79,7 @@ class Users extends DataBase
     public function getOneUser($id)
     {
         $db = $this->connectDb();
-        $query = "SELECT * FROM `pro_users` WHERE `user_id` = :id";
+        $query = "SELECT `user_id`,`user_pseudo`,`user_firstname`,`user_lastname`,`user_mail` FROM `pro_users` WHERE `user_id` = :id";
         $requete = $db->prepare($query);
         $requete->bindValue(":id", $id, PDO::PARAM_STR);
         $requete->execute();
@@ -95,18 +95,17 @@ class Users extends DataBase
         $requete->execute();
         return $requete->fetch(PDO::FETCH_ASSOC);
     }
-    public function modifyUser($pseudo, $prenom, $nom, $mail, $motdepasse, $id)
+    public function modifyUser($pseudo, $prenom, $nom, $mail, $id)
     {
         $db = $this->connectDb();
         $query = 'UPDATE `pro_users` 
-        SET `user_pseudo` = :pseudo, `user_firstname` = :firstname, `user_lastname` = :lastname, `user_mail` = :mail, `user_password` = :password 
+     SET `user_pseudo` = :pseudo, `user_firstname` = :firstname, `user_lastname` = :lastname, `user_mail` = :mail  
         WHERE  `user_id`= :id';
         $requete = $db->prepare($query);
         $requete->bindValue(":pseudo", $pseudo, PDO::PARAM_STR);
         $requete->bindValue(":firstname", $prenom, PDO::PARAM_STR);
         $requete->bindValue(":lastname", $nom, PDO::PARAM_STR);
         $requete->bindValue(":mail", $mail, PDO::PARAM_STR);
-        $requete->bindValue(":password", $motdepasse, PDO::PARAM_STR);
         $requete->bindValue(":id", $id, PDO::PARAM_INT);
         return $requete->execute();
     }
@@ -132,6 +131,19 @@ WHERE user_pseudo = :pseudo";
         $requete->bindValue(":pseudo", $pseudo, PDO::PARAM_STR);
         $requete->execute();
         return $requete->fetch();
+    }
+
+    public function insertSettingUser($pseudo, $mail, $id)
+    {
+        $db = $this->connectDb();
+        $query = "UPDATE `pro_users`
+        SET `user_pseudo` =:pseudo, `user_mail` =:mail
+        WHERE `user_id` = :id";
+        $requete = $db->prepare($query);
+        $requete->bindValue(":pseudo", $pseudo, PDO::PARAM_STR);
+        $requete->bindValue(":mail", $mail, PDO::PARAM_STR);
+        $requete->bindValue(":id", $id, PDO::PARAM_INT);
+        return $requete->execute();
     }
 }
 

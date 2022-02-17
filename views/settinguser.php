@@ -1,5 +1,5 @@
 <?php
-require '../controllers/controller_modifuser.php';
+require '../controllers/controller_settinguser.php';
 // var_dump($_POST);
 ?>
 
@@ -16,38 +16,38 @@ require '../controllers/controller_modifuser.php';
 </head>
 
 <body>
-    <h1 class="text-center mb-5 mt-2">Modification d'un utilisateur</h1>
+    <h1 class="text-center mb-5 mt-2">Modifier votre profil</h1>
 
 
     <div class="container d-flex justify-content-center">
         <div class="card shadow bg-dark text-white" style="width: 25rem;">
             <div class="card-body">
-                <h5 class="card-title text-center pb-4 text-warning">N° de id utilisateur : <?= $oneUser["user_id"] ?></h5>
-                <form action="#" method="POST">
+                <h5 class="card-title text-center pb-4 text-warning">Bonjour <?= $_SESSION["nom"] ?> <?= $_SESSION["prénom"] ?> </h5>
+                <p class="card-title text-center pb-4 text-warning">N° de id utilisateur : <?= $_SESSION["id"] ?></p>
 
-                    Pseudo : <input class="input-group input-group-sm mb-3" type="text" name="pseudo" value="<?= $oneUser["user_pseudo"] ?>">
+                <form action="settinguser.php" method="POST">
+                    Pseudo : <input class="input-group input-group-sm mb-3" type="text" name="pseudo" value="<?= $_SESSION["pseudo"] ?>">
                     <label for="nom" class="form-label"></label><span class="text-danger">
                         <?=
                         $arrayError["pseudo"] ?? " ";
                         ?>
                     </span><br>
 
-                    Prénom : <input class="input-group input-group-sm mb-3" type="text" name="prenom" value="<?= $oneUser["user_firstname"] ?>">
+                    Prénom : <input disabled class="input-group input-group-sm mb-3" type="text" value="<?= $_SESSION["prénom"] ?>">
                     <label for="prenom" class="form-label"></label><span class="text-danger">
                         <?=
                         $arrayError["prenom"] ?? " ";
                         ?>
                     </span><br>
 
-                    Nom : <input class="input-group input-group-sm mb-3" type="text" name="nom" value="<?= $oneUser["user_lastname"] ?>">
+                    Nom : <input disabled class="input-group input-group-sm mb-3" type="text" value="<?= $_SESSION["nom"] ?>">
                     <label for="nom" class="form-label"></label><span class="text-danger">
                         <?=
                         $arrayError["nom"] ?? " ";
                         ?>
                     </span><br>
 
-                    Mail : <input class="input-group input-group-sm mb-3" type="text" name="mail" value="<?= $oneUser["user_mail"] ?>">
-                    <input type="hidden" name="iduser" value="<?= $oneUser["user_id"] ?>">
+                    Mail : <input class="input-group input-group-sm mb-3" type="text" name="mail" value="<?= $_SESSION["mail"] ?>">-
                     <label for="mail" class="form-label"></label><span class="text-danger">
                         <?=
                         $arrayError["mail"] ?? " ";
@@ -72,7 +72,7 @@ require '../controllers/controller_modifuser.php';
                                 </div>
                                 <div class="modal-footer">
                                     <!-- l'input va recuperer les valeurs, le mettre en type submit et une value -->
-                                    <form action="" method="POST">
+                                    <form action="settinguser.php" method="POST">
                                         <input type="submit" value="Enregistrer" class="btn btn-success"></input>
                                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
                                     </form>
@@ -86,7 +86,7 @@ require '../controllers/controller_modifuser.php';
     </div>
 
     <div class="text-center">
-        <a class="btn btn-danger mt-5 mb-5 ms-2" href="listusers.php"><i class="bi bi-arrow-return-left"></i> Retour à la liste des utilisateurs</a>
+        <a class="btn btn-danger mt-5 mb-5 ms-2" href="home.php"><i class="bi bi-arrow-return-left"></i> Retour à l'accueil</a>
     </div>
 
 

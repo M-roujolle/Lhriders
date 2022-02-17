@@ -14,6 +14,7 @@ require '../controllers/controller_listusers.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../assets/js/script.js"></script>
+    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
     <title>Liste des utilisateurs</title>
 </head>
 
@@ -28,7 +29,6 @@ require '../controllers/controller_listusers.php';
                     <th>PRENOM</th>
                     <th>NOM</th>
                     <th>MAIL</th>
-                    <th>MOT DE PASSE</th>
                     <th>VALIDATION</th>
                     <th>ROLE</th>
                     <th>MODIFIER</th>
@@ -43,7 +43,6 @@ require '../controllers/controller_listusers.php';
                         <td><?= $users['user_firstname'] ?></td>
                         <td><?= $users['user_lastname'] ?></td>
                         <td><?= $users['user_mail'] ?></td>
-                        <td><?= $users['user_password'] ?></td>
                         <td><?= $users['user_validate'] ?></td>
                         <td><?= $users['role_id'] ?></td>
                         <td><a class="btn btn-primary" href="modifuser.php?id=<?= $users["user_id"] ?>">

@@ -7,7 +7,7 @@ session_start();
 if ($_SESSION["role"] != 1 || !isset($_SESSION["id"])) {
     header('Location: home.php');
 }
-// var_dump($_POST);
+var_dump($_POST);
 
 $regexNom = "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð '-]{2,30}$/u";
 $regexPseudo = "/^([a-zA-Z0-9-_]{2,36})$/u";
@@ -48,28 +48,18 @@ if (isset($_POST["iduser"])) {
             }
         }
 
-
-        if (isset($_POST["motdepasse"])) {
-            if (empty($_POST["motdepasse"])) {
-                $arrayError["motdepasse"] = "Veuillez saisir votre mot de passe";
-            } elseif (!preg_match($regexPseudo, $_POST["motdepasse"])) {
-                $arrayError["motdepasse"] = "Format invalide / Caractères spéciaux interdit";
-            }
-        }
-
         if (empty($arrayError)) {
             $insert = new Users;
             $pseudo = htmlspecialchars(trim($_POST["pseudo"]));
             $prenom = htmlspecialchars(trim($_POST["prenom"]));
             $nom = htmlspecialchars(trim($_POST["nom"]));
             $mail = htmlspecialchars(trim($_POST["mail"]));
-            $motdepasse = htmlspecialchars(trim($_POST["motdepasse"]));
         }
     }
 
     if (empty($arrayError)) {
         $insert = new Users;
-        $insert->modifyUser($pseudo, $prenom, $nom, $mail, $motdepasse, $_POST["iduser"]);
+        $insert->modifyUser($pseudo, $prenom, $nom, $mail, $_POST["iduser"]);
         $modification = 1;
     }
     $oneUser = $modifUser->getOneUser($_GET["id"]);
