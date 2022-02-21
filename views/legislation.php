@@ -74,8 +74,16 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
                     <li class="nav-item">
                         <a class="nav-link active text-white" href="./conseils.php">Conseils / Entretien</a>
                     </li>
+                    <?php if (isset($_SESSION["id"])) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" href="./create_ride.php">Créer son tracé</a>
+                        </li>
+                    <?php } ?>
                 </ul>
                 <?php if (isset($_SESSION["id"])) { ?>
+                    <form action="" method="POST">
+                        <a href="settinguser.php" class="fs-3 text-white mb-1 pe-2"><i class="bi bi-gear"></i></a>
+                    </form>
                     <a class="abutton" href="logout.php">Se déconnecter</a>
                 <?php } else { ?>
 

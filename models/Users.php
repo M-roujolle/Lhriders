@@ -145,6 +145,17 @@ WHERE user_pseudo = :pseudo";
         $requete->bindValue(":id", $id, PDO::PARAM_INT);
         return $requete->execute();
     }
+
+    public function changePassword($pseudo)
+    {
+        $db = $this->connectDb();
+        $query = "UPDATE  `pro_users`
+        SET `user_password` = PASSWORD =:pseudo 
+        WHERE `user_id` = :id";
+        $requete = $db->prepare($query);
+        $requete->bindValue(":pseudo", $pseudo, PDO::PARAM_STR);
+        return $requete->execute();
+    }
 }
 
 

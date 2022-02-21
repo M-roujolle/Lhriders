@@ -26,7 +26,7 @@ if (!empty($_POST)) {
             } elseif (!preg_match($regexPseudo, $_POST["pseudo"])) {;
                 $arrayError["pseudo"] = "Format invalide";
             } elseif (!$insert->checkFreePseudo($_POST['pseudo'])) {
-                $arrayError["user_pseudo"] = "Ce pseudo est déjà utilisé";
+                $arrayError["pseudo"] = "Ce pseudo est déjà utilisé";
             }
         }
     }
@@ -38,11 +38,10 @@ if (!empty($_POST)) {
             } elseif (!filter_var($_POST["mail"], FILTER_VALIDATE_EMAIL)) {;
                 $arrayError["mail"] = "Format invalide";
             } elseif (!$insert->checkFreeMail($_POST['mail'])) {
-                $arrayError["user_mail"] = "Ce mail est déjà utilisé";
+                $arrayError["mail"] = "Ce mail est déjà utilisé";
             }
         }
     }
-    var_dump($arrayError);
 
 
     if (empty($arrayError)) {
@@ -54,8 +53,6 @@ if (!empty($_POST)) {
         if ($insert->insertSettingUser($pseudo, $mail, $_SESSION["id"])) {
             $_SESSION["pseudo"] = $pseudo;
             $_SESSION["mail"] = $mail;
-        } else {
-            echo "ntm";
         }
     }
 }

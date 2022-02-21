@@ -43,8 +43,12 @@ require "../controllers/controller_home.php";
                     <li class="nav-item">
                         <a class="nav-link active text-white" href="./conseils.php">Conseils / Entretien</a>
                     </li>
+                    <?php if (isset($_SESSION["id"])) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" href="./create_ride.php">Créer son tracé</a>
+                        </li>
+                    <?php } ?>
                 </ul>
-
 
                 <?php if (isset($_SESSION["id"])) { ?>
                     <form action="" method="POST">

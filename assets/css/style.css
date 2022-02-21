@@ -65,6 +65,21 @@
 
 }
 
+.principalePictModifUser {
+    background: no-repeat center/100% url("../img/modifuser.jpeg");
+    height: 30rem;
+    background-attachment: fixed;
+    background-size: cover;
+    color: orangered;
+}
+
+.principalePictCreateRide {
+    background: no-repeat center/100% url("../img/create_ride.jpeg");
+    height: 30rem;
+    background-attachment: fixed;
+    background-size: cover;
+    color: orangered;
+}
 
 .logo {
     height: 5rem;
@@ -116,10 +131,3 @@
     text-decoration: none;
     margin-right: 1rem;
 }
-
-/* .overflow {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 10rem;
-} */

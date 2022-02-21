@@ -75,8 +75,16 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
                     <li class="nav-item">
                         <a class="nav-link active text-white" href="./conseils.php">Conseils / Entretien</a>
                     </li>
+                    <?php if (isset($_SESSION["id"])) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" href="./create_ride.php">Créer son tracé</a>
+                        </li>
+                    <?php } ?>
                 </ul>
                 <?php if (isset($_SESSION["id"])) { ?>
+                    <form action="" method="POST">
+                        <a href="settinguser.php" class="fs-3 text-white mb-1 pe-2"><i class="bi bi-gear"></i></a>
+                    </form>
                     <a class="abutton" href="logout.php">Se déconnecter</a>
                 <?php } else { ?>
 
@@ -142,8 +150,6 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
         </div>
     </div>
 
-    <h2 class="text-center pt-5 ms-5 me-5">
-        Que diriez-vous d'une balade moto sur les plus belles routes de Normandie ? Pour une sortie improvisée ou longuement préparée, faites l'expérience de la liberté.</h2>
 
     <div class="row justify-content-evenly m-0 pt-5 pb-5 text-center">
         <?php foreach ($allRideArray as $ride) { ?>
