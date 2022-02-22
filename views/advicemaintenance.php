@@ -1,12 +1,12 @@
 <?php
-require "../controllers/controller_conseils.php";
+require "../controllers/controller_advicemaintenance.php";
 require "../controllers/controller_users.php";
 require "../data/data.php";
 include "../templates/header.php";
 ?>
 
 
-<div class="principalePictConsEnt">
+<div class="principalePictAdvicemaintenance">
     <div class="text-center pt-4 text-white">
         <h1>Conseils pour bien débuter et entretien</h1>
         <p>Tout motard qui se respect menage sa monture ! Tu trouveras ici des astuces et conseils pour organiser, préparer et anticiper au mieux tes promenades. N'oublies jamais que le risque zéro n'existe pas ! </p>
@@ -69,7 +69,7 @@ include "../templates/header.php";
                 </form>
             </div>
             <div class="modal-footer">
-                <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="./inscription.php">S'inscrire</a>
+                <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="./registration.php">S'inscrire</a>
             </div>
         </div>
     </div>

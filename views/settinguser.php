@@ -35,14 +35,14 @@ require '../controllers/controller_settinguser.php';
                         <a class="nav-link active text-white" aria-current="page" href="home.php">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="./balades.php">Balades</a>
+                        <a class="nav-link active text-white" href="./ride.php">Balades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="./conseils.php">Conseils / Entretien</a>
+                        <a class="nav-link active text-white" href="./advicemaintenance.php">Conseils / Entretien</a>
                     </li>
                     <?php if (isset($_SESSION["id"])) { ?>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" href="./create_ride.php">Créer son tracé</a>
+                            <a class="nav-link active text-white" href="./createride.php">Créer son tracé</a>
                         </li>
                     <?php } ?>
                 </ul>
@@ -155,7 +155,7 @@ require '../controllers/controller_settinguser.php';
                     <a class="nav-link active text-white" aria-current="page" href="../views/cgu.php">Conditions génerales d'utilisation</a>
                 </li>
                 <li class="list-inline-item">
-                    <a class="nav-link active text-white" aria-current="page" href="../views/mentionslegales.php">Mentions Légales</a>
+                    <a class="nav-link active text-white" aria-current="page" href="../views/legalnotice.php">Mentions Légales</a>
                 </li>
                 <li class="list-inline-item">
                     <a class="nav-link active text-white" href="./legislation.php">Législation</a>

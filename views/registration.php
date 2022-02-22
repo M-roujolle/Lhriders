@@ -1,11 +1,11 @@
 <?php
-require "../controllers/controller_inscription.php";
+require "../controllers/controller_registration.php";
 include "../templates/header.php";
 ?>
 
 
 
-<div class="principalePictInscription">
+<div class="principalePictRTegistration">
     <div class="text-center pt-4">
         <h1>Inscrivez vous ici pour pouvoir créer vos propres balades !</h1>
     </div>
@@ -25,7 +25,7 @@ include "../templates/header.php";
     <div class="d-flex justify-content-center">
         <div class=" col-lg-6 mt-5">
             <div class="navColor text-white d-flex justify-content-center">
-                <form action="inscription.php" method="POST" class="ps-3 pe-3">
+                <form action="registration.php" method="POST" class="ps-3 pe-3">
                     <h1 class="text-center pt-3 mb-3">Inscription</h1>
                     <div class="mb-3">
 
@@ -107,7 +107,7 @@ include "../templates/header.php";
                 </form>
             </div>
             <div class="modal-footer">
-                <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="./inscription.php">S'inscrire</a>
+                <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="./registration.php">S'inscrire</a>
             </div>
         </div>
     </div>

@@ -12,7 +12,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../assets/js/script.js"></script>
-    <title>Moto poto / Accueil</title>
+    <title>Moto poto</title>
 </head>
 
 <body>
@@ -32,13 +32,13 @@
                         <a class="nav-link active text-white" aria-current="page" href="home.php">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="./balades.php">Balades</a>
+                        <a class="nav-link active text-white" href="./ride.php">Balades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="./conseils.php">Conseils / Entretien</a>
+                        <a class="nav-link active text-white" href="./advicemaintenance.php">Conseils / Entretien</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="./create_ride.php">Créer son tracé</a>
+                        <a class="nav-link active text-white" href="./createride.php">Créer son tracé</a>
                     </li>
                 </ul>
 

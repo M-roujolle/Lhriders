@@ -1,12 +1,11 @@
 <?php
-require "../controllers/controller_balades.php";
+require "../controllers/controller_ride.php";
 require "../controllers/controller_users.php";
 require "../data/data.php";
 include "../templates/header.php";
-
 ?>
 
-<div class="principalePictBalades">
+<div class="principalePictRide">
     <div class="text-center pt-4">
         <h1 class="text-center"> Plus qu’une balade : une aventure</h1>
     </div>
@@ -155,7 +154,7 @@ include "../templates/header.php";
                 </form>
             </div>
             <div class="modal-footer">
-                <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="./inscription.php">S'inscrire</a>
+                <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="./registration.php">S'inscrire</a>
             </div>
         </div>
     </div>

@@ -18,7 +18,7 @@ include "../templates/header.php";
             <h2 class="text-center mt-3 selectColor">Création du tracé</h2>
 
 
-            <form action="create_ride.php" method="POST">
+            <form action="createride.php" method="POST">
 
 
                 <div class="mb-3 mt-5">
@@ -147,7 +147,7 @@ include "../templates/header.php";
 <?php } else { ?>
 
     <p class="text-center">Veuillez vous inscrire pour pouvoir créer votre balade !</p>
-    <a class="btn-outline-primary" type="button" href="../views/inscription.php">S'inscrire</a>
+    <a class="btn-outline-primary" type="button" href="../views/registration.php">S'inscrire</a>
 <?php } ?>
 
 <!-- MODAL ------------------------------------------------------------------------------------------------------------------------------------------->

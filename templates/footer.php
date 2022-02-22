@@ -8,7 +8,7 @@
                 <a class="nav-link active text-white" aria-current="page" href="../views/cgu.php">Conditions génerales d'utilisation</a>
             </li>
             <li class="list-inline-item">
-                <a class="nav-link active text-white" aria-current="page" href="../views/mentionslegales.php">Mentions Légales</a>
+                <a class="nav-link active text-white" aria-current="page" href="../views/legalnotice.php">Mentions Légales</a>
             </li>
             <li class="list-inline-item">
                 <a class="nav-link active text-white" href="./legislation.php">Législation</a>

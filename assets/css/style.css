@@ -14,7 +14,7 @@
     background-size: cover;
 }
 
-.principalePictConsEnt {
+.principalePictAdvicemaintenance {
     background: no-repeat center/100% url("../img/conseilsentretient.jpeg");
     height: 30rem;
     background-attachment: fixed;
@@ -28,7 +28,7 @@
     background-size: cover;
 }
 
-.principalePictMentionsLegales {
+.principalePictLegalnotice {
     background: no-repeat center/100% url("../img/mentionslegales.jpeg");
     height: 30rem;
     background-attachment: fixed;
@@ -43,14 +43,14 @@
     background-size: cover;
 }
 
-.principalePictBalades {
+.principalePictRide {
     background: no-repeat center/100% url("../img/balades.jpg");
     height: 30rem;
     background-attachment: fixed;
     background-size: cover;
 }
 
-.principalePictInscription {
+.principalePictRegistration {
     background: no-repeat center/100% url("../img/inscription.jpg");
     height: 30rem;
     background-attachment: fixed;

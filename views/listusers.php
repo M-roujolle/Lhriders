@@ -81,7 +81,7 @@ require '../controllers/controller_listusers.php';
         </table>
     </div>
     <div class="text-center">
-        <a class="btn btn-danger mt-2 ms-2" href="inscription.php"><i class="bi bi-arrow-return-left"></i> Retour à l'inscription</a>
+        <a class="btn btn-danger mt-2 ms-2" href="registration.php"><i class="bi bi-arrow-return-left"></i> Retour à l'inscription</a>
     </div>
 </body>
 
