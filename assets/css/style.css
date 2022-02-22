@@ -43,13 +43,6 @@
     background-size: cover;
 }
 
-.principalePictCookies {
-    background: no-repeat center/100% url("../img/cookies.jpeg");
-    height: 30rem;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
 .principalePictBalades {
     background: no-repeat center/100% url("../img/balades.jpg");
     height: 30rem;
@@ -126,6 +119,16 @@
     display: block;
     color: white;
     background-color: orangered;
+    border-radius: 5rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.bbutton {
+    display: block;
+    color: orangered;
+    background-color: white;
     border-radius: 5rem;
     padding: 0.5rem 1rem;
     text-decoration: none;

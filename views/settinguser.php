@@ -38,9 +38,6 @@ require '../controllers/controller_settinguser.php';
                         <a class="nav-link active text-white" href="./balades.php">Balades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="./legislation.php">Législation</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link active text-white" href="./conseils.php">Conseils / Entretien</a>
                     </li>
                     <?php if (isset($_SESSION["id"])) { ?>
@@ -65,7 +62,7 @@ require '../controllers/controller_settinguser.php';
                 <?php } ?>
 
                 <?php if (isset($_SESSION["id"]) && $_SESSION["role"] == "1") { ?>
-                    <a href="listusers.php">MODE ADMIN</a>
+                    <a class="bbutton" href="listusers.php">Panel admin</a>
                 <?php } ?>
             </div>
         </div>
@@ -112,21 +109,6 @@ require '../controllers/controller_settinguser.php';
                         ?>
                     </span><br>
                     <input class="input-group input-group-sm mb-3" type="text" name="mail" value="<?= $_SESSION["mail"] ?>">
-
-
-                    Modifier de passe : <input class="input-group input-group-sm" type="password" value="" placeholder="Mot de passe actuel">
-                    <label for="mdpactuel" class="form-label"></label><span class="text-danger">
-                        <?=
-                        $arrayError["motdepasse"] ?? " ";
-                        ?>
-                    </span><br>
-                    <input class="input-group input-group-sm" type="password" value="" placeholder="Nouveau mot de passe">
-                    <label for="mdpnouveau" class="form-label"></label><span class="text-danger">
-                        <?=
-                        $arrayError["motdepasse"] ?? " ";
-                        ?>
-                    </span><br>
-
 
                     <!-- Button trigger modal -->
                     <!-- on laisse un button type button ici, on recupere l'info plus bas -->
@@ -176,7 +158,7 @@ require '../controllers/controller_settinguser.php';
                     <a class="nav-link active text-white" aria-current="page" href="../views/mentionslegales.php">Mentions Légales</a>
                 </li>
                 <li class="list-inline-item">
-                    <a class="nav-link active text-white" aria-current="page" href="../views/cookies.php">Cookies</a>
+                    <a class="nav-link active text-white" href="./legislation.php">Législation</a>
                 </li>
             </ul>
             <p class="copyright">©Moto Poto 2022</p>

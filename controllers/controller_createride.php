@@ -3,8 +3,39 @@ require '../config.php';
 require '../models/DataBase.php';
 require '../models/Users.php';
 
-var_dump($_POST);
+// var_dump($_POST);
+session_start();
+// on verifie si post login, password et connexikon sont dispo
+if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
 
+    // si login et password ne sont pas vide
+    if (!empty($_POST["login"]) && !empty($_POST["password"])) {
+        $user = new Users;
+
+        $existUser = $user->verifUserExist($_POST["login"])["utilisateur"];
+
+        if ($existUser === "1") {
+
+            // on stock notre mdp dans $userPassword
+            $userPassword = $user->verifPassword($_POST["login"])["user_password"];
+
+            // function php qui verfie le mdp avec le mdp hashé
+            if (password_verify($_POST["password"], $userPassword)) {
+                $_SESSION = $user->getUser($_POST["login"]);
+                // var_dump($_SESSION);
+            } else {
+                $errormessage = "Pseudo ou mot de passe invalide";
+                $errorConnect = true;
+            }
+        } else {
+            $errormessage = "Pseudo ou mot de passe invalide";
+            $errorConnect = true;
+        }
+    } else {
+        $errormessage = "Veuillez remplir les champs 'login' et 'password'";
+        $errorConnect = true;
+    }
+}
 
 $regexNom = "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,30}$/u";
 
@@ -72,6 +103,12 @@ if (!empty($_POST)) {
     if (isset($_POST["select"])) {
         if (empty($_POST["select"]) || $_POST["select"] == 0) {
             $arrayError["select"] = "Veuillez saisir le nombre de participants";
+        }
+    }
+
+    if (isset($_POST["date"])) {
+        if (empty($_POST["date"])) {
+            $arrayError["date"] = "Veuillez indiquer une date de départ";
         }
     }
 

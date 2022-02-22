@@ -30,9 +30,6 @@ class Users extends DataBase
         $requete->bindValue(":mail", $mail, PDO::PARAM_STR);
         $requete->bindValue(":password", $motdepasse, PDO::PARAM_STR);
         return $requete->execute();
-
-        // modif a voir avec anou ou chef back alex, dans merise, table pro_user (cliquer sur la clé de 10) user_validate et role_id mis par defaut 0 et 2
-        // avant, aucun parametre dans la colonne default/Expression
     }
 
     // fonction pour verifier si le pseudo est deja existant
