@@ -4,6 +4,8 @@ session_start();
 require '../config.php';
 require '../models/DataBase.php';
 require '../models/Users.php';
+require '../models/Rides.php';
+
 
 var_dump($_POST);
 
@@ -48,6 +50,8 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
 $regexNom = "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,30}$/u";
 $regexDescription = "/^[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.&_ç'-=]{2,250}$/u";
 $regexIframe = "/^(<iframe src=\"https:\/\/www\.google\.com\/maps\/embed\?pb=).+(<\/iframe>)$/";
+$regexTime = "/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/";
+$regexDate = "/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/";
 $arrayError = [];
 
 
@@ -85,13 +89,13 @@ if (!empty($_POST)) {
         }
     }
 
-    // if (isset($_POST["heure"])) {
-    //     if (empty($_POST["heure"])) {
-    //         $arrayError["heure"] = "Veuillez saisir une heure";
-    //     } elseif (!preg_match($regexNom, $_POST["heure"])) {
-    //         $arrayError["heure"] = "Format invalide";
-    //     }
-    // }
+    if (isset($_POST["heure"])) {
+        if (empty($_POST["heure"])) {
+            $arrayError["heure"] = "Veuillez saisir une heure";
+        } elseif (!preg_match($regexTime, $_POST["heure"])) {
+            $arrayError["heure"] = "Format invalide";
+        }
+    }
 
     if (isset($_POST["select"])) {
         if (empty($_POST["select"]) || $_POST["select"] == 0) {
@@ -111,7 +115,11 @@ if (!empty($_POST)) {
 
     if (isset($_POST["date"])) {
         if (empty($_POST["date"])) {
-            $arrayError["date"] = "Veuillez indiquer une date de départ";
+            $arrayError["date"] = "Veuillez saisir une date valide";
+        } elseif (!preg_match($regexDate, $_POST["date"])) {
+            $arrayError["date"] = "Format invalide";
+        } elseif (time() >= strtotime($_POST["date"])) {
+            $arrayError["date"] = "La date ne doit pas être antérieure";
         }
     }
 
@@ -124,7 +132,7 @@ if (!empty($_POST)) {
         // je sécurise mes champs à l'aide d'un htmlspecialchars et j'enlève les espaces en trop avec trim avant de les stocker dans les variables
         $titre = htmlspecialchars(trim($_POST["titre"]));
         $description = htmlspecialchars(trim($_POST["description"]));
-        $iframe = htmlspecialchars(trim($_POST["iframe"]));
+        $iframe = $_POST["iframe"];
         $kilometre = htmlspecialchars(trim($_POST["kilometre"]));
         $hours = htmlspecialchars(trim($_POST["heure"]));
         $participants = htmlspecialchars(trim($_POST["select"]));
@@ -136,5 +144,6 @@ if (!empty($_POST)) {
         $insert = new Rides;
         // j'utilise la methode insertride pour créer la balade
         $insert->insertRide($iframe, $titre, $description, $kilometre, $participants, $hours, $meeting, $date, $iduser);
+        $alertride = "";
     }
 }

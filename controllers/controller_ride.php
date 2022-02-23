@@ -1,7 +1,8 @@
 <?php
-require '../config.php';
-require '../models/DataBase.php';
-require '../models/Users.php';
+require "../config.php";
+require "../models/DataBase.php";
+require "../models/Users.php";
+require "../models/Rides.php";
 
 session_start();
 // on verifie si post login, password et connexikon sont dispo
@@ -35,3 +36,9 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
         $errorConnect = true;
     }
 }
+
+
+$rideObj = new Rides;
+$arrayride = $rideObj->showRide();
+
+// var_dump($arrayride);

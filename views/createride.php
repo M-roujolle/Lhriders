@@ -165,6 +165,10 @@ include "../templates/header.php";
     </div>
 </div>
 
+<?php if (isset($alertride)) { ?>
+    <span id="alertride"></span>
+<?php } ?>
 <?php
+
 include "../templates/footer.php";
 ?>
