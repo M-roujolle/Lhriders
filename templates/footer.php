@@ -17,3 +17,23 @@
         <p class="copyright">©Moto Poto 2022</p>
     </div>
 </footer>
+
+<?php if (isset($alert)) { ?>
+    <span id="alertconnexion"></span>
+<?php } ?>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+</script>
+
+<script>
+    if (<?= $errorConnect ?? false ?>)
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: '<?= $errormessage ?>',
+        })
+</script>
+
+</body>
+
+</html>

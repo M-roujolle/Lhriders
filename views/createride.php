@@ -63,19 +63,19 @@ include "../templates/header.php";
                             <div id="kilometre" class="form-text text-white"> Indique le kilometrage du tracé</div>
                         </div>
                     </div>
-
                     <div class="col-md text-dark">
                         <div class="form-floating">
-                            <input name="prix" class="form-control" id="prix" placeholder="Ex : 8€" value="<?= isset($_POST["prix"]) ? htmlspecialchars($_POST["prix"]) : "" ?>">
-                            <label for="prix">Prix carburant (estimation) : </label><span class="text-danger">
+                            <input name="heure" type="time" class="form-control" id="heure" placeholder="10h30" value="<?= isset($_POST["heure"]) ? htmlspecialchars($_POST["heure"]) : "" ?>">
+                            <label for="heure">Heure de départ :</label><span class="text-danger">
                                 <?=
-                                $arrayError["prix"] ?? " ";
+                                $arrayError["heure"] ?? " ";
                                 ?>
                             </span>
-                            <div id="prix" class="form-text text-white"> Indique le coût de carburant du tracé :</div>
+                            <div id="heure" class="form-text text-white"> Indique l'heure de départ de ta balade</div>
                         </div>
                     </div>
                 </div>
+
                 <div class="mt-4">
                     <label for="select">Choix du nombre de participants (min 2 - max 50) :</label><span class="text-danger">
                         <?=
@@ -92,19 +92,8 @@ include "../templates/header.php";
                         <option value="6">De 40 à 50 </option>
                     </select>
                 </div>
-                <div class="row g-2">
-                    <div class="col-md text-dark">
-                        <div class="form-floating">
-                            <input name="heure" type="time" class="form-control" id="heure" placeholder="10h30" value="<?= isset($_POST["heure"]) ? htmlspecialchars($_POST["heure"]) : "" ?>">
-                            <label for="heure">Heure de départ :</label><span class="text-danger">
-                                <?=
-                                $arrayError["heure"] ?? " ";
-                                ?>
-                            </span>
-                            <div id="heure" class="form-text text-white"> Indique l'heure de départ de ta balade</div>
-                        </div>
-                    </div>
 
+                <div class="row g-2">
                     <div class="col-md text-dark">
                         <div class="form-floating">
                             <input name="rdv" type="text" class="form-control" id="rdv" placeholder="Ex : Stade océane">
@@ -116,17 +105,20 @@ include "../templates/header.php";
                             <div id="rdv" class="form-text text-white"> Indique aux membres où se rendre</div>
                         </div>
                     </div>
+                    <div class="col-md text-dark">
+                        <div class="form-floating">
+
+                            <input name="date" value="<?= isset($_POST["date"]) ? htmlspecialchars($_POST["date"]) : "" ?>" type="date" class="form-control" id="titre" placeholder="Ex: Le Havre - Fécamp">
+                            <p id="date" class="form-text text-white">Indique une date de départ</p>
+                            <label for="date" class="form-label"></label><span class="text-danger">
+                                <?=
+                                $arrayError["date"] ?? " ";
+                                ?>
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="mb-3 mt-5">
-                    <label for="date" class="form-label">Date de départ :</label><span class="text-danger">
-                        <?=
-                        $arrayError["date"] ?? " ";
-                        ?>
-                    </span>
-                    <input name="date" value="<?= isset($_POST["date"]) ? htmlspecialchars($_POST["date"]) : "" ?>" type="date" class="form-control" id="titre" placeholder="Ex: Le Havre - Fécamp">
-                    <p id="date" class="form-text text-white">Indique une date de départ</p>
-                </div>
 
                 <div class="mb-3 form-check mt-3">
                     <input name="checkbox" type="checkbox" class="form-check-input" id="checkbox">
@@ -172,12 +164,7 @@ include "../templates/header.php";
         </div>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-</script>
+
 <?php
 include "../templates/footer.php";
 ?>
-
-</body>
-
-</html>

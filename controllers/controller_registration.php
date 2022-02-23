@@ -121,6 +121,6 @@ if (!empty($_POST)) {
         $mail = htmlspecialchars(trim($_POST["mail"]));
         $motdepasse = password_hash($_POST["motdepasse"], PASSWORD_BCRYPT);
         $insert->insertUser($pseudo, $prenom, $nom, $mail, $motdepasse);
-        $alert = "";
+        $alertregistration = "";
     }
 }
