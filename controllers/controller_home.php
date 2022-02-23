@@ -4,6 +4,9 @@ require '../models/DataBase.php';
 require '../models/Users.php';
 
 session_start();
+if (isset($_GET["alert"])) {
+    $alertlogout = "";
+}
 
 // on verifie si post login, password et connexikon sont dispo
 if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {

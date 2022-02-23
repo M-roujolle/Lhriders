@@ -1,11 +1,15 @@
 <?php
+session_start();
+
 require '../config.php';
 require '../models/DataBase.php';
 require '../models/Users.php';
 
 var_dump($_POST);
-session_start();
+
+/////////////////////////////////////////////////////////////////
 // on verifie si post login, password et connexikon sont dispo
+/////////////////////////////////////////////////////////////////
 if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
 
     // si login et password ne sont pas vide
@@ -37,9 +41,13 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
     }
 }
 
+////////////////////////////////////////////
+// controle de formulaire 
+////////////////////////////////////////////
+
 $regexNom = "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,30}$/u";
 $regexDescription = "/^[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.&_ç'-=]{2,250}$/u";
-
+$regexIframe = "/^(<iframe src=\"https:\/\/www\.google\.com\/maps\/embed\?pb=).+(<\/iframe>)$/";
 $arrayError = [];
 
 
@@ -61,13 +69,13 @@ if (!empty($_POST)) {
         }
     }
 
-    // if (isset($_POST["iframe"])) {
-    //     if (empty($_POST["iframe"])) {
-    //         $arrayError["iframe"] = "Veuillez insérer un iframe";
-    //     } elseif (!preg_match($regexNom, $_POST["iframe"])) {
-    //         $arrayError["iframe"] = "Format invalide";
-    //     }
-    // }
+    if (isset($_POST["iframe"])) {
+        if (empty($_POST["iframe"])) {
+            $arrayError["iframe"] = "Veuillez insérer un iframe";
+        } elseif (!preg_match($regexIframe, $_POST["iframe"])) {
+            $arrayError["iframe"] = "Format invalide";
+        }
+    }
 
     if (isset($_POST["kilometre"])) {
         if (empty($_POST["kilometre"])) {
@@ -111,5 +119,22 @@ if (!empty($_POST)) {
         if (empty($_POST["checkbox"])) {
             $arrayError["checkbox"] = "Veuillez valider les CGU";
         }
+    }
+    if (empty($arrayError)) {
+        // je sécurise mes champs à l'aide d'un htmlspecialchars et j'enlève les espaces en trop avec trim avant de les stocker dans les variables
+        $titre = htmlspecialchars(trim($_POST["titre"]));
+        $description = htmlspecialchars(trim($_POST["description"]));
+        $iframe = htmlspecialchars(trim($_POST["iframe"]));
+        $kilometre = htmlspecialchars(trim($_POST["kilometre"]));
+        $hours = htmlspecialchars(trim($_POST["heure"]));
+        $participants = htmlspecialchars(trim($_POST["select"]));
+        $meeting = htmlspecialchars(trim($_POST["rdv"]));
+        $date = htmlspecialchars(trim($_POST["date"]));
+        $iduser = $_SESSION["id"];
+
+        // j'instancie un nouvel object selon la classe Rides afin d'utiliser ses méthodes
+        $insert = new Rides;
+        // j'utilise la methode insertride pour créer la balade
+        $insert->insertRide($iframe, $titre, $description, $kilometre, $participants, $hours, $meeting, $date, $iduser);
     }
 }

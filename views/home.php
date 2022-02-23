@@ -95,7 +95,7 @@ include "../templates/header.php";
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="" method="POST">
+                <form action="?login" method="POST">
                     <input type="text" class="form-control" placeholder="Pseudo" name="login">
                     <input type="password" class="form-control mt-3" placeholder="Mot de passe" name="password">
                     <input class="mt-3 btn btn-outline-primary text-center" type="submit" value="Connexion" name="connexion">
@@ -107,6 +107,10 @@ include "../templates/header.php";
         </div>
     </div>
 </div>
+
+<?php if (isset($alertlogout)) { ?>
+    <span id="alertlogout"></span>
+<?php } ?>
 
 <?php
 include "../templates/footer.php";

@@ -18,3 +18,9 @@ window.addEventListener("DOMContentLoaded", function () {
     );
   }
 });
+
+window.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("alertlogout")) {
+    Swal.fire("Vous êtes bien déconnecté", "A bientôt", "info");
+  }
+});
