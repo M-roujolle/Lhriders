@@ -64,14 +64,14 @@ require '../controllers/controller_listrides.php';
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        Etes vous certain de vouloir supprimer cet utilisateur ?
+                                        Etes vous certain de vouloir supprimer ce tracé ?
                                     </div>
                                     <div class="modal-footer">
                                         <form action="" method="POST">
                                             <input type="hidden" value="<?= $value['ride_id'] ?>" name="ride_id">
                                             <button type="submit" name="idsupp" class="btn btn-danger">Supprimer</button>
                                         </form>
-                                        <a href="listusers.php" class="btn btn-primary btn-sm">Retour</a>
+                                        <a href="listrides.php" class="btn btn-primary btn-sm">Retour</a>
                                     </div>
                                 </div>
                             </div>
@@ -83,7 +83,7 @@ require '../controllers/controller_listrides.php';
     </div>
     <div class="text-center">
         <a class="btn btn-danger mt-2 ms-2" href="admincontrol.php"> Retour panel controle</a>
-        <a class="btn btn-danger mt-2 ms-2" href="registration.php"> Retour à l'inscription</a>
+        <a class="btn btn-danger mt-2 ms-2" href="home.php"> Retour à l'accueil</a>
     </div>
 </body>
 

@@ -9,7 +9,7 @@ class Users extends DataBase
      */
     public function getAllUsers()
     {
-        //    je me co a la db a l'aide de la methode herité connectDb
+        //    je me connecte a la db a l'aide de la methode herité connectDb
         $db = $this->connectDb();
         // je stock ma requete sql sdans une variable 
         $requete = "SELECT * FROM `pro_users`";
@@ -32,7 +32,7 @@ class Users extends DataBase
         return $requete->execute();
     }
 
-    // fonction pour verifier si le pseudo est deja existant
+    // fonction pour verifier si le  est deja existant
     public function checkFreeMail(string $mail): bool
     {
         $db = $this->connectDb();
@@ -143,14 +143,15 @@ WHERE user_pseudo = :pseudo";
         return $requete->execute();
     }
 
-    // public function changePassword($pseudo)
-    // {
-    //     $db = $this->connectDb();
-    //     $query = "UPDATE  `pro_users`
-    //     SET `user_password` = PASSWORD =:pseudo 
-    //     WHERE `user_id` = :id";
-    //     $requete = $db->prepare($query);
-    //     $requete->bindValue(":pseudo", $pseudo, PDO::PARAM_STR);
-    //     return $requete->execute();
-    // }
+    public function changeStatusUser($iduser, $userstatus)
+    {
+        $db = $this->connectDb();
+        $query = "UPDATE `pro_users` 
+        SET `user_validate` = :userstatus
+           WHERE  `user_id`= :iduser;";
+        $requete = $db->prepare($query);
+        $requete->bindValue(":userstatus", $userstatus, PDO::PARAM_INT);
+        $requete->bindValue(":iduser", $iduser, PDO::PARAM_INT);
+        return $requete->execute();
+    }
 }

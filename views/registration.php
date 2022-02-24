@@ -12,12 +12,6 @@ include "../templates/header.php";
 </div>
 
 
-<?php if (isset($_SESSION["id"]) && $_SESSION["role"] == "1") { ?>
-    <div class="text-center">
-        <a class="btn btn-danger mt-2 ms-2" href="listusers.php">Aller à liste des utilisateurs</a>
-    </div>
-<?php } ?>
-
 
 <!-- Formulaire de contact-------------------------------------------------------------------------------------------->
 
@@ -115,6 +109,7 @@ include "../templates/header.php";
 
 <?php if (isset($alertregistration)) { ?>
     <span id="alertconfirm"></span>
+
 <?php } ?>
 
 

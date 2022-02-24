@@ -30,67 +30,6 @@ $typeOfBikers = [
 
 ];
 
-// page index iframe d'exemple de sorties
-$roadMaps = [
-    [
-        "id" => 1,
-        "iframe" => '<iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d165494.3020424753!2d0.005009196031334846!3d49.600606928838886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x47e017c3893f4e43%3A0x40c14484fb684d0!2zw4l0cmV0YXQ!3m2!1d49.707006899999996!2d0.2055978!4m5!1s0x47e02f2395218b7d%3A0x5bc1867aaf33af12!2sLe%20Havre!3m2!1d49.494369999999996!2d0.107929!5e0!3m2!1sfr!2sfr!4v1641322911920!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
-        "name" => "Le Havre - Etretat",
-        "description" => "Départ plage du Havre, direction la plage d'Etretat en longeant la cote.",
-        "information" => "Durée: 28 min - Distance: 25 km - Carburant: 3€78",
-    ],
-    [
-        "id" => 2,
-        "iframe" => '<iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d165494.3020424753!2d0.005009196031334846!3d49.600606928838886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x47e017c3893f4e43%3A0x40c14484fb684d0!2zw4l0cmV0YXQ!3m2!1d49.707006899999996!2d0.2055978!4m5!1s0x47e02f2395218b7d%3A0x5bc1867aaf33af12!2sLe%20Havre!3m2!1d49.494369999999996!2d0.107929!5e0!3m2!1sfr!2sfr!4v1641322911920!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
-        "name" => "Le Havre - Deauville",
-        "description" => "Départ plage du Havre, direction la plage d'Etretat en longeant la cote.",
-        "information" => "Durée: 52 min - Distance: 44 km - Carburant: 4€62",
-    ],
-    [
-        "id" => 2,
-        "iframe" => '<iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d165494.3020424753!2d0.005009196031334846!3d49.600606928838886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x47e017c3893f4e43%3A0x40c14484fb684d0!2zw4l0cmV0YXQ!3m2!1d49.707006899999996!2d0.2055978!4m5!1s0x47e02f2395218b7d%3A0x5bc1867aaf33af12!2sLe%20Havre!3m2!1d49.494369999999996!2d0.107929!5e0!3m2!1sfr!2sfr!4v1641322911920!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
-        "name" => "Le Havre - Etretat",
-        "description" => "Départ du centre du Havre (Quai Southampton) direction Etretat ne longeant notre belle côte normande....",
-        "information" => "Durée: 34 min - Distance: 29 km - Carburant: 2€62",
-    ],
-    [
-        "id" => 2,
-        "iframe" => '<iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d165494.3020424753!2d0.005009196031334846!3d49.600606928838886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x47e017c3893f4e43%3A0x40c14484fb684d0!2zw4l0cmV0YXQ!3m2!1d49.707006899999996!2d0.2055978!4m5!1s0x47e02f2395218b7d%3A0x5bc1867aaf33af12!2sLe%20Havre!3m2!1d49.494369999999996!2d0.107929!5e0!3m2!1sfr!2sfr!4v1641322911920!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
-        "name" => "Le Havre - Etretat",
-        "description" => "Départ du centre du Havre (Quai Southampton) direction Etretat ne longeant notre belle côte normande....",
-        "information" => "Durée: 34 min - Distance: 29 km - Carburant: 2€62",
-    ],
-    [
-        "id" => 2,
-        "iframe" => '<iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d165494.3020424753!2d0.005009196031334846!3d49.600606928838886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x47e017c3893f4e43%3A0x40c14484fb684d0!2zw4l0cmV0YXQ!3m2!1d49.707006899999996!2d0.2055978!4m5!1s0x47e02f2395218b7d%3A0x5bc1867aaf33af12!2sLe%20Havre!3m2!1d49.494369999999996!2d0.107929!5e0!3m2!1sfr!2sfr!4v1641322911920!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
-        "name" => "Le Havre - Etretat",
-        "description" => "Départ du centre du Havre (Quai Southampton) direction Etretat ne longeant notre belle côte normande....",
-        "information" => "Durée: 34 min - Distance: 29 km - Carburant: 2€62",
-    ],
-    [
-        "id" => 2,
-        "iframe" => '<iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d165494.3020424753!2d0.005009196031334846!3d49.600606928838886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x47e017c3893f4e43%3A0x40c14484fb684d0!2zw4l0cmV0YXQ!3m2!1d49.707006899999996!2d0.2055978!4m5!1s0x47e02f2395218b7d%3A0x5bc1867aaf33af12!2sLe%20Havre!3m2!1d49.494369999999996!2d0.107929!5e0!3m2!1sfr!2sfr!4v1641322911920!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
-        "name" => "Le Havre - Etretat",
-        "description" => "Départ du centre du Havre (Quai Southampton) direction Etretat ne longeant notre belle côte normande....",
-        "information" => "Durée: 34 min - Distance: 29 km - Carburant: 2€62",
-    ],
-    [
-        "id" => 2,
-        "iframe" => '<iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d165494.3020424753!2d0.005009196031334846!3d49.600606928838886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x47e017c3893f4e43%3A0x40c14484fb684d0!2zw4l0cmV0YXQ!3m2!1d49.707006899999996!2d0.2055978!4m5!1s0x47e02f2395218b7d%3A0x5bc1867aaf33af12!2sLe%20Havre!3m2!1d49.494369999999996!2d0.107929!5e0!3m2!1sfr!2sfr!4v1641322911920!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
-        "name" => "Le Havre - Etretat",
-        "description" => "Départ du centre du Havre (Quai Southampton) direction Etretat ne longeant notre belle côte normande....",
-        "information" => "Durée: 34 min - Distance: 29 km - Carburant: 2€62",
-    ],
-    [
-        "id" => 2,
-        "iframe" => '<iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d165494.3020424753!2d0.005009196031334846!3d49.600606928838886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x47e017c3893f4e43%3A0x40c14484fb684d0!2zw4l0cmV0YXQ!3m2!1d49.707006899999996!2d0.2055978!4m5!1s0x47e02f2395218b7d%3A0x5bc1867aaf33af12!2sLe%20Havre!3m2!1d49.494369999999996!2d0.107929!5e0!3m2!1sfr!2sfr!4v1641322911920!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
-        "name" => "Le Havre - Etretat",
-        "description" => "Départ du centre du Havre (Quai Southampton) direction Etretat ne longeant notre belle côte normande....",
-        "information" => "Durée: 34 min - Distance: 29 km - Carburant: 2€62",
-    ],
-
-];
-
 // page index photos motos
 $showYourBike = [
     [

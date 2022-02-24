@@ -43,7 +43,13 @@ require '../controllers/controller_listusers.php';
                         <td><?= $users['user_firstname'] ?></td>
                         <td><?= $users['user_lastname'] ?></td>
                         <td><?= $users['user_mail'] ?></td>
-                        <td><?= $users['user_validate'] ?></td>
+                        <td>
+                            <form method="POST" action="">
+                                <input type="hidden" name="userstatus" value="<?= $users['user_validate'] ?>">
+                                <input name="idvalider" type="hidden" value="<?= $users['user_id'] ?>">
+                                <button name="valider" class="btn btn-primary" type="submit"><?= $users['user_validate'] == 0 ? "Valider" : "Suspendre" ?></button>
+                            </form>
+                        </td>
                         <td><?= $users['role_id'] ?></td>
                         <td><a class="btn btn-primary" href="modifuser.php?id=<?= $users["user_id"] ?>">
                                 Modifier
@@ -82,7 +88,7 @@ require '../controllers/controller_listusers.php';
     </div>
     <div class="text-center">
         <a class="btn btn-danger mt-2 ms-2" href="admincontrol.php"> Retour panel controle</a>
-        <a class="btn btn-danger mt-2 ms-2" href="registration.php"> Retour à l'inscription</a>
+        <a class="btn btn-danger mt-2 ms-2" href="home.php"> Retour à l'accueil</a>
     </div>
 </body>
 

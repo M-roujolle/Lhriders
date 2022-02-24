@@ -137,9 +137,18 @@ include "../templates/header.php";
         </div>
     </div>
 <?php } else { ?>
+    <div class="row text-center justify-content-center mt-5 mb-5 m-0 p-0">
+        <div class="card border border-white shadow" style="width: 50rem;">
+            <img src="../assets/img/etreinscri.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h4 class="card-text mt-2">Vous devez vous inscrire pour pouvoir créer votre tracé !</h4>
+                <a class="btn btn-primary mt-4" type="button" href="../views/registration.php">S'inscrire</a>
+            </div>
+        </div>
+    </div>
 
-    <p class="text-center">Veuillez vous inscrire pour pouvoir créer votre balade !</p>
-    <a class="btn-outline-primary" type="button" href="../views/registration.php">S'inscrire</a>
+
+
 <?php } ?>
 
 <!-- MODAL ------------------------------------------------------------------------------------------------------------------------------------------->

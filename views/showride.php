@@ -80,7 +80,7 @@ require '../controllers/controller_showride.php';
         </div>
     </form>
     <div class="text-center">
-        <a class="btn btn-danger mt-5 mb-5 ms-2" href="listusers.php"><i class="bi bi-arrow-return-left"></i> Retour à la liste des utilisateurs</a>
+        <a class="btn btn-danger mt-5 mb-5 ms-2" href="listrides.php"></i>Retour</a>
     </div>
 </body>
 

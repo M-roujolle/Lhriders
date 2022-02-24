@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top navColor">
         <div class="container-fluid">
             <img class="logo" src="../assets/img/lhr.png">
-            <a class="navbar-brand text-white ps-1" href="home.php">LH Riders</a>
+            <a class="navbar-brand text-white ps-1" href="home.php">LHRiders</a>
             <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
