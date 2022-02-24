@@ -53,6 +53,26 @@ class Rides extends DataBase
         return $insert->fetch();
     }
 
+    public function deleteRide($id)
+    {
+        $db = $this->connectDb();
+        $query = "DELETE FROM `pro_ride` WHERE `ride_id` = :id";
+        $requete = $db->prepare($query);
+        $requete->bindValue(":id", $id, PDO::PARAM_INT);
+        return $requete->execute();
+    }
+
+    public function changeStatusRide($idride, $ridestatus)
+    {
+        $db = $this->connectDb();
+        $query = "UPDATE `pro_ride` 
+        SET `ride_validate` = :ridestatus
+           WHERE  `ride_id`= :idride;";
+        $requete = $db->prepare($query);
+        $requete->bindValue(":ridestatus", $ridestatus, PDO::PARAM_INT);
+        $requete->bindValue(":idride", $idride, PDO::PARAM_INT);
+        return $requete->execute();
+    }
 
 
 

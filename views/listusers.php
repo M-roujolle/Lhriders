@@ -48,6 +48,12 @@ require '../controllers/controller_listusers.php';
                         <td><a class="btn btn-primary" href="modifuser.php?id=<?= $users["user_id"] ?>">
                                 Modifier
                             </a></td>
+                        <td>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $users["user_id"] ?>">
+                                <i class="bi bi-trash"></i> </button>
+                        </td>
+
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal<?= $users["user_id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -69,12 +75,6 @@ require '../controllers/controller_listusers.php';
                                 </div>
                             </div>
                         </div>
-
-                        <td>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $users["user_id"] ?>">
-                                <i class="bi bi-trash"></i> </button>
-                        </td>
                     </tr>
                 <?php } ?>
             </tbody>

@@ -26,6 +26,7 @@ require '../controllers/controller_listrides.php';
                 <tr>
                     <th>ID BALADE</th>
                     <th>TITRE</th>
+                    <th>VALIDATION</th>
                     <th>PLUS D'INFO</th>
                     <th>SUPPRIMER</th>
                 </tr>
@@ -37,19 +38,22 @@ require '../controllers/controller_listrides.php';
                     <tr>
                         <td scope="row"><?= $value['ride_id'] ?></td>
                         <td><?= $value['ride_title'] ?></td>
-                        <td><a class="btn btn-primary" href="../views/modifride.php?id=<?= $value['ride_id'] ?>">
+                        <td>
+                            <form method="POST" action="">
+                                <input type="hidden" name="ridestatus" value="<?= $value['ride_validate'] ?>">
+                                <input name="idvalider" type="hidden" value="<?= $value['ride_id'] ?>">
+                                <button name="valider" class="btn btn-primary" type="submit"><?= $value['ride_validate'] == 0 ? "Valider" : "Suspendre" ?></button>
+                            </form>
+                        </td>
+                        <td><a class="btn btn-primary" href="showride.php?id=<?= $value['ride_id'] ?>">
                                 +
                             </a>
                         </td>
-                        <td><a class="btn btn-danger" href="modifuser.php?id=<td><?= $value['ride_id'] ?></td>">
-                                <i class="bi bi-trash"></i>
-                            </a>
+                        <td>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $value['ride_id'] ?>">
+                                <i class="bi bi-trash"></i> </button>
                         </td>
-
-
-
-
-
 
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal<?= $value['ride_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -64,7 +68,7 @@ require '../controllers/controller_listrides.php';
                                     </div>
                                     <div class="modal-footer">
                                         <form action="" method="POST">
-                                            <input type="hidden" value="<?= $value['ride_id'] ?>" name="user_id">
+                                            <input type="hidden" value="<?= $value['ride_id'] ?>" name="ride_id">
                                             <button type="submit" name="idsupp" class="btn btn-danger">Supprimer</button>
                                         </form>
                                         <a href="listusers.php" class="btn btn-primary btn-sm">Retour</a>
@@ -72,8 +76,6 @@ require '../controllers/controller_listrides.php';
                                 </div>
                             </div>
                         </div>
-
-
                     </tr>
                 <?php } ?>
             </tbody>
