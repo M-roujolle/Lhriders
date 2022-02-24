@@ -7,7 +7,7 @@ require '../models/Users.php';
 require '../models/Rides.php';
 
 
-var_dump($_POST);
+// var_dump($_POST);
 
 /////////////////////////////////////////////////////////////////
 // on verifie si post login, password et connexikon sont dispo
@@ -48,7 +48,7 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
 ////////////////////////////////////////////
 
 $regexNom = "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,30}$/u";
-$regexDescription = "/^[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.&_ç'-=]{2,250}$/u";
+$regexDescription = "/^[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.&_ç'-=]{2,350}$/u";
 $regexIframe = "/^(<iframe src=\"https:\/\/www\.google\.com\/maps\/embed\?pb=).+(<\/iframe>)$/";
 $regexTime = "/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/";
 $regexDate = "/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/";
@@ -98,7 +98,7 @@ if (!empty($_POST)) {
     }
 
     if (isset($_POST["select"])) {
-        if (empty($_POST["select"]) || $_POST["select"] == 0) {
+        if (empty($_POST["select"]) || $_POST["select"] === 0) {
             $arrayError["select"] = "Veuillez saisir le nombre de participants";
         }
     }

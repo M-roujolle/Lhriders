@@ -38,8 +38,39 @@ class Rides extends DataBase
     public function showRide()
     {
         $db = $this->connectDb();
-        $requete = "SELECT `ride_iframe`,`ride_title`,`ride_description`,`ride_kilometre`,`ride_participants`,`ride_hours`,`ride_meeting`,`ride_date`,`ride_validate` FROM `pro_ride` WHERE `ride_validate` = 1";
+        $requete = "SELECT `ride_id`,`ride_iframe`,`ride_title`,`ride_description`,`ride_kilometre`,`ride_participants`,`ride_hours`,`ride_meeting`,`ride_date`,`ride_validate` FROM `pro_ride` WHERE `ride_validate` = 1";
         $result = $db->query($requete);
+        return $result->fetchAll();
+    }
+
+    public function getOneRide($id)
+    {
+        $db = $this->connectDb();
+        $requete = "SELECT * FROM `pro_ride` WHERE `ride_id`=:id";
+        $insert = $db->prepare($requete);
+        $insert->bindValue(":id", $id, PDO::PARAM_STR);
+        $insert->execute();
+        return $insert->fetch();
+    }
+
+
+
+
+
+
+
+    // EN COURS DE TEST-----------------------------------------------------
+    public function getAllRides()
+    {
+        //    je me co a la db a l'aide de la methode herité connectDb
+        $db = $this->connectDb();
+        // je stock ma requete sql sdans une variable 
+        $requete = "SELECT *
+        FROM pro_users
+        INNER JOIN pro_ride ON pro_users.user_id = pro_ride.user_id;";
+        // j'execute ma requete à l'aide de la methode query que je stock dans result
+        $result = $db->query($requete);
+        // j'effectue un fetchAll pour récupérer les données sous forme de tableau
         return $result->fetchAll();
     }
 }

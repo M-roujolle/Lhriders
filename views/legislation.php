@@ -10,7 +10,7 @@ include "../templates/header.php";
 </div>
 
 
-<p class="text-center ms-5 me-5 fw-bold pt-5">Chez Moto Poto nous savons très bien que tu ne vas pas tout lire... Libre à toi de lire ou non ces conditions, nous te conseillons vivement de prendre connaissance de ces articles et nous te rappelons que Moto Poto se décharge de toute responsabilités en cas de problèmes... Et comme tu l'as déja entendu : "Nul n'est censé ignorer la Loi". C'est pourquoi nous t'avons fait un condensé des règles primordiales à connaitre ;)</p>
+<p class="text-center ms-5 me-5 fw-bold pt-5">Chez LH Riders nous savons très bien que tu ne vas pas tout lire... Libre à toi de lire ou non ces conditions, nous te conseillons vivement de prendre connaissance de ces articles et nous te rappelons que LH Riders se décharge de toute responsabilités en cas de problèmes... Et comme tu l'as déja entendu : "Nul n'est censé ignorer la Loi". C'est pourquoi nous t'avons fait un condensé des règles primordiales à connaitre ;)</p>
 <p style="color: red" class="ms-5 me-5 fw-bold text-center">En bref :</p>
 
 <div class="text-center pb-5 fw-bold">

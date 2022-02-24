@@ -83,7 +83,7 @@ include "../templates/header.php";
                         $arrayError["reCaptcha"] ?? " ";
                         ?>
                     </span>
-                    <div class="g-recaptcha" data-sitekey="6Ld6tnQeAAAAACk-h0TnuIFs3Sme7aOPunAlqFyN"></div>
+                    <div class="g-recaptcha" data-sitekey="6LdvTZkeAAAAAODC1ihzB7MWwJZZ9vyhzVI59Q9P"></div>
                     <button type="submit" class="btn btn-success mb-5 mt-3 col-12 ">Valider</button>
                 </form>
             </div>

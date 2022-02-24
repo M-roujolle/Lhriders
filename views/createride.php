@@ -84,12 +84,12 @@ include "../templates/header.php";
                     </span>
                     <select name="select" class="form-select form-select-sm mt-4 mb-4" aria-label="form-select-sm example">
                         <option selected value="0">Nombre de participants</option>
-                        <option value="1">De 2 à 5</option>
-                        <option value="2">De 5 à 10</option>
-                        <option value="3">De 10 à 20</option>
-                        <option value="4">De 20 à 30</option>
-                        <option value="5">De 30 à 40</option>
-                        <option value="6">De 40 à 50 </option>
+                        <option>De 2 à 5</option>
+                        <option>De 5 à 10</option>
+                        <option>De 10 à 20</option>
+                        <option>De 20 à 30</option>
+                        <option>De 30 à 40</option>
+                        <option>De 40 à 50 </option>
                     </select>
                 </div>
 

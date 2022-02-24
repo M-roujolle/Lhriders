@@ -25,7 +25,7 @@ require '../controllers/controller_settinguser.php';
     <nav class="navbar navbar-expand-lg navbar-light sticky-top navColor">
         <div class="container-fluid">
             <img class="logo" src="../assets/img/logomoto.png">
-            <a class="navbar-brand text-white ps-1" href="home.php">MotoPoto</a>
+            <a class="navbar-brand text-white ps-1" href="home.php">LH Riders</a>
             <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -161,7 +161,7 @@ require '../controllers/controller_settinguser.php';
                     <a class="nav-link active text-white" href="./legislation.php">Législation</a>
                 </li>
             </ul>
-            <p class="copyright">©Moto Poto 2022</p>
+            <p class="copyright">©LH Riders 2022</p>
         </div>
     </footer>
 

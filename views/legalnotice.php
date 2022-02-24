@@ -18,7 +18,7 @@ include "../templates/header.php";
                     la
                     Confiance dans l’économie numérique, dite L.C.E.N., il est porté à la connaissance des
                     utilisateurs et
-                    visiteurs, du site motopoto.fr, les présentes mentions légales. La connexion et la navigation
+                    visiteurs, du site lhriders.fr, les présentes mentions légales. La connexion et la navigation
                     sur le Site par l’Utilisateur implique l'acceptation intégrale et sans réserve
                     des présentes mentions légales.Ces dernières sont accessibles sur le Site à la rubrique «
                     Mentions légales ».</p>
@@ -57,10 +57,10 @@ include "../templates/header.php";
                 sans autorisation de l’Editeur est prohibée et pourra entraînée des actions et poursuites
                 judiciaires
                 telles que notamment prévues par le Code de la propriété intellectuelle et le Code civil.
-                Pour plus d’informations, se reporter aux CGU du site motopoto.fr accessible à la rubrique "CGU"
+                Pour plus d’informations, se reporter aux CGU du site lhriders.fr accessible à la rubrique "CGU"
                 Pour plus d'informations en matière de cookies, se reporter à la Charte en matière de cookies du
                 site
-                motopoto.fr accessible à la rubrique "Gestion des Cookies"
+                lhriders.fr accessible à la rubrique "Gestion des Cookies"
             </div>
             <p>
                 <a href="http://legalplace.fr">Rédigé sur legalplace</a>

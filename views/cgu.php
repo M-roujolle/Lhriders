@@ -16,7 +16,7 @@ include "../templates/header.php";
 
         <div class="text-center  pb-5">
             <p>Les présentes conditions générales d'utilisation dites « CGU » ont pour objet l'encadrement juridique
-                des modalités de mise à disposition du site et des services par http://motopoto.fr/ et de définir les
+                des modalités de mise à disposition du site et des services par http://lhriders.fr/ et de définir les
                 conditions d’accès et d’utilisation des services par « l'Utilisateur ».
                 Les présentes CGU sont accessibles sur le site à la rubrique «Conditions Générale d'Utilisation».
                 Toute inscription ou utilisation du site implique l'acceptation sans aucune réserve ni restriction des
@@ -25,18 +25,18 @@ include "../templates/header.php";
                 Je reconnais avoir lu et compris les CGU et je les accepte ».
                 En cas de non-acceptation des CGU stipulées dans le présent contrat, l'Utilisateur se doit de renoncer
                 à l'accès des services proposés par le site.
-                http://motopoto.fr/ se réserve le droit de modifier unilatéralement et à tout moment le contenu des
+                http://lhriders.fr/ se réserve le droit de modifier unilatéralement et à tout moment le contenu des
                 présentes CGU.
             </p>
         </div>
         <div class="text-center pb-5 fw-bold"> Article 1 - LES MENTIONS LEGALES :<br>
-            L’édition et la direction de la publication du site http://motopoto.fr/ est assurée par Maxime Roujolle,
+            L’édition et la direction de la publication du site http://lhriders.fr/ est assurée par Maxime Roujolle,
             domicilié 1295 Route du Hameau d'Enfer.
             Le numéro de téléphone est 0660769121
             Adresse e-mail roujolle.maxime@gmail.com.</div>
 
         <div class="text-center  pb-5 fw-bold"> ARTICLE 2 - ACCES AU SITE :<br>
-            Le site http://motopoto.fr/ permet à l'Utilisateur un accès gratuit aux services suivants :
+            Le site http://lhriders.fr/ permet à l'Utilisateur un accès gratuit aux services suivants :
             Organisation d'un itinéraire de balades pour motards.
             Le site est accessible gratuitement en tout lieu à tout Utilisateur ayant un accès à Internet. Tous les
             frais supportés par l'Utilisateur pour accéder au service (matériel informatique, logiciels, connexion
@@ -51,7 +51,7 @@ include "../templates/header.php";
             rendant à la page dédiée sur son espace personnel. Celle-ci sera effective dans un délai raisonnable.
             Tout événement dû à un cas de force majeure ayant pour conséquence un dysfonctionnement du site
             ou serveur et sous réserve de toute interruption ou modification en cas de maintenance, n'engage pas
-            la responsabilité de http://motopoto.fr/. Dans ces cas, l’Utilisateur accepte ainsi ne pas tenir rigueur à
+            la responsabilité de http://lhriders.fr/. Dans ces cas, l’Utilisateur accepte ainsi ne pas tenir rigueur à
             l’éditeur de toute interruption ou suspension de service, même sans préavis.
             L'Utilisateur a la possibilité de contacter le site par messagerie électronique à l’adresse email de
             l’éditeur communiqué à l’ARTICLE 1.</div>
@@ -73,17 +73,17 @@ include "../templates/header.php";
             reproduit, copie ou publie le contenu protégé doit citer l’auteur et sa source.
         </div>
         <div class="text-center  pb-5 fw-bold"> ARTICLE 5 - RESPONSABILITE :<br>
-            Les sources des informations diffusées sur le site http://motopoto.fr/ sont réputées fiables mais le site
+            Les sources des informations diffusées sur le site http://lhriders.fr/ sont réputées fiables mais le site
             ne garantit pas qu’il soit exempt de défauts, d’erreurs ou d’omissions.
             Les informations communiquées sont présentées à titre indicatif et général sans valeur contractuelle.
-            Malgré des mises à jour régulières, le site http://motopoto.fr/ ne peut être tenu responsable de la
+            Malgré des mises à jour régulières, le site http://lhriders.fr/ ne peut être tenu responsable de la
             modification des dispositions administratives et juridiques survenant après la publication. De même, le
             site ne peut être tenue responsable de l’utilisation et de l’interprétation de l’information contenue dans
             ce site.
             L'Utilisateur s'assure de garder son mot de passe secret. Toute divulgation du mot de passe, quelle
             que soit sa forme, est interdite. Il assume les risques liés à l'utilisation de son identifiant et mot de
             passe. Le site décline toute responsabilité.
-            Le site http://motopoto.fr/ ne peut être tenu pour responsable d’éventuels virus qui pourraient infecter
+            Le site http://lhriders.fr/ ne peut être tenu pour responsable d’éventuels virus qui pourraient infecter
             l’ordinateur ou tout matériel informatique de l’Internaute, suite à une utilisation, à l’accès, ou au
             téléchargement provenant de ce site.
             La responsabilité du site ne peut être engagée en cas de force majeure ou du fait imprévisible et
@@ -91,7 +91,7 @@ include "../templates/header.php";
         </div>
         <div class="text-center  pb-5 fw-bold"> ARTICLE 6 - LIENS HYPERTEXTES :<br>
             Des liens hypertextes peuvent être présents sur le site. L’Utilisateur est informé qu’en cliquant sur ces
-            liens, il sortira du site http://motopoto.fr/. Ce dernier n’a pas de contrôle sur les pages web sur
+            liens, il sortira du site http://lhriders.fr/. Ce dernier n’a pas de contrôle sur les pages web sur
             lesquelles aboutissent ces liens et ne saurait, en aucun cas, être responsable de leur contenu.
         </div>
         <div class="text-center  pb-5 fw-bold"> ARTICLE 7 - PUBLICATIONS PAR L'UTILISATEUR :<br>

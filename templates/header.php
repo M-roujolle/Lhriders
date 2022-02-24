@@ -12,7 +12,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../assets/js/script.js"></script>
-    <title>Moto poto</title>
+    <title>LH Riders</title>
 </head>
 
 <body>
@@ -21,8 +21,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-light sticky-top navColor">
         <div class="container-fluid">
-            <img class="logo" src="../assets/img/logomoto.png">
-            <a class="navbar-brand text-white ps-1" href="home.php">MotoPoto</a>
+            <img class="logo" src="../assets/img/lhr.png">
+            <a class="navbar-brand text-white ps-1" href="home.php">LH Riders</a>
             <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -57,7 +57,7 @@
                 <?php } ?>
 
                 <?php if (isset($_SESSION["id"]) && $_SESSION["role"] == "1") { ?>
-                    <a class="bbutton" href="listusers.php">Panel admin</a>
+                    <a class="bbutton" href="admincontrol.php">Panel admin</a>
                 <?php } ?>
             </div>
         </div>

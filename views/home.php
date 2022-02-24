@@ -6,7 +6,7 @@ include "../templates/header.php";
 
 <div class="principalePict">
     <div class="text-center pt-4">
-        <h1 class="mt-2">Bienvenue sur le site MotoPoto</h1>
+        <h1 class="mt-2">Bienvenue sur le site LH Riders</h1>
     </div>
 </div>
 
@@ -14,8 +14,8 @@ include "../templates/header.php";
 
 <div class="mt-5 row text-center m-0">
     <h2 class="pt-5 ps-5 pe-5 pb-5">
-        Besoin d’évasion ? Notre site te fournira le nécessaire pour partir en roadtrip moto l’esprit tranquille ! Que tu cherches une balade d’une heure à la mer ou une virée de deux jours en Normandie, Moto Poto te met à disposition de nombreux itinériaires. Et si tu as l’âme d’un baroudeur-organisateur, tu peux créer ton propre itinéraire !
-        Alors, prêt pour l’aventure avec Moto Poto ? </h2>
+        Besoin d’évasion ? Notre site te fournira le nécessaire pour partir en roadtrip moto l’esprit tranquille ! Que tu cherches une balade d’une heure à la mer ou une virée de deux jours en Normandie, LH Riders te met à disposition de nombreux itinériaires. Et si tu as l’âme d’un baroudeur-organisateur, tu peux créer ton propre itinéraire !
+        Alors, prêt pour l’aventure avec LH Riders ? </h2>
 </div>
 
 <!-- CATEGORIES DE MOTARD ---------------------------------------------------------------------------------------------------------->

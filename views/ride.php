@@ -3,6 +3,7 @@ require "../controllers/controller_ride.php";
 require "../controllers/controller_users.php";
 require "../data/data.php";
 include "../templates/header.php";
+// var_dump($arrayride);
 ?>
 
 <div class="principalePictRide">
@@ -15,22 +16,49 @@ include "../templates/header.php";
 <h2 class="text-center pt-5 ms-5 me-5">
     Que diriez-vous d'une balade moto sur les plus belles routes de Normandie ? Pour une sortie improvisée ou longuement préparée, faites l'expérience de la liberté.</h2>
 
-<!-- boucles roadMaps------------------------------------------------------------------------------------------------------------------------>
+<!-- boucles ------------------------------------------------------------------------------------------------------------------------>
 
-<!-- <div class="row justify-content-evenly m-0 pt-5 pb-5 text-center"> -->
 
 <div class="row m-0">
     <?php foreach ($arrayride as $value) { ?>
         <div class="d-flex justify-content-evenly col-lg-4">
-            <div class="card mt-5">
+            <div class="card mt-5 shadow">
                 <div class="card-body">
                     <div class="container p-0">
                         <?= $value["ride_iframe"] ?>
                     </div>
                     <h5 class="card-title text-center mt-2"><?= $value["ride_title"] ?></h5>
-                    <p class="card-text text-center mt-2"><?= $value["ride_description"] ?></p>
+                    <p class="card-text text-center mt-2">Démarre à <?= $value["ride_hours"] ?> le <?= $value["ride_date"] ?>, <?= $value["ride_kilometre"] ?> kilomètres </p>
                     <div class="text-center">
-                        <a href="#" class="btn btn-primary">Plus d'info</a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-<?= $value["ride_id"] ?>">
+                            Plus d'infos
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="modal-<?= $value["ride_id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="modal-title" id="exampleModalLabel"><?= $value["ride_description"] ?></p>
+
+                                        <div class="modal-footer">
+                                            <div class="text-center">
+                                                <ul>
+                                                    <li class="modal-title" id="exampleModalLabel">Nombre de participants: <?= $value["ride_participants"] ?></li>
+                                                    <li class="modal-title" id="exampleModalLabel">Point de départ : <?= $value["ride_meeting"] ?></li>
+                                            </div>
+                                            </ul>
+
+                                        </div>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

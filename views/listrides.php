@@ -1,5 +1,5 @@
 <?php
-require '../controllers/controller_listusers.php';
+require '../controllers/controller_listrides.php';
 
 ?>
 
@@ -19,37 +19,40 @@ require '../controllers/controller_listusers.php';
 </head>
 
 <body>
-    <h1 class="text-center mb-5 mt-2">Liste des utilisateurs</h1>
+    <h1 class="text-center mb-5 mt-2">Liste des sorties moto</h1>
     <div class="container d-flex justify-content-center">
         <table class="table table-striped table-dark">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>PSEUDO</th>
-                    <th>PRENOM</th>
-                    <th>NOM</th>
-                    <th>MAIL</th>
-                    <th>VALIDATION</th>
-                    <th>ROLE</th>
-                    <th>MODIFIER</th>
+                    <th>ID BALADE</th>
+                    <th>TITRE</th>
+                    <th>PLUS D'INFO</th>
                     <th>SUPPRIMER</th>
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($allUsersArray as $users) { ?>
+
+
+                <?php foreach ($arrayride as $value) { ?>
                     <tr>
-                        <td scope="row"><?= $users['user_id'] ?></td>
-                        <td><?= $users['user_pseudo'] ?></td>
-                        <td><?= $users['user_firstname'] ?></td>
-                        <td><?= $users['user_lastname'] ?></td>
-                        <td><?= $users['user_mail'] ?></td>
-                        <td><?= $users['user_validate'] ?></td>
-                        <td><?= $users['role_id'] ?></td>
-                        <td><a class="btn btn-primary" href="modifuser.php?id=<?= $users["user_id"] ?>">
-                                Modifier
-                            </a></td>
+                        <td scope="row"><?= $value['ride_id'] ?></td>
+                        <td><?= $value['ride_title'] ?></td>
+                        <td><a class="btn btn-primary" href="../views/modifride.php?id=<?= $value['ride_id'] ?>">
+                                +
+                            </a>
+                        </td>
+                        <td><a class="btn btn-danger" href="modifuser.php?id=<td><?= $value['ride_id'] ?></td>">
+                                <i class="bi bi-trash"></i>
+                            </a>
+                        </td>
+
+
+
+
+
+
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal<?= $users["user_id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="exampleModal<?= $value['ride_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -61,7 +64,7 @@ require '../controllers/controller_listusers.php';
                                     </div>
                                     <div class="modal-footer">
                                         <form action="" method="POST">
-                                            <input type="hidden" value="<?= $users["user_id"] ?>" name="user_id">
+                                            <input type="hidden" value="<?= $value['ride_id'] ?>" name="user_id">
                                             <button type="submit" name="idsupp" class="btn btn-danger">Supprimer</button>
                                         </form>
                                         <a href="listusers.php" class="btn btn-primary btn-sm">Retour</a>
@@ -70,11 +73,7 @@ require '../controllers/controller_listusers.php';
                             </div>
                         </div>
 
-                        <td>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $users["user_id"] ?>">
-                                <i class="bi bi-trash"></i> </button>
-                        </td>
+
                     </tr>
                 <?php } ?>
             </tbody>
