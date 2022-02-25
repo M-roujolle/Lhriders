@@ -1,13 +1,23 @@
 <?php
+require '../config.php';
+require '../models/DataBase.php';
+require '../models/Users.php';
+require "../controllers/controller_redirectioninscription.php";
 include "../templates/header.php";
 ?>
-<div class="row">
-    <div class="card mt-5">
+<div class="principalePictRedirection">
+    <h1 class="text-center pt-3 pb-3"> En attente</h1>
+</div>
+<div class="row m-0 p-0 justify-content-center text-center">
+    <div class="card mt-5" style="width: 50rem;">
+        <h5 class="card-header">VOTRE COMPTE EST EN COURS DE VALIDATION</h5>
         <div class="card-body">
-            <h1 class="text-center">EN ATTENTE DE VALIDATION</h1>
+            <p class="card-text">Veuillez recommencer ultérieurement.</p>
+            <a href="../views/home.php" class="btn btn-primary">Retour à l'accueil</a>
         </div>
     </div>
 </div>
+
 
 <!-- MODAL ------------------------------------------------------------------------------------------------------------------------------------------->
 

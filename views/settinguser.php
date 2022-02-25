@@ -1,6 +1,5 @@
 <?php
 require '../controllers/controller_settinguser.php';
-// var_dump($_POST);
 ?>
 
 <!DOCTYPE html>

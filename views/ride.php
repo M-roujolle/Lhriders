@@ -39,22 +39,11 @@ include "../templates/header.php";
                         <div class="modal fade" id="modal-<?= $value["ride_id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
-                                    <div class="modal-header">
-
-                                    </div>
                                     <div class="modal-body">
-                                        <p class="modal-title" id="exampleModalLabel"><?= $value["ride_description"] ?></p>
-
-                                        <div class="modal-footer">
-                                            <div class="text-center">
-                                                <ul>
-                                                    <li class="modal-title" id="exampleModalLabel">Nombre de participants: <?= $value["ride_participants"] ?></li>
-                                                    <li class="modal-title" id="exampleModalLabel">Point de départ : <?= $value["ride_meeting"] ?></li>
-                                            </div>
-                                            </ul>
-
-                                        </div>
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <p class="modal-title mt-5" id="exampleModalLabel"><?= $value["ride_description"] ?></p>
+                                        <p class="modal-title mt-5" id="exampleModalLabel">Point de départ : <?= $value["ride_meeting"] ?></p>
+                                        <p class="modal-title mt-5" id="exampleModalLabel">Nombre de participants: <?= $value["ride_participants"] ?></p>
+                                        <button type="button" class="btn btn-secondary mt-5" data-bs-dismiss="modal">Fermer</button>
                                     </div>
                                 </div>
                             </div>

@@ -74,6 +74,14 @@
     color: orangered;
 }
 
+.principalePictRedirection {
+    background: no-repeat center/100% url("../img/test.png");
+    height: 30rem;
+    background-attachment: fixed;
+    background-size: cover;
+    color: orangered;
+}
+
 .logo {
     height: 4rem;
 }
