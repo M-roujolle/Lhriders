@@ -27,6 +27,11 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
 
             // function php qui verfie le mdp avec le mdp hashé
             if (password_verify($_POST["password"], $userPassword)) {
+                $uservalidate = $user->getUser($_POST["login"])["validation"];
+                if ($uservalidate == 0) {
+                    header('Location: ../views/redirectioninscription.php');
+                    exit();
+                }
                 $_SESSION = $user->getUser($_POST["login"]);
                 // var_dump($_SESSION);
             } else {
@@ -60,46 +65,57 @@ if (!empty($_POST)) {
     if (isset($_POST["titre"])) {
         if (empty($_POST["titre"])) {
             $arrayError["titre"] = "Veuillez mettre un titre";
+            unset($_POST["titre"]);
         } elseif (!preg_match($regexNom, $_POST["titre"])) {
             $arrayError["titre"] = "Format invalide";
+            unset($_POST["titre"]);
         }
     }
 
     if (isset($_POST["description"])) {
         if (empty($_POST["description"])) {
             $arrayError["description"] = "Veuillez écrire un descriptif";
+            unset($_POST["description"]);
         } elseif (!preg_match($regexDescription, $_POST["description"])) {
             $arrayError["description"] = "Format invalide";
+            unset($_POST["description"]);
         }
     }
 
     if (isset($_POST["iframe"])) {
         if (empty($_POST["iframe"])) {
             $arrayError["iframe"] = "Veuillez insérer un iframe";
+            unset($_POST["iframe"]);
         } elseif (!preg_match($regexIframe, $_POST["iframe"])) {
             $arrayError["iframe"] = "Format invalide";
+            unset($_POST["iframe"]);
         }
     }
 
     if (isset($_POST["kilometre"])) {
         if (empty($_POST["kilometre"])) {
             $arrayError["kilometre"] = "Veuillez indiquer le nombre de kilomètres";
+            unset($_POST["kilometre"]);
         } elseif (!ctype_digit($_POST["kilometre"])) {
             $arrayError["kilometre"] = "Veuillez indiquer un chiffre";
+            unset($_POST["kilometre"]);
         }
     }
 
     if (isset($_POST["heure"])) {
         if (empty($_POST["heure"])) {
             $arrayError["heure"] = "Veuillez saisir une heure";
+            unset($_POST["heure"]);
         } elseif (!preg_match($regexTime, $_POST["heure"])) {
             $arrayError["heure"] = "Format invalide";
+            unset($_POST["heure"]);
         }
     }
 
     if (isset($_POST["select"])) {
         if (empty($_POST["select"]) || $_POST["select"] === 0) {
             $arrayError["select"] = "Veuillez saisir le nombre de participants";
+            unset($_POST["select"]);
         }
     }
 
@@ -107,8 +123,10 @@ if (!empty($_POST)) {
     if (isset($_POST["rdv"])) {
         if (empty($_POST["rdv"])) {
             $arrayError["rdv"] = "Veuillez saisir un point de rendez-vous";
+            unset($_POST["rdv"]);
         } elseif (!preg_match($regexDescription, $_POST["rdv"])) {
             $arrayError["rdv"] = "Format invalide";
+            unset($_POST["rdv"]);
         }
     }
 
@@ -116,16 +134,20 @@ if (!empty($_POST)) {
     if (isset($_POST["date"])) {
         if (empty($_POST["date"])) {
             $arrayError["date"] = "Veuillez saisir une date valide";
+            unset($_POST["date"]);
         } elseif (!preg_match($regexDate, $_POST["date"])) {
             $arrayError["date"] = "Format invalide";
+            unset($_POST["date"]);
         } elseif (time() >= strtotime($_POST["date"])) {
             $arrayError["date"] = "La date ne doit pas être antérieure";
+            unset($_POST["date"]);
         }
     }
 
     if (!isset($_POST["checkbox"])) {
         if (empty($_POST["checkbox"])) {
             $arrayError["checkbox"] = "Veuillez valider les CGU";
+            unset($_POST["checkbox"]);
         }
     }
     if (empty($arrayError)) {
@@ -145,5 +167,6 @@ if (!empty($_POST)) {
         // j'utilise la methode insertride pour créer la balade
         $insert->insertRide($iframe, $titre, $description, $kilometre, $participants, $hours, $meeting, $date, $iduser);
         $alertride = "";
+        unset($_POST);
     }
 }

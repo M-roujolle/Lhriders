@@ -20,6 +20,11 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
 
             // function php qui verfie le mdp avec le mdp hashé
             if (password_verify($_POST["password"], $userPassword)) {
+                $uservalidate = $user->getUser($_POST["login"])["validation"];
+                if ($uservalidate == 0) {
+                    header('Location: ../views/redirectioninscription.php');
+                    exit();
+                }
                 $_SESSION = $user->getUser($_POST["login"]);
                 // var_dump($_SESSION);
             } else {

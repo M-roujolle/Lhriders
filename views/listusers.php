@@ -50,7 +50,7 @@ require '../controllers/controller_listusers.php';
                                 <button name="valider" class="btn btn-primary" type="submit"><?= $users['user_validate'] == 0 ? "Valider" : "Suspendre" ?></button>
                             </form>
                         </td>
-                        <td><?= $users['role_id'] ?></td>
+                        <td><?= $users['role_id'] == 2 ? "User" : "Admin" ?></td>
                         <td><a class="btn btn-primary" href="modifuser.php?id=<?= $users["user_id"] ?>">
                                 Modifier
                             </a></td>

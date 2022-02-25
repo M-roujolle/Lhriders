@@ -10,6 +10,3 @@ if ($_SESSION["role"] != 1 || !isset($_SESSION["id"])) {
 
 $oneRideObj = new Rides;
 $oneride = $oneRideObj->getOneRide($_GET["id"]);
-
-
-// var_dump($oneride);

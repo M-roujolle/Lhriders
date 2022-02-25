@@ -37,7 +37,7 @@ include "../templates/header.php";
                         $arrayError["description"] ?? " ";
                         ?>
                     </span>
-                    <textarea name="description" value="<?= isset($_POST["description"]) ? htmlspecialchars($_POST["description"]) : "" ?>" rows="9" cols="33" type="text" class="form-control" id="description" placeholder="Ex : Route variée, avec de la petite route avec des beaux virages et de belles vues sur la mer, petite pause à Etretat pour observer les falaises, et direction Le Havre en passant par la plage. "></textarea>
+                    <textarea name="description" rows="9" cols="33" type="text" class="form-control" id="description" placeholder="Ex : Route variée, avec de la petite route avec des beaux virages et de belles vues sur la mer, petite pause à Etretat pour observer les falaises, et direction Le Havre en passant par la plage. "><?= isset($_POST["description"]) ? htmlspecialchars($_POST["description"]) : "" ?></textarea>
                     <div id="emailHelp" class="form-text text-white">Décris en quelques mots ton tracé. Points d'intérets, types de routes, temps de route etc...</div>
                 </div>
 
@@ -96,7 +96,7 @@ include "../templates/header.php";
                 <div class="row g-2">
                     <div class="col-md text-dark">
                         <div class="form-floating">
-                            <input name="rdv" type="text" class="form-control" id="rdv" placeholder="Ex : Stade océane">
+                            <input name="rdv" value="<?= isset($_POST["rdv"]) ? htmlspecialchars($_POST["rdv"]) : "" ?>" type="text" class="form-control" id="rdv" placeholder="Ex : Stade océane">
                             <label for="rdv">Point de rendez-vous :</label><span class="text-danger">
                                 <?=
                                 $arrayError["rdv"] ?? " ";
@@ -121,7 +121,7 @@ include "../templates/header.php";
 
 
                 <div class="mb-3 form-check mt-3">
-                    <input name="checkbox" type="checkbox" class="form-check-input" id="checkbox">
+                    <input name="checkbox" type="checkbox" class="form-check-input" id="checkbox" <?= isset($_POST["checkbox"]) ? "checked" : "" ?>>
                     <label class="form-check-label" for="checkbox">Valider les CGU</label>
                     <span class="text-danger">
                         <?=
@@ -168,7 +168,7 @@ include "../templates/header.php";
                 </form>
             </div>
             <div class="modal-footer">
-                <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="./inscription.php">S'inscrire</a>
+                <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="./registration.php">S'inscrire</a>
             </div>
         </div>
     </div>
