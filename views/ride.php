@@ -1,7 +1,6 @@
 <?php
 require "../controllers/controller_ride.php";
 require "../controllers/controller_users.php";
-require "../data/data.php";
 include "../templates/header.php";
 // var_dump($arrayride);
 ?>

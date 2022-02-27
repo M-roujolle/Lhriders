@@ -41,7 +41,9 @@
                         <a class="nav-link active text-white" href="./createride.php">Créer son tracé</a>
                     </li>
                 </ul>
-
+                <?php if (isset($_SESSION["id"])) { ?>
+                    <p class="text-white me-2 justify-align-items">Bonjour <?= $_SESSION["nom"] ?> <?= $_SESSION["prénom"] ?></p>
+                <?php } ?>
                 <?php if (isset($_SESSION["id"])) { ?>
                     <form action="" method="POST">
                         <a href="settinguser.php" class="fs-3 text-white mb-1 pe-2"><i class="bi bi-gear"></i></a>

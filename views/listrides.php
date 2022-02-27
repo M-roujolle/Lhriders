@@ -1,6 +1,5 @@
 <?php
 require '../controllers/controller_listrides.php';
-
 ?>
 
 <!DOCTYPE html>

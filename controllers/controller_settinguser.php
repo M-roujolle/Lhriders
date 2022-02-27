@@ -2,10 +2,11 @@
 require '../config.php';
 require '../models/DataBase.php';
 require '../models/Users.php';
+require '../models/Rides.php';
 
 session_start();
 var_dump($_SESSION);
-var_dump($_POST);
+
 
 $regexNom = "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð '-]{2,30}$/u";
 $regexPseudo = "/^([a-zA-Z0-9-_]{2,36})$/u";
@@ -15,8 +16,6 @@ $arrayError = [];
 
 
 if (!empty($_POST)) {
-
-    var_dump($_POST);
 
     $insert = new Users;
 
@@ -56,4 +55,14 @@ if (!empty($_POST)) {
             $_SESSION["mail"] = $mail;
         }
     }
+}
+
+
+
+if (empty($arrayError)) {
+
+    $id = $_SESSION["id"];
+    $rideObj = new Rides;
+    $arrayShowRideId = $rideObj->showRideById($id);
+    var_dump($arrayShowRideId);
 }

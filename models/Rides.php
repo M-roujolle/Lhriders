@@ -89,18 +89,16 @@ class Rides extends DataBase
         return $result->fetchAll();
     }
 
-    public function showRideById()
+    public function showRideById($id)
     {
-        //    je me co a la db a l'aide de la methode herité connectDb
         $db = $this->connectDb();
-        // je stock ma requete sql sdans une variable 
-        $requete = "SELECT *
+        $query = "SELECT *
         FROM `pro_users`
-        INNER JOIN `pro_ride` ON `pro_users.user_id` = `pro_ride.user_id`
-        WHERE `pro_ride.user_id` = :id";
-        // j'execute ma requete à l'aide de la methode query que je stock dans result
-        $result = $db->query($requete);
-        // j'effectue un fetchAll pour récupérer les données sous forme de tableau
-        return $result->fetchAll();
+        INNER JOIN `pro_ride` ON pro_users.user_id = pro_ride.user_id
+        WHERE pro_ride.user_id = :id";
+        $requete = $db->prepare($query);
+        $requete->bindValue(":id", $id, PDO::PARAM_STR);
+        $requete->execute();
+        return $requete->fetchAll();
     }
 }
