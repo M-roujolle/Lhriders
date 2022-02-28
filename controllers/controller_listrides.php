@@ -10,7 +10,7 @@ if ($_SESSION["role"] != 1 || !isset($_SESSION["id"])) {
 
 
 $rideObj = new Rides;
-var_dump($_POST);
+// var_dump($_POST);
 
 // on verifie si idvalider et valider existe
 if (isset($_POST["idvalider"], $_POST["valider"], $_POST["ridestatus"])) {

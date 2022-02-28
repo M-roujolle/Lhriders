@@ -20,7 +20,7 @@ require '../controllers/controller_listusers.php';
 
 <body>
     <h1 class="text-center mb-5 mt-2">Liste des utilisateurs</h1>
-    <div class="container d-flex justify-content-center">
+    <div class="row m-0 p-0 col-lg-12">
         <table class="table table-striped table-dark">
             <thead>
                 <tr>

@@ -7,7 +7,7 @@ session_start();
 if ($_SESSION["role"] != 1 || !isset($_SESSION["id"])) {
     header('Location: home.php');
 }
-var_dump($_POST);
+// var_dump($_POST);
 
 $regexNom = "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð '-]{2,30}$/u";
 $regexPseudo = "/^([a-zA-Z0-9-_]{2,36})$/u";

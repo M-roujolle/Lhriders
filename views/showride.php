@@ -16,7 +16,7 @@ require '../controllers/controller_showride.php';
 </head>
 
 <body>
-    <h1 class="text-center mb-5 mt-2">Modification d'une balade MODE ADMIN</h1>
+    <h1 class="text-center mb-5 mt-2">Vérification balade MODE ADMIN</h1>
 
 
     <form action="" method="POST">

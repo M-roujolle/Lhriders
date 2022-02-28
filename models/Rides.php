@@ -101,4 +101,23 @@ class Rides extends DataBase
         $requete->execute();
         return $requete->fetchAll();
     }
+
+    public function modifRide($iframe, $titre, $description, $kilometre, $participants, $hours, $meeting, $date, $id)
+    {
+        $db = $this->connectDb();
+        $query = "UPDATE `pro_ride`
+        SET `ride_iframe` = :iframe, `ride_title` =:title, `ride_description` =:description, `ride_kilometre` =:kilometre, `ride_participants` =:participants, `ride_hours` =:hours, `ride_meeting` =:meeting, `ride_date` =:date
+        WHERE `ride_id` = :id";
+        $requete = $db->prepare($query);
+        $requete->bindValue(":iframe", $iframe, PDO::PARAM_STR);
+        $requete->bindValue(":title", $titre, PDO::PARAM_STR);
+        $requete->bindValue(":description", $description, PDO::PARAM_STR);
+        $requete->bindValue(":kilometre", $kilometre, PDO::PARAM_STR);
+        $requete->bindValue(":participants", $participants, PDO::PARAM_STR);
+        $requete->bindValue(":hours", $hours, PDO::PARAM_STR);
+        $requete->bindValue(":meeting", $meeting, PDO::PARAM_STR);
+        $requete->bindValue(":date", $date, PDO::PARAM_STR);
+        $requete->bindValue(":id", $id, PDO::PARAM_INT);
+        return $requete->execute();
+    }
 }

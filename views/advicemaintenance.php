@@ -39,7 +39,7 @@ include "../templates/header.php";
         <div class="col-lg-4">
             <div class="card mb-5">
                 <div class="card-body shadow">
-                    <div class="container">
+                    <div class="containeriframe">
                         <?= $value["iframe"] ?> </div>
                     <h5 class="card-title pt-3"><?= $value["name"] ?></h5>
                     <p class="card-text"><?= $value["description"] ?></p>

@@ -53,7 +53,7 @@ include "../templates/header.php";
                     <!-- on laisse un button type button ici, on recupere l'info plus bas -->
                     <div class="text-center mt-3">
                         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Enregistrer
+                            Modifier
                         </button>
                     </div>
                     <!-- Modal -->
@@ -95,7 +95,7 @@ include "../templates/header.php";
 </div>
 
 <div class="text-center">
-    <a class="btn btn-danger mt-5 mb-5 ms-2" href="home.php"><i class="bi bi-arrow-return-left"></i> Retour à l'accueil</a>
+    <a class="btn btn-danger mt-5 mb-5 ms-2" href="home.php">Retour à l'accueil</a>
 </div>
 
 

@@ -5,7 +5,6 @@ require '../models/Users.php';
 require '../models/Rides.php';
 
 session_start();
-var_dump($_SESSION);
 
 
 $regexNom = "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð '-]{2,30}$/u";
@@ -64,5 +63,5 @@ if (empty($arrayError)) {
     $id = $_SESSION["id"];
     $rideObj = new Rides;
     $arrayShowRideId = $rideObj->showRideById($id);
-    var_dump($arrayShowRideId);
+    // var_dump($arrayShowRideId);
 }

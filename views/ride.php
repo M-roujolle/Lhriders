@@ -23,7 +23,7 @@ include "../templates/header.php";
         <div class="d-flex justify-content-evenly col-lg-4">
             <div class="card mt-5 shadow">
                 <div class="card-body">
-                    <div class="container p-0">
+                    <div class="row p-0">
                         <?= $value["ride_iframe"] ?>
                     </div>
                     <h5 class="card-title text-center mt-2"><?= $value["ride_title"] ?></h5>
