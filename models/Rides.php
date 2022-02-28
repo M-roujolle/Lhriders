@@ -120,4 +120,23 @@ class Rides extends DataBase
         $requete->bindValue(":id", $id, PDO::PARAM_INT);
         return $requete->execute();
     }
+
+    // fonction qui permet de renvoyer true ou false, si l'id de ballade n'appartient pas à l'user on ne rentre pas dans la condition
+    public function verifBelongRideUser($idride, $iduser)
+    {
+        $db = $this->connectDb();
+        $query = "SELECT * 
+        FROM pro_ride
+        WHERE ride_id = :idride
+        AND user_id = :iduser";
+        $requete = $db->prepare($query);
+        $requete->bindValue(":idride", $idride, PDO::PARAM_INT);
+        $requete->bindValue(":iduser", $iduser, PDO::PARAM_INT);
+        $requete->execute();
+        if ($requete->fetch() === false) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

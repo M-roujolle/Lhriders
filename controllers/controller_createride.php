@@ -10,7 +10,7 @@ require '../models/Rides.php';
 // var_dump($_POST);
 
 /////////////////////////////////////////////////////////////////
-// on verifie si post login, password et connexikon sont dispo
+// on verifie si post login, password et connexion sont dispo
 /////////////////////////////////////////////////////////////////
 if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
 
