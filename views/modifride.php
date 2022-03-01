@@ -12,7 +12,7 @@ include "../templates/header.php";
 
     <div class="row g-2 justify-content-evenly m-0">
         <div class="col-lg-4">
-            <div class="form-control mb-3 shadow">
+            <div class="form-control mb-3 shadowcss">
                 <label for="titre" class="form-label">Titre :</label><span class="text-danger">
                     <?=
                     $arrayError["titre"] ?? " ";
@@ -20,7 +20,7 @@ include "../templates/header.php";
                 </span>
                 <input name="titre" value="<?= $modifride['ride_title'] ?>" type="text" class="form-control" id="titre">
             </div>
-            <div class="form-control mb-3 shadow">
+            <div class="form-control mb-3 shadowcss">
                 <label for="iframe" class="form-label">Iframe :</label><span class="text-danger">
                     <?=
                     $arrayError["iframe"] ?? " ";
@@ -28,7 +28,7 @@ include "../templates/header.php";
                 </span>
                 <textarea name="iframe" class="form-control" id="iframe" aria-describedby="emailHelp"><?= $modifride['ride_iframe'] ?></textarea>
             </div>
-            <div class="form-control mb-3 shadow">
+            <div class="form-control mb-3 shadowcss">
                 <label for="kilometre">Kilomètres :</label><span class="text-danger">
                     <?=
                     $arrayError["kilometre"] ?? " ";
@@ -38,7 +38,7 @@ include "../templates/header.php";
             </div>
 
 
-            <div class="form-control mb-3 shadow">
+            <div class="form-control mb-3 shadowcss">
                 <label for="select">Choix du nombre de participants (min 2 - max 50) :</label><span class="text-danger">
                     <?=
                     $arrayError["select"] ?? " ";
@@ -59,7 +59,7 @@ include "../templates/header.php";
 
 
 
-            <div class="form-control mb-3 shadow">
+            <div class="form-control mb-3 shadowcss">
                 <label for="rdv">Point de rendez-vous :</label><span class="text-danger">
                     <?=
                     $arrayError["rdv"] ?? " ";
@@ -67,7 +67,7 @@ include "../templates/header.php";
                 </span>
                 <input name="rdv" type="text" class="form-control" id="rdv" value="<?= $modifride['ride_meeting'] ?>">
             </div>
-            <div class="form-control mb-3 shadow">
+            <div class="form-control mb-3 shadowcss">
                 <label for="date" class="form-label">Date de départ</label><span class="text-danger">
                     <?=
                     $arrayError["date"] ?? " ";
@@ -75,7 +75,7 @@ include "../templates/header.php";
                 </span>
                 <input name="date" value="<?= $modifride['ride_date'] ?>" type="date" class="form-control" id="titre">
             </div>
-            <div class="form-control mb-3 shadow">
+            <div class="form-control mb-3 shadowcss">
                 <label for="heure">Heure de départ :</label><span class="text-danger">
                     <?=
                     $arrayError["heure"] ?? " ";
@@ -85,7 +85,7 @@ include "../templates/header.php";
             </div>
         </div>
         <div class="col-lg-4">
-            <div class="form-control shadow">
+            <div class="form-control shadowcss">
                 <label for="description" class="form-label">Description :</label><span class="text-danger">
                     <?=
                     $arrayError["description"] ?? " ";

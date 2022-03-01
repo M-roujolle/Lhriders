@@ -1,7 +1,13 @@
 <?php
 require '../controllers/controller_settinguser.php';
 include "../templates/header.php";
+// var_dump($_SESSION);
+// var_dump($_POST);
+// var_dump($arrayShowRideId);
 ?>
+
+
+
 
 <div class="principalePictModifUser">
     <div class="text-center pt-4">
@@ -67,7 +73,7 @@ include "../templates/header.php";
                                 <div class="modal-footer">
                                     <!-- l'input va recuperer les valeurs, le mettre en type submit et une value -->
                                     <form action="settinguser.php" method="POST">
-                                        <input type="submit" value="Enregistrer" class="btn btn-success"></input>
+                                        <input type="submit" name="saveuser" value="Enregistrer" class="btn btn-success"></input>
                                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
                                     </form>
                                 </div>
@@ -78,6 +84,9 @@ include "../templates/header.php";
             </div>
         </div>
     </div>
+
+
+
     <div class="col-lg-4">
         <div class="card mt-5">
             <div class="card-body">
@@ -86,6 +95,34 @@ include "../templates/header.php";
                     <ul class="mt-4">
                         <li>
                             <a href="modifride.php?id=<?= $value["ride_id"] ?>" class="btn btn-primary"><?= $value["ride_title"] ?></a>
+
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalsupp<?= $value["ride_id"] ?>">
+                                <i class="bi bi-trash"></i> </button>
+
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="modalsupp<?= $value["ride_id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Etes vous certain de vouloir supprimer ce tracé ?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <form action="settinguser.php" method="POST">
+                                                <input type="hidden" value="<?= $value["ride_id"] ?>" name="rideid">
+                                                <button type="submit" name="suppride" class="btn btn-danger">Supprimer</button>
+                                            </form>
+                                            <a href="settinguser.php" class="btn btn-primary btn-sm">Retour</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 <?php } ?>

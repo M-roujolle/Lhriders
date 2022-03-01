@@ -2,6 +2,7 @@
 require '../config.php';
 require '../models/DataBase.php';
 require '../models/Users.php';
+require "../models/Rides.php";
 
 session_start();
 if ($_SESSION["role"] != 1 || !isset($_SESSION["id"])) {

@@ -14,7 +14,7 @@ $regexPseudo = "/^([a-zA-Z0-9-_]{2,36})$/u";
 $arrayError = [];
 
 
-if (!empty($_POST)) {
+if (!empty($_POST) && isset($_POST["saveuser"])) {
 
     $insert = new Users;
 
@@ -57,11 +57,15 @@ if (!empty($_POST)) {
 }
 
 
+$rideObj = new Rides;
 
-if (empty($arrayError)) {
 
-    $id = $_SESSION["id"];
-    $rideObj = new Rides;
-    $arrayShowRideId = $rideObj->showRideById($id);
-    // var_dump($arrayShowRideId);
+if (isset($_POST["rideid"])) {
+    $id = $_POST["rideid"];
+    $rideObj->deleteRide($id);
 }
+
+$id = $_SESSION["id"];
+
+
+$arrayShowRideId = $rideObj->showRideById($id);
