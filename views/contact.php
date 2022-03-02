@@ -23,12 +23,14 @@ include "../templates/header.php";
 
 <?php } else { ?>
 
+    <h1 class="text-center pt-3 mb-3">Formulaire de Contact</h1>
     <div class="row m-0">
         <div class="d-flex justify-content-center">
             <div class=" col-lg-6 mt-5">
                 <div class="navColor text-white d-flex justify-content-center">
+
                     <form action="contact.php" method="POST" class="ps-3 pe-3">
-                        <h1 class="text-center pt-3 mb-3">Formulaire de Contact</h1>
+
 
                         <div class="mb-3">
                             <label for="nom" class="form-label">Nom : </label><span class="text-danger">

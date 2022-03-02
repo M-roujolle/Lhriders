@@ -8,7 +8,7 @@ include "../templates/header.php";
 <div class="principalePictRide">
 </div>
 
-<h1 class=" selectColor pt-5 pb-5 text-center"> Plus qu’une balade : une aventure</h1>
+<h1 class=" selectColor pt-3 pb-3 text-center"> Plus qu’une balade : une aventure</h1>
 
 <p class="text-center pt-5 ms-5 me-5 fs-4">
     Que diriez-vous d'une balade moto sur les plus belles routes de Normandie ? Pour une sortie improvisée ou longuement préparée, faites l'expérience de la liberté.</p>

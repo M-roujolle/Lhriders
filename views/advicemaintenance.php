@@ -13,10 +13,10 @@ include "../templates/header.php";
     </div>
 </div>
 
-<h1 class=" selectColor pt-5 pb-5 text-center">Conseils pour bien débuter et entretien</h1>
+<h1 class=" selectColor pt-3 pb-3 text-center">Conseils pour bien débuter et entretien</h1>
 <p class="pt-5 ps-5 pe-5 pb-5 fs-4 text-center">Tout motard qui se respect menage sa monture ! Tu trouveras ici des astuces et conseils pour organiser, préparer et anticiper au mieux tes promenades. N'oublies jamais que le risque zéro n'existe pas ! </p>
 
-<h2 class="text-center pt-3 pb-3 selectColor">10 conseils pour rouler serein</h2>
+<h2 class="text-center pt-2 pb-2 selectColor">10 conseils pour rouler serein</h2>
 <div class="row justify-content-evenly gy-5 m-0 text-center">
     <?php foreach ($consEnt as $key => $value) { ?>
         <div class="card shadow" style="width: 18rem;">
@@ -32,7 +32,7 @@ include "../templates/header.php";
     <a href="https://www.motoblouz.com/enjoytheride/conseils-moto/10459-conseils-jeune-permis-moto-2017-04-14">Source: Motoblouz</a>
 </p>
 
-<h3 class="text-center mt-5 pt-3 pb-3 selectColor">Sélections de vidéos présentées par High Side</h3>
+<h3 class="text-center mt-5 pt-2 pb-2 selectColor">Sélections de vidéos présentées par High Side</h3>
 
 
 <div class="row justify-content-evenly m-0 pt-5 pb-2 text-center">

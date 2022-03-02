@@ -10,11 +10,9 @@ include "../templates/header.php";
 
 
 <div class="principalePictModifUser">
-    <div class="text-center pt-4">
-        <h1>Modifie ton profil ici </h1>
-    </div>
 </div>
 
+<h1 class="text-center selectColor pt-3 pb-3">Modifie ton profil ici </h1>
 <div class="row m-0 p-0 justify-content-evenly">
     <div class="col-lg-4 mt-5 ">
         <div class="card">

@@ -30,8 +30,8 @@ include "../templates/header.php";
                 roujolle.maxime@gmail.com.</div>
 
             <div class="text-center  pb-5 fw-bold"> ARTICLE 2 - L'HEBERGEUR :<br>
-                L'hébergeur du Site est la société _______________, dont le siège social est situé au
-                _______________ , avec le numéro de téléphone : _______________ + adresse mail de contact</div>
+                L'hébergeur du Site est la société LHRiders, dont le siège social est situé a
+                Saint Romain de Colbosc, avec le numéro de téléphone : 0660769121 et le contact mail : roujolle.maxime@gmail.com</div>
 
             <div class="text-center  pb-5 fw-bold"> ARTICLE 3 - ACCES AU SITE :<br>
                 Le Site est accessible en tout endroit, 7j/7, 24h/24 sauf cas de force majeure, interruption

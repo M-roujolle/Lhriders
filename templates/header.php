@@ -42,18 +42,18 @@
                     </li>
                 </ul>
                 <?php if (isset($_SESSION["id"])) { ?>
-                    <p class="text-white me-2 justify-align-items">Bonjour <?= $_SESSION["nom"] ?> <?= $_SESSION["prénom"] ?></p>
+                    <p class="text-white mt-3 me-2">Bonjour <?= $_SESSION["nom"] ?> <?= $_SESSION["prénom"] ?></p>
                 <?php } ?>
                 <?php if (isset($_SESSION["id"])) { ?>
                     <form action="" method="POST">
                         <a href="settinguser.php" class="fs-3 text-white mb-1 pe-2"><i class="bi bi-gear"></i></a>
                     </form>
-                    <a class="buttonred text-white" href="logout.php">Déconnexion</a>
+                    <a class="buttonred text-white" href="logout.php"><i class="bi bi-power"></i></a>
 
                 <?php } else { ?>
 
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <a class="nav-link active text-white ps-4">Connexion / Inscription <i class="bi bi-person-circle fs-3"></i></a>
+                        <a class="nav-link active text-white ps-4">Connexion / Inscription</a>
                     </button>
 
 
