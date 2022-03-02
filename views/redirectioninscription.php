@@ -6,14 +6,15 @@ require "../controllers/controller_redirectioninscription.php";
 include "../templates/header.php";
 ?>
 <div class="principalePictRedirection">
-    <h1 class="text-center pt-3 pb-3"> En attente</h1>
 </div>
+
+<h1 class=" selectColor pt-5 pb-5 text-center"> En attente</h1>
 <div class="row m-0 p-0 justify-content-center text-center">
     <div class="card mt-5" style="width: 50rem;">
         <h5 class="card-header">VOTRE COMPTE EST EN COURS DE VALIDATION</h5>
         <div class="card-body">
             <p class="card-text">Veuillez recommencer ultérieurement.</p>
-            <a href="../views/home.php" class="btn btn-primary">Retour à l'accueil</a>
+            <a href="../views/home.php" class="buttondark text-white">Retour à l'accueil</a>
         </div>
     </div>
 </div>
@@ -32,11 +33,11 @@ include "../templates/header.php";
                 <form action="" method="POST">
                     <input type="text" class="form-control" placeholder="Pseudo" name="login">
                     <input type="password" class="form-control mt-3" placeholder="Mot de passe" name="password">
-                    <input class="mt-3 btn btn-outline-primary text-center" type="submit" value="Connexion" name="connexion">
+                    <input class="mt-3 buttondark text-center" type="submit" value="Connexion" name="connexion">
                 </form>
             </div>
             <div class="modal-footer">
-                <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="./registration.php">S'inscrire</a>
+                <a class="buttonorange position-absolute top-100 start-50 translate-middle" href="./registration.php">S'inscrire</a>
             </div>
         </div>
     </div>

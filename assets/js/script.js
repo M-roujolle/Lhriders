@@ -1,11 +1,7 @@
 // modal dynamique
 window.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("alertconnexion")) {
-    Swal.fire(
-      "Vous êtes maintenant connecté",
-      "Vous pouvez créer vos balades ! ",
-      "success"
-    );
+    Swal.fire("Connexion réussie !", " ", "success");
   }
 });
 

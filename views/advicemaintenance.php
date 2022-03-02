@@ -8,14 +8,15 @@ include "../templates/header.php";
 
 <div class="principalePictAdvicemaintenance">
     <div class="text-center pt-4 text-white">
-        <h1>Conseils pour bien débuter et entretien</h1>
-        <p>Tout motard qui se respect menage sa monture ! Tu trouveras ici des astuces et conseils pour organiser, préparer et anticiper au mieux tes promenades. N'oublies jamais que le risque zéro n'existe pas ! </p>
+
 
     </div>
 </div>
-<h2 class="text-center pt-5 pb-5">10 conseils pour rouler serein</h2>
 
+<h1 class=" selectColor pt-5 pb-5 text-center">Conseils pour bien débuter et entretien</h1>
+<p class="pt-5 ps-5 pe-5 pb-5 fs-4 text-center">Tout motard qui se respect menage sa monture ! Tu trouveras ici des astuces et conseils pour organiser, préparer et anticiper au mieux tes promenades. N'oublies jamais que le risque zéro n'existe pas ! </p>
 
+<h2 class="text-center pt-3 pb-3 selectColor">10 conseils pour rouler serein</h2>
 <div class="row justify-content-evenly gy-5 m-0 text-center">
     <?php foreach ($consEnt as $key => $value) { ?>
         <div class="card shadow" style="width: 18rem;">
@@ -65,11 +66,11 @@ include "../templates/header.php";
                 <form action="" method="POST">
                     <input type="text" class="form-control" placeholder="Pseudo" name="login">
                     <input type="password" class="form-control mt-3" placeholder="Mot de passe" name="password">
-                    <input class="mt-3 btn btn-outline-primary text-center" type="submit" value="Connexion" name="connexion">
+                    <input class="mt-3 buttondark text-center" type="submit" value="Connexion" name="connexion">
                 </form>
             </div>
             <div class="modal-footer">
-                <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="./registration.php">S'inscrire</a>
+                <a class="buttonorange text-white position-absolute top-100 start-50 translate-middle" href="./registration.php">S'inscrire</a>
             </div>
         </div>
     </div>

@@ -70,7 +70,7 @@ require '../controllers/controller_listrides.php';
                                             <input type="hidden" value="<?= $value['ride_id'] ?>" name="ride_id">
                                             <button type="submit" name="idsupp" class="btn btn-danger">Supprimer</button>
                                         </form>
-                                        <a href="listrides.php" class="btn btn-primary btn-sm">Retour</a>
+                                        <a href="listrides.php" class="buttondark btn-sm">Retour</a>
                                     </div>
                                 </div>
                             </div>

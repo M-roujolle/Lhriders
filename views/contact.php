@@ -55,7 +55,7 @@ include "../templates/header.php";
 
 
 
-                        <button type="submit" class="btn btn-primary mb-5 ms-1">Envoyer</button>
+                        <button type="submit" class="buttondark col-6 mb-5 ms-1">Envoyer</button>
                     </form>
                 </div>
             </div>
@@ -76,11 +76,11 @@ include "../templates/header.php";
                 <form action="" method="POST">
                     <input type="text" class="form-control" placeholder="Pseudo" name="login">
                     <input type="password" class="form-control mt-3" placeholder="Mot de passe" name="password">
-                    <input class="mt-3 btn btn-outline-primary text-center" type="submit" value="Connexion" name="connexion">
+                    <input class="mt-3 buttondark text-center" type="submit" value="Connexion" name="connexion">
                 </form>
             </div>
             <div class="modal-footer">
-                <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="./registration.php">S'inscrire</a>
+                <a class="buttonorange text-white position-absolute top-100 start-50 translate-middle" href="./registration.php">S'inscrire</a>
             </div>
         </div>
     </div>

@@ -105,7 +105,7 @@ include "../templates/header.php";
         <!-- Button trigger modal -->
         <!-- on laisse un button type button ici, on recupere l'info plus bas -->
         <div class="text-center">
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="buttonorange text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Modifier
             </button>
         </div>
@@ -119,9 +119,9 @@ include "../templates/header.php";
                     </div>
                     <div class="modal-footer">
                         <form action="" method="POST">
-                            <input type="submit" value="Enregistrer" class="btn btn-success"></input>
+                            <input type="submit" value="Enregistrer" class="buttondark"></input>
                             <input type="hidden" name="idride" value="<?= $_GET["id"] ?>"></input>
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
+                            <button type="button" class="buttonred text-white" data-bs-dismiss="modal">Annuler</button>
                         </form>
                     </div>
                 </div>
@@ -131,7 +131,7 @@ include "../templates/header.php";
 
 
 <div class="text-center">
-    <a class="btn btn-danger mt-5 mb-5 ms-2" href="settinguser.php"></i>Retour au profil</a>
+    <a class="buttonred text-white mt-5 mb-5 ms-2" href="settinguser.php"></i>Retour au profil</a>
 </div>
 
 <?php

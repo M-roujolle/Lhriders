@@ -48,13 +48,14 @@
                     <form action="" method="POST">
                         <a href="settinguser.php" class="fs-3 text-white mb-1 pe-2"><i class="bi bi-gear"></i></a>
                     </form>
-                    <a class="abutton" href="logout.php">Se déconnecter</a>
+                    <a class="buttonred text-white" href="logout.php">Déconnexion</a>
 
                 <?php } else { ?>
 
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <a class="nav-link active text-white ps-4">Connexion / Inscription <i class="bi bi-person-circle fs-3"></i></a>
                     </button>
+
 
                 <?php } ?>
 

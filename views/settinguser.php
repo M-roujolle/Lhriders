@@ -22,8 +22,8 @@ include "../templates/header.php";
                 <h5 class="card-title text-center mt-2">Modifier mon profil</h5>
             </div>
             <div class="card-body bg-dark text-white">
-                <h5 class="card-title text-center pb-4 text-warning">Bonjour <?= $_SESSION["nom"] ?> <?= $_SESSION["prénom"] ?> </h5>
-                <p class="card-title text-center pb-4 text-warning">Votre N° d'identification : <?= $_SESSION["id"] ?></p>
+                <h5 class="card-title text-center pb-4">Bonjour <?= $_SESSION["nom"] ?> <?= $_SESSION["prénom"] ?> </h5>
+                <p class="card-title text-center pb-4">Votre N° d'identification : <?= $_SESSION["id"] ?></p>
 
                 <form action="settinguser.php" method="POST">
                     Pseudo :<label for="nom" class="form-label"></label><span class="text-danger">
@@ -58,7 +58,7 @@ include "../templates/header.php";
                     <!-- Button trigger modal -->
                     <!-- on laisse un button type button ici, on recupere l'info plus bas -->
                     <div class="text-center mt-3">
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button type="button" class="buttonorange text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Modifier
                         </button>
                     </div>
@@ -73,7 +73,7 @@ include "../templates/header.php";
                                 <div class="modal-footer">
                                     <!-- l'input va recuperer les valeurs, le mettre en type submit et une value -->
                                     <form action="settinguser.php" method="POST">
-                                        <input type="submit" name="saveuser" value="Enregistrer" class="btn btn-success"></input>
+                                        <input type="submit" name="saveuser" value="Enregistrer" class="buttonorange text-white"></input>
                                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
                                     </form>
                                 </div>
@@ -94,7 +94,7 @@ include "../templates/header.php";
                 <?php foreach ($arrayShowRideId as $value) { ?>
                     <ul class="mt-4">
                         <li>
-                            <a href="modifride.php?id=<?= $value["ride_id"] ?>" class="btn btn-primary"><?= $value["ride_title"] ?></a>
+                            <a href="modifride.php?id=<?= $value["ride_id"] ?>" class="buttondark text-white"><?= $value["ride_title"] ?></a>
 
 
                             <!-- Button trigger modal -->
@@ -116,9 +116,9 @@ include "../templates/header.php";
                                         <div class="modal-footer">
                                             <form action="settinguser.php" method="POST">
                                                 <input type="hidden" value="<?= $value["ride_id"] ?>" name="rideid">
-                                                <button type="submit" name="suppride" class="btn btn-danger">Supprimer</button>
+                                                <button type="submit" name="suppride" class="buttonred">Supprimer</button>
                                             </form>
-                                            <a href="settinguser.php" class="btn btn-primary btn-sm">Retour</a>
+                                            <a href="settinguser.php" class="buttondark text-white btn-sm">Retour</a>
                                         </div>
                                     </div>
                                 </div>
@@ -132,7 +132,7 @@ include "../templates/header.php";
 </div>
 
 <div class="text-center">
-    <a class="btn btn-danger mt-5 mb-5 ms-2" href="home.php">Retour à l'accueil</a>
+    <a class="buttonred text-white mt-5 mb-5 ms-2" href="home.php">Retour à l'accueil</a>
 </div>
 
 

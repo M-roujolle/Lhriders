@@ -73,7 +73,7 @@ require '../controllers/controller_modifuser.php';
                                 <div class="modal-footer">
                                     <!-- l'input va recuperer les valeurs, le mettre en type submit et une value -->
                                     <form action="" method="POST">
-                                        <input type="submit" value="Enregistrer" class="btn btn-success"></input>
+                                        <input type="submit" value="Enregistrer" class="buttonorange text-white"></input>
                                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
                                     </form>
                                 </div>

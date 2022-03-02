@@ -76,7 +76,7 @@ require '../controllers/controller_listusers.php';
                                             <input type="hidden" value="<?= $users["user_id"] ?>" name="user_id">
                                             <button type="submit" name="idsupp" class="btn btn-danger">Supprimer</button>
                                         </form>
-                                        <a href="listusers.php" class="btn btn-primary btn-sm">Retour</a>
+                                        <a href="listusers.php" class="buttondark btn-sm">Retour</a>
                                     </div>
                                 </div>
                             </div>

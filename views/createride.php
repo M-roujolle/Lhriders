@@ -5,11 +5,9 @@ include "../templates/header.php";
 ?>
 
 <div class="principalePictCreateRide">
-    <div class="text-center pt-4">
-        <h1 class="text-center"> Créer ton propre tracé</h1>
-    </div>
 </div>
 
+<h1 class=" selectColor pt-5 pb-5 text-center"> Créer ton propre tracé</h1>
 
 <!-- formulaire creation de tracé ------------------------------------>
 <?php if (isset($_SESSION["id"])) { ?>
@@ -130,8 +128,9 @@ include "../templates/header.php";
                     </span>
                 </div>
 
-
-                <button type="submit" class="btn btn-primary col-12">Créer</button>
+                <div class="text-center">
+                    <button type="submit" class="buttonorange col-12 text-white">Créer</button>
+                </div>
 
             </form>
         </div>
@@ -142,7 +141,7 @@ include "../templates/header.php";
             <img src="../assets/img/etreinscri.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h4 class="card-text mt-2">Vous devez vous inscrire pour pouvoir créer votre tracé !</h4>
-                <a class="btn btn-primary mt-4" type="button" href="../views/registration.php">S'inscrire</a>
+                <a class="buttondark text-white" type="button" href="../views/registration.php">S'inscrire</a>
             </div>
         </div>
     </div>
@@ -164,11 +163,11 @@ include "../templates/header.php";
                 <form action="" method="POST">
                     <input type="text" class="form-control" placeholder="Pseudo" name="login">
                     <input type="password" class="form-control mt-3" placeholder="Mot de passe" name="password">
-                    <input class="mt-3 btn btn-outline-primary text-center" type="submit" value="Connexion" name="connexion">
+                    <input class="mt-3 buttondark text-center" type="submit" value="Connexion" name="connexion">
                 </form>
             </div>
             <div class="modal-footer">
-                <a class="btn btn-success position-absolute top-100 start-50 translate-middle" href="./registration.php">S'inscrire</a>
+                <a class="buttonorange text-white position-absolute top-100 start-50 translate-middle" href="./registration.php">S'inscrire</a>
             </div>
         </div>
     </div>
