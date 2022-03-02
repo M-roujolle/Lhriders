@@ -5,13 +5,9 @@ include "../templates/header.php";
 
 
 
-<div class="principalePictRTegistration">
-    <div class="text-center pt-4">
-        <h1>Inscrivez vous ici pour pouvoir créer vos propres balades !</h1>
-    </div>
+<div class="principalePictRegistration">
 </div>
-
-
+<h1 class=" selectColor pt-5 pb-5 text-center">Inscrivez vous ici pour pouvoir créer vos propres balades !</h1>
 
 <!-- Formulaire de contact-------------------------------------------------------------------------------------------->
 <form action="registration.php" method="POST" class="ps-3 pe-3">
