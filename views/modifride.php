@@ -115,7 +115,7 @@ include "../templates/header.php";
                 <div class="modal-content">
 
                     <div class="modal-body text-dark">
-                        Etes vous sur de vouloir enregistrer les modifications ?
+                        Vos modifications seront de nouveau soumise à un contrôle êtes vous sur de vouloir enregistrer les modifications ?
                     </div>
                     <div class="modal-footer">
                         <form action="" method="POST">

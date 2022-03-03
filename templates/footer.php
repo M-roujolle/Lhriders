@@ -14,7 +14,7 @@
                 <a class="nav-link active text-white" href="./legislation.php">Législation</a>
             </li>
         </ul>
-        <p class="copyright">©LH Riders 2022</p>
+        <p class="copyright">©LHRiders 2022</p>
     </div>
 </footer>
 

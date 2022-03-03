@@ -7,7 +7,7 @@ include "../templates/header.php";
 
 <div class="principalePictRegistration">
 </div>
-<h1 class=" selectColor pt-5 pb-5 text-center">Inscrivez vous ici pour pouvoir créer vos propres balades !</h1>
+<h1 class=" selectColor pt-3 pb-3 text-center">Inscrivez vous ici pour pouvoir créer vos propres balades !</h1>
 
 <!-- Formulaire de contact-------------------------------------------------------------------------------------------->
 <form action="registration.php" method="POST" class="ps-3 pe-3">
@@ -16,7 +16,7 @@ include "../templates/header.php";
             <div class="col-md-3 register-left">
                 <i class="bi bi-person-circle"></i>
                 <h3 class="colorOrange">Bienvenue</h3>
-                <p class="colorOrange">Créer ton profil ici pour pouvoir éditer ta balade !</p>
+                <p class="">Créer ton profil ici pour pouvoir éditer ta balade !</p>
             </div>
             <div class="col-md-9 register-right">
                 <div class="tab-content" id="myTabContent">
@@ -31,7 +31,7 @@ include "../templates/header.php";
                                         $arrayError["pseudo"] ?? " ";
                                         ?>
                                     </span>
-                                    <input value="<?= isset($_POST["pseudo"]) ? htmlspecialchars($_POST["pseudo"]) : "" ?>" name="pseudo" type="text" class="form-control col-12" id="pseudo" placeholder="Ex : Jean414">
+                                    <input value="<?= isset($_POST["pseudo"]) ? htmlspecialchars($_POST["pseudo"]) : "" ?>" name="pseudo" type="text" class="form-control" id="pseudo" placeholder="Ex : Jean414">
                                 </div>
                                 <div class="form-group">
                                     <!--  prenom -->
@@ -40,7 +40,7 @@ include "../templates/header.php";
                                         $arrayError["prenom"] ?? " ";
                                         ?>
                                     </span>
-                                    <input value="<?= isset($_POST["prenom"]) ? htmlspecialchars($_POST["prenom"]) : "" ?>" name=" prenom" type="text" class="form-control col-12" id="prenom" placeholder="Ex : Jean">
+                                    <input value="<?= isset($_POST["prenom"]) ? htmlspecialchars($_POST["prenom"]) : "" ?>" name=" prenom" type="text" class="form-control" id="prenom" placeholder="Ex : Jean">
                                 </div>
                                 <div class="form-group">
                                     <!-- nom -->
@@ -49,7 +49,7 @@ include "../templates/header.php";
                                         $arrayError["nom"] ?? " ";
                                         ?>
                                     </span>
-                                    <input value="<?= isset($_POST["nom"]) ? htmlspecialchars($_POST["nom"]) : "" ?>" name="nom" type="text" class="form-control col-12" id="nom" placeholder="Ex : Dupont">
+                                    <input value="<?= isset($_POST["nom"]) ? htmlspecialchars($_POST["nom"]) : "" ?>" name="nom" type="text" class="form-control" id="nom" placeholder="Ex : Dupont">
                                 </div>
                                 <div class="form-group">
                                     <!-- mail -->
@@ -58,22 +58,22 @@ include "../templates/header.php";
                                         $arrayError["mail"] ?? " ";
                                         ?>
                                     </span>
-                                    <input value="<?= isset($_POST["mail"]) ? htmlspecialchars($_POST["mail"]) : "" ?>" name=" mail" type="mail" class="form-control col-12" id="mail" placeholder="Ex : nom.prénom@mail.fr">
+                                    <input value="<?= isset($_POST["mail"]) ? htmlspecialchars($_POST["mail"]) : "" ?>" name=" mail" type="mail" class="form-control" id="mail" placeholder="Ex : nom.prénom@mail.fr">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <!-- mot de passe -->
-                                    <label for="motdepasse" class="form-label mt-1">Mot de passe : </label><span class="text-danger">
+                                    <label for="motdepasse" class="form-label">Mot de passe : </label><span class="text-danger">
                                         <?=
                                         $arrayError["motdepasse"] ?? " ";
                                         ?>
                                     </span>
-                                    <input value="<?= isset($_POST["motdepasse"]) ? htmlspecialchars($_POST["motdepasse"]) : "" ?>" name=" motdepasse" type="password" class="form-control col-12" id="motdepasse" placeholder="Saisissez votre mot de passe">
+                                    <input value="<?= isset($_POST["motdepasse"]) ? htmlspecialchars($_POST["motdepasse"]) : "" ?>" name=" motdepasse" type="password" class="form-control" id="motdepasse" placeholder="Saisissez votre mot de passe">
                                 </div>
-                                <div class="mb-3 form-check ms-1">
-                                    <input type="checkbox" class="form-check-input mt-4" name="checkBox" id="checkBox">
-                                    <label class="form-check-label mt-4" for="checkBox">Accepter les CGU</label><span class="text-danger">
+                                <div class="form-check ms-1 mt-3">
+                                    <input type="checkbox" class="form-check-input" name="checkBox" id="checkBox">
+                                    <label class="form-check-label" for="checkBox">Accepter les CGU</label><span class="text-danger">
                                         <?=
                                         $arrayError["checkBox"] ?? " ";
                                         ?>
@@ -84,9 +84,9 @@ include "../templates/header.php";
                                     $arrayError["reCaptcha"] ?? " ";
                                     ?>
                                 </span>
-                                <div class="g-recaptcha mt-5" data-sitekey="6LdvTZkeAAAAAODC1ihzB7MWwJZZ9vyhzVI59Q9P"></div>
+                                <div class="g-recaptcha mt-3" data-sitekey="6LdvTZkeAAAAAODC1ihzB7MWwJZZ9vyhzVI59Q9P"></div>
                             </div>
-                            <button type="submit" class="buttongreen text-white mb-5 mt-4 ms-4 col-11 ">Valider</button>
+                            <button type="submit" class="buttongreen text-white mb-5 mt-4 ms-4 col-11">Valider</button>
 
                         </div>
 

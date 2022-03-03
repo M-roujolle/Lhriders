@@ -8,7 +8,7 @@ include "../templates/header.php";
 <div class="principalePictRedirection">
 </div>
 
-<h1 class=" selectColor pt-5 pb-5 text-center"> En attente</h1>
+<h1 class=" selectColor pt-3 pb-3 text-center"> En attente</h1>
 <div class="row m-0 p-0 justify-content-center text-center">
     <div class="card mt-5" style="width: 50rem;">
         <h5 class="card-header">VOTRE COMPTE EST EN COURS DE VALIDATION</h5>

@@ -106,7 +106,7 @@ class Rides extends DataBase
     {
         $db = $this->connectDb();
         $query = "UPDATE `pro_ride`
-        SET `ride_iframe` = :iframe, `ride_title` =:title, `ride_description` =:description, `ride_kilometre` =:kilometre, `ride_participants` =:participants, `ride_hours` =:hours, `ride_meeting` =:meeting, `ride_date` =:date
+        SET `ride_iframe` = :iframe, `ride_title` =:title, `ride_description` =:description, `ride_kilometre` =:kilometre, `ride_participants` =:participants, `ride_hours` =:hours, `ride_meeting` =:meeting, `ride_date` =:date, `ride_validate` = 0
         WHERE `ride_id` = :id";
         $requete = $db->prepare($query);
         $requete->bindValue(":iframe", $iframe, PDO::PARAM_STR);

@@ -1,7 +1,6 @@
-// modal dynamique
 window.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("alertconnexion")) {
-    Swal.fire("Connexion réussie !", " ", "success");
+    Swal.fire("Connexion réussie !", "", "success");
   }
 });
 

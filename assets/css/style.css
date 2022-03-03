@@ -370,7 +370,7 @@
 
 
 .register {
-    background: -webkit-linear-gradient(left, #000000, #270800, #883201);
+    background: -webkit-linear-gradient(left, #000000, #270800, #f35b03);
     margin-top: 3%;
     padding: 3%;
 }
@@ -443,7 +443,7 @@
 .register .nav-tabs {
     margin-top: 3%;
     border: none;
-    background: #0062cc;
+    background: #000000;
     border-radius: 1.5rem;
     width: 28%;
     float: right;
@@ -481,11 +481,11 @@
 
 .form-style-9 {
     max-width: 100%;
-    background: #ffffff;
+    background: #ecebeb;
     margin: 50px auto;
     box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
     border-radius: 10px;
-    border: 6px solid #305A72;
+    border: 6px solid #000000;
 }
 
 .form-style-9 ul {
