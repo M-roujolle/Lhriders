@@ -109,7 +109,7 @@ include "../templates/header.php";
                 </ul>
             </form>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 d-none d-lg-block">
             <div class="card mt-5" style="width: 98%">
                 <img src="../assets/img/return.jpeg" class="card-img-top" alt="motard">
             </div>
