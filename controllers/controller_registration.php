@@ -34,6 +34,7 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
 
 
                 $_SESSION = $user->getUser($_POST["login"]);
+                $alert = "";
             } else {
                 $errormessage = "Pseudo ou mot de passe invalide";
                 $errorConnect = true;

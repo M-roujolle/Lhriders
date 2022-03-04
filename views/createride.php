@@ -154,7 +154,7 @@ include "../templates/header.php";
 <?php if (isset($alertride)) { ?>
     <span id="alertride"></span>
 <?php } ?>
-<?php
 
+<?php
 include "../templates/footer.php";
 ?>

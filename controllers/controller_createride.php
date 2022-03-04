@@ -33,6 +33,7 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
                     exit();
                 }
                 $_SESSION = $user->getUser($_POST["login"]);
+                $alert = "";
                 // var_dump($_SESSION);
             } else {
                 $errormessage = "Pseudo ou mot de passe invalide";
