@@ -35,13 +35,15 @@ include "../templates/header.php";
                         <!-- Modal -->
                         <div class="modal fade" id="modal-<?= $value["ride_id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-body">
-                                        <p class="modal-title mt-5" id="exampleModalLabel"><?= $value["ride_description"] ?></p>
-                                        <p class="modal-title mt-5" id="exampleModalLabel">Point de départ : <?= $value["ride_meeting"] ?></p>
-                                        <p class="modal-title mt-5" id="exampleModalLabel">Nombre de participants: <?= $value["ride_participants"] ?></p>
-                                        <button type="button" class="buttondark text-white mt-5" data-bs-dismiss="modal">Fermer</button>
+                                <div class="card" style="width: 25rem;">
+                                    <div class="card-header bg-secondary text-white">
+                                        <?= $value["ride_title"] ?>
                                     </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><?= $value["ride_description"] ?></li>
+                                        <li class="list-group-item">Point de départ: <?= $value["ride_meeting"] ?></li>
+                                        <li class="list-group-item">Nombre de participants: <?= $value["ride_participants"] ?></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

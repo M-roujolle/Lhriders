@@ -130,7 +130,7 @@ include "../templates/header.php";
 </div>
 
 <div class="text-center">
-    <a class="buttonred text-white mt-5 mb-5 ms-2" href="home.php">Retour à l'accueil</a>
+    <a class="buttondark text-white mt-5 mb-5 ms-2" href="home.php">Retour à l'accueil</a>
 </div>
 
 

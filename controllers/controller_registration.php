@@ -7,7 +7,7 @@ require '../models/Users.php';
 
 $regexNom = "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð '-]{2,30}$/u";
 $regexPseudo = "/^([a-zA-Z0-9-_]{2,36})$/u";
-// $rexgexMail = "/^([a-z.-]+)@([a-z]+).([a-z]){2,4}$/u";
+
 
 session_start();
 
@@ -113,7 +113,7 @@ if (!empty($_POST)) {
         if (empty($_POST["pseudo"])) {
             $arrayError["pseudo"] = "Veuillez saisir votre pseudo";
         } elseif (!preg_match($regexPseudo, $_POST["pseudo"])) {;
-            $arrayError["pseudo"] = "Format invalide";
+            $arrayError["pseudo"] = "Format invalide / Espace et caratères spéciaux interdit";
         } elseif (!$userPseudo->checkFreePseudo($_POST['pseudo'])) {
             $arrayError["pseudo"] = "Ce pseudo est déjà utilisé";
         }
