@@ -5,7 +5,7 @@ include "../templates/header.php";
 // var_dump($arrayride);
 ?>
 
-<div class="principalePictRide">
+<div class="principalePictRide d-none d-lg-block">
 </div>
 
 <h1 class=" selectColor pt-3 pb-3 text-center"> Plus qu’une balade : une aventure</h1>

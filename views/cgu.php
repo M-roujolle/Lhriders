@@ -4,7 +4,7 @@ require "../controllers/controller_users.php";
 include "../templates/header.php";
 ?>
 
-<div class="principalePictCgu">
+<div class="principalePictCgu d-none d-lg-block">
 </div>
 
 <!-- DECRIPTION DU SITE----------------------------------------------------------------------------------------------------------------->

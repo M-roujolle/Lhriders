@@ -5,7 +5,7 @@ require '../models/Users.php';
 require "../controllers/controller_redirectioninscription.php";
 include "../templates/header.php";
 ?>
-<div class="principalePictRedirection">
+<div class="principalePictRedirection d-none d-lg-block">
 </div>
 
 <h1 class=" selectColor pt-3 pb-3 text-center"> En attente</h1>

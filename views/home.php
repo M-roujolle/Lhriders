@@ -4,7 +4,7 @@ require "../controllers/controller_home.php";
 include "../templates/header.php";
 ?>
 
-<div class="principalePict">
+<div class="principalePict d-none d-lg-block">
 </div>
 
 <!-- DECRIPTION DU SITE----------------------------------------------------------------------------------------------------------------->

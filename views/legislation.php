@@ -5,7 +5,7 @@ require "../data/data.php";
 include "../templates/header.php";
 ?>
 
-<div class="principalePictLegis">
+<div class="principalePictLegis d-none d-lg-block">
 </div>
 
 <h1 class="text-center mt-5">Legislation Française des balades moto</h1>
@@ -32,7 +32,7 @@ include "../templates/header.php";
     <div class="card mb-3 ms-5 me-5 border border-success" style="max-width: 50 rem;">
         <div class="row g-0 pt-5">
             <div class="col-md-4">
-                <img src="../<?= $value["pictures"] ?>" class="img-fluid rounded-start ms-5 pb-5" alt="...">
+                <img src="../<?= $value["pictures"] ?>" class="img-fluid rounded-start ms-5 pb-5 d-none d-lg-block" alt="...">
             </div>
             <div class="col-md-8">
                 <div class="card-body">

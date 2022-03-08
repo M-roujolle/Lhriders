@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Connexion à la base de donée
+ */
 class DataBase
 {
 

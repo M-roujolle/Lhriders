@@ -4,7 +4,7 @@ require "../data/data.php";
 include "../templates/header.php";
 ?>
 
-<div class="principalePictCreateRide">
+<div class="principalePictCreateRide d-none d-lg-block">
 </div>
 
 <h1 class="selectColor pt-3 pb-3 text-center"> Créer ton propre tracé</h1>

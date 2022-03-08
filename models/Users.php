@@ -9,11 +9,11 @@ class Users extends DataBase
      */
     public function getAllUsers()
     {
-        //    je me connecte a la db a l'aide de la methode herité connectDb
+        //    je me connecte à la db à l'aide de la méthode heritée connectDb
         $db = $this->connectDb();
-        // je stock ma requete sql sdans une variable 
+        // je stock ma requete sql dans une variable 
         $requete = "SELECT * FROM `pro_users`";
-        // j'execute ma requete à l'aide de la methode query que je stock dans result
+        // j'execute ma requete à l'aide de la méthode query que je stock dans result
         $result = $db->query($requete);
         // j'effectue un fetchAll pour récupérer les données sous forme de tableau
         return $result->fetchAll();

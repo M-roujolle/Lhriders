@@ -4,7 +4,7 @@ require "../controllers/controller_users.php";
 include "../templates/header.php";
 ?>
 
-<div class="principalePictContact">
+<div class="principalePictContact d-none d-lg-block">
 </div>
 
 <!-- Formulaire de contact-------------------------------------------------------------------------------------------->

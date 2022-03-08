@@ -4,7 +4,7 @@ include "../templates/header.php";
 ?>
 
 
-<form action="" method="POST">
+<!-- <form action="" method="POST">
 
     <p><?= $arrayError["belong"] ?? "" ?></p>
 
@@ -98,14 +98,119 @@ include "../templates/header.php";
                     <?= $modifride["ride_iframe"] ?>
                 </div>
             </div>
+        </div> -->
+
+
+
+<!-- Button trigger modal -->
+<!-- on laisse un button type button ici, on recupere l'info plus bas -->
+<!-- <div class="text-center">
+            <button type="button" class="buttonorange text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Modifier
+            </button>
+        </div> -->
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-body text-dark">
+                        Vos modifications seront de nouveau soumise à un contrôle êtes vous sur de vouloir enregistrer les modifications ?
+                    </div>
+                    <div class="modal-footer">
+                        <form action="" method="POST">
+                            <input type="submit" value="Enregistrer" class="buttondark"></input>
+                            <input type="hidden" name="idride" value="<?= $_GET["id"] ?>"></input>
+                            <button type="button" class="buttonred text-white" data-bs-dismiss="modal">Annuler</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
+</form> -->
 
 
+
+<h1 class="selectColor pt-3 pb-3 text-center">Modification du tracé</h1>
+
+<div class="container mt-5">
+    <form action="" method="POST">
+
+        <p><?= $arrayError["belong"] ?? "" ?></p>
+
+        <label for="titre" class="form-label">Titre :</label><span class="text-danger">
+            <?=
+            $arrayError["titre"] ?? " ";
+            ?>
+        </span>
+        <input name="titre" value="<?= $modifride['ride_title'] ?>" type="text" class="form-control" id="titre">
+
+        <label for="iframe" class="form-label">Iframe :</label><span class="text-danger">
+            <?=
+            $arrayError["iframe"] ?? " ";
+            ?>
+        </span>
+        <textarea name="iframe" class="form-control" id="iframe" aria-describedby="emailHelp"><?= $modifride['ride_iframe'] ?></textarea>
+
+        <label for="kilometre">Kilomètres :</label><span class="text-danger">
+            <?=
+            $arrayError["kilometre"] ?? " ";
+            ?>
+        </span>
+        <input name="kilometre" type="number" class="form-control" id="kilometre" value="<?= $modifride['ride_kilometre'] ?>">
+
+        <label for="select">Choix du nombre de participants (min 2 - max 50) :</label><span class="text-danger">
+            <?=
+            $arrayError["select"] ?? " ";
+            ?>
+        </span>
+
+        <select name="select" class="form-select form-select mt-4 mb-4" aria-label="form-select-sm example">
+            <option selected value="0">Nombre de participants</option>
+            <option <?= $modifride['ride_participants'] == "De 2 à 5" ? "selected" : "" ?>>De 2 à 5</option>
+            <option <?= $modifride['ride_participants'] == "De 5 à 10" ? "selected" : "" ?>>De 5 à 10</option>
+            <option <?= $modifride['ride_participants'] == "De 10 à 20" ? "selected" : "" ?>>De 10 à 20</option>
+            <option <?= $modifride['ride_participants'] == "De 20 à 30" ? "selected" : "" ?>>De 20 à 30</option>
+            <option <?= $modifride['ride_participants'] == "De 30 à 40" ? "selected" : "" ?>>De 30 à 40</option>
+            <option <?= $modifride['ride_participants'] == "De 40 à 50" ? "selected" : "" ?>>De 40 à 50 </option>
+        </select>
+
+        <label for="rdv">Point de rendez-vous :</label><span class="text-danger">
+            <?=
+            $arrayError["rdv"] ?? " ";
+            ?>
+        </span>
+        <input name="rdv" type="text" class="form-control" id="rdv" value="<?= $modifride['ride_meeting'] ?>">
+
+        <label for="date" class="form-label">Date de départ</label><span class="text-danger">
+            <?=
+            $arrayError["date"] ?? " ";
+            ?>
+        </span>
+        <input name="date" value="<?= $modifride['ride_date'] ?>" type="date" class="form-control" id="titre">
+
+        <label for="heure">Heure de départ :</label><span class="text-danger">
+            <?=
+            $arrayError["heure"] ?? " ";
+            ?>
+        </span>
+        <input name="heure" type="time" class="form-control" id="heure" value="<?= $modifride['ride_hours'] ?>">
+
+        <label for="description" class="form-label">Description :</label><span class="text-danger">
+            <?=
+            $arrayError["description"] ?? " ";
+            ?>
+        </span>
+        <textarea name="description" rows="9" cols="33" type="text" class="form-control" id="description"><?= $modifride['ride_description'] ?></textarea>
+
+        <div class="row">
+            <?= $modifride["ride_iframe"] ?>
+        </div>
 
         <!-- Button trigger modal -->
         <!-- on laisse un button type button ici, on recupere l'info plus bas -->
-        <div class="text-center">
-            <button type="button" class="buttonorange text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div class="text-center mt-5">
+            <button type="button" class="buttondark text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Modifier
             </button>
         </div>
@@ -127,7 +232,23 @@ include "../templates/header.php";
                 </div>
             </div>
         </div>
-</form>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <div class="text-center">

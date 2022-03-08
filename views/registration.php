@@ -5,7 +5,7 @@ include "../templates/header.php";
 
 
 
-<div class="principalePictRegistration">
+<div class="principalePictRegistration d-none d-lg-block">
 </div>
 <h1 class=" selectColor pt-3 pb-3 text-center">Inscrivez vous ici pour pouvoir créer vos propres balades !</h1>
 
