@@ -19,8 +19,8 @@
                 <a class="m-2 col-lg-4 btn btn-outline-secondary fs-3" href="listrides.php"><i class="bi bi-signpost-2-fill"></i> Gestion des sorties</a>
             </div>
             <div>
-                <a class="m-2 col-lg-4 btn btn-outline-secondary fs-3" href="infoPatient.php?results=infoPatient"><i class="bi bi-play-circle-fill"></i> Gestion des tutos</a>
-                <a class="m-2 col-lg-4 btn btn-outline-secondary fs-3" href="gestionRdv.php?results=gestionRdv"><i class="bi bi-camera-fill"></i> Gestion post moto </a>
+                <a class="m-2 col-lg-4 btn btn-outline-secondary fs-3" href="construct.php"><i class="bi bi-play-circle-fill"></i> Gestion des tutos</a>
+                <a class="m-2 col-lg-4 btn btn-outline-secondary fs-3" href="construct.php"><i class="bi bi-camera-fill"></i> Gestion post moto </a>
             </div>
         </div>
     </div>

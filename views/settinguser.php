@@ -72,52 +72,56 @@ include "../templates/header.php";
             <div class="card-body">
                 <h5 class="card-title text-center mt-2">Modifier mes balades</h5>
 
-                <?php foreach ($arrayShowRideId as $value) { ?>
-                    <ul class="mt-4">
-                        <li>
-                            <a href="modifride.php?id=<?= $value["ride_id"] ?>" class="buttondark text-white"><?= $value["ride_title"] ?></a>
 
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Titre</th>
+                            <th scope="col">Supprimer</th>
+                        </tr>
+                    </thead>
+                    <?php foreach ($arrayShowRideId as $value) { ?>
+                        <tbody>
+                            <th scope="row"><a href="modifride.php?id=<?= $value["ride_id"] ?>" class="buttondark text-white"><?= $value["ride_title"] ?></a></th>
+                            <td>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalsupp<?= $value["ride_id"] ?>">
+                                    <i class="bi bi-trash"></i> </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalsupp<?= $value["ride_id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
 
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalsupp<?= $value["ride_id"] ?>">
-                                <i class="bi bi-trash"></i> </button>
-
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="modalsupp<?= $value["ride_id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            Etes vous certain de vouloir supprimer ce tracé ?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <form action="settinguser.php" method="POST">
-                                                <input type="hidden" value="<?= $value["ride_id"] ?>" name="rideid">
-                                                <button type="submit" name="suppride" class="buttondelete">Supprimer</button>
-                                            </form>
-                                            <a href="settinguser.php" class="buttonreturn text-white">Retour</a>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Etes vous certain de vouloir supprimer ce tracé ?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <form action="settinguser.php" method="POST">
+                                                    <input type="hidden" value="<?= $value["ride_id"] ?>" name="rideid">
+                                                    <button type="submit" name="suppride" class="buttondelete">Supprimer</button>
+                                                </form>
+                                                <a href="settinguser.php" class="buttonreturn text-white">Retour</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
-                <?php } ?>
+                            </td>
+                        </tbody>
+                    <?php } ?>
+                </table>
             </div>
         </div>
     </div>
-</div>
-</div>
-
-<div class="text-center">
-    <a class="buttondark text-white mt-5 ms-2" href="home.php">Retour à l'accueil</a>
-</div>
 
 
-<?php
-include "../templates/footer.php";
-?>
+    <div class="text-center">
+        <a class="buttondark text-white mt-5 ms-2" href="home.php">Retour à l'accueil</a>
+    </div>
+
+
+    <?php
+    include "../templates/footer.php";
+    ?>

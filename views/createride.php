@@ -13,7 +13,7 @@ include "../templates/header.php";
 <?php if (isset($_SESSION["id"])) { ?>
     <div class="row m-0">
         <div class="col-lg-6">
-            <form class="form-style-9" action="createride.php" method="POST">
+            <form class=" form-style-9" action="createride.php" method="POST">
                 <h2 class="text-center">Création du tracé</h2>
                 <ul>
                     <li>
@@ -42,7 +42,7 @@ include "../templates/header.php";
                             ?>
                         </span>
                         <input name="iframe" type="text" value="<?= isset($_POST["iframe"]) ? htmlspecialchars($_POST["iframe"]) : "" ?>" class="form-control" id="iframe" aria-describedby="emailHelp" placeholder="<iframe src='https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d165407.58526710264!2d0.128765300210693!3d49.626152441086234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x47e02f2395218b7d%3A0x5bc1867aaf33af12!2sLe%20Havre!3m2!1d49.494369999999996!2d0.107929!4m5!1s0x47e06b69133e1681%3A0x57434975e5d89613!2zRsOpY2FtcA!3m2!1d49.755601!2d0.380774!5e0!3m2!1sfr!2sfr!4v1645183233975!5m2!1sfr!2sfr' width='600' height='450' style='border:0;' allowfullscreen=' loading='lazy'></iframe>">
-                        <div id="iframe" class="form-text "><a href="https://alphadesign.fr/blog/comment-creer-une-google-map-responsive-pour-n-importe-quel-site.html"> Comment recupérer un iframe sur google ?</a></div>
+                        <div id="iframe" class="form-text "><a href="https://alphadesign.fr/blog/comment-creer-une-google-map-responsive-pour-n-importe-quel-site.html" target="_blank"> Comment recupérer un iframe sur google ?</a></div>
                     </li>
                     <li> <label for="kilometre">Kilomètres :</label><span class="text-danger">
                             <?=
@@ -67,7 +67,7 @@ include "../templates/header.php";
                             $arrayError["select"] ?? " ";
                             ?>
                         </span>
-                        <select name="select" class="form-select form-select-sm mb-4" aria-label="form-select-sm example">
+                        <select name="select" class="form-select form-select-sm" aria-label="form-select-sm example">
                             <option selected value="0">Nombre de participants</option>
                             <option>De 2 à 5</option>
                             <option>De 5 à 10</option>
@@ -110,15 +110,15 @@ include "../templates/header.php";
             </form>
         </div>
         <div class="col-lg-6 d-none d-lg-block">
-            <div class="card mt-5" style="width: 98%">
-                <img src="../assets/img/return.jpeg" class="card-img-top" alt="motard">
+            <div class="card mt-5 border border-dark" style="width: 100%">
+                <img src="../assets/img/return.jpeg" class="card-img-top h-100" alt="motard">
             </div>
         </div>
     </div>
 
 <?php } else { ?>
     <div class="row text-center justify-content-center mt-5 mb-5 m-0 p-0">
-        <div class="card border border-white shadow" style="width: 50rem;">
+        <div class="card border border-white shadow pt-2" style="width: 50rem;">
             <img src="../assets/img/etreinscri.jpeg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h4 class="card-text mt-2">Vous devez vous inscrire pour pouvoir créer votre tracé !</h4>

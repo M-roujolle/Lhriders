@@ -706,3 +706,9 @@ textarea {
 .buttonblue {
     background-color: blue;
 }
+
+
+/* bg header ---------------------------*/
+.backgroundheader {
+    background-color: rgb(78, 78, 78);
+}

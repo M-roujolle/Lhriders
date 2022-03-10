@@ -61,7 +61,7 @@ $showYourBike = [
     ],
     [
         "id" => 6,
-        "pictures" => "./assets/img/custom2.jpeg",
+        "pictures" => "./assets/img/bikepage.jpeg",
         "model" => "Custom base triumph - 2012",
     ],
     [

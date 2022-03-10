@@ -9,8 +9,8 @@ include "../templates/header.php";
 
 <!-- DECRIPTION DU SITE----------------------------------------------------------------------------------------------------------------->
 
-<h1 class="text-center pt-5">Mentions Légales</h1>
-<div class="mt-5 row text-center m-0">
+<h1 class="text-center pt-5 text-white">Mentions Légales</h1>
+<div class="mt-5 row text-center m-0 text-white">
     <div class="row">
         <div class="col col-lg-12">
             <div class="pb-5">

@@ -8,11 +8,11 @@ include "../templates/header.php";
 <div class="principalePictLegis d-none d-lg-block">
 </div>
 
-<h1 class="text-center mt-5">Legislation Française des balades moto</h1>
-<p class="text-center ms-5 me-5 fw-bold pt-5">Chez LH Riders nous savons très bien que tu ne vas pas tout lire... Libre à toi de lire ou non ces conditions, nous te conseillons vivement de prendre connaissance de ces articles et nous te rappelons que LH Riders se décharge de toute responsabilités en cas de problèmes... Et comme tu l'as déja entendu : "Nul n'est censé ignorer la Loi". C'est pourquoi nous t'avons fait un condensé des règles primordiales à connaitre ;)</p>
+<h1 class="text-center mt-5 text-white">Legislation Française des balades moto</h1>
+<p class="text-center ms-5 me-5 fw-bold pt-5 text-white">Chez LH Riders nous savons très bien que tu ne vas pas tout lire... Libre à toi de lire ou non ces conditions, nous te conseillons vivement de prendre connaissance de ces articles et nous te rappelons que LH Riders se décharge de toute responsabilités en cas de problèmes... Et comme tu l'as déja entendu : "Nul n'est censé ignorer la Loi". C'est pourquoi nous t'avons fait un condensé des règles primordiales à connaitre ;)</p>
 <p style="color: red" class="ms-5 me-5 fw-bold text-center">En bref :</p>
 
-<div class="text-center pb-5 fw-bold">
+<div class="text-center pb-5  ms-5 me-5 fw-bold">
     <div class="card border border-danger">
         <div class="card-body">
             <li>Aucune déclaration nécessaire pour une sortie de moins de 50 motos (on parle bien ici de moto et non de participants).</li>
@@ -24,7 +24,7 @@ include "../templates/header.php";
     </div>
 </div>
 
-<p class="text-center ms-5 me-5">Le rassemblement entre deux roues et les balades motos organisées sur route sont incontournables dans le cercle des motards. Ces balades en groupe renforcent la fraternité et l’expérience des pilotes de deux roues. Toutefois, la concentration de véhicules terrestres occasionne des difficultés de circulation pour les autres automobilistes. De ce fait, l’organisateur de la sortie à plusieurs cylindrés doit déclarer ou demander une autorisation aux préfectures concernant par l’itinéraire emprunté.
+<p class="text-center ms-5 me-5 text-white">Le rassemblement entre deux roues et les balades motos organisées sur route sont incontournables dans le cercle des motards. Ces balades en groupe renforcent la fraternité et l’expérience des pilotes de deux roues. Toutefois, la concentration de véhicules terrestres occasionne des difficultés de circulation pour les autres automobilistes. De ce fait, l’organisateur de la sortie à plusieurs cylindrés doit déclarer ou demander une autorisation aux préfectures concernant par l’itinéraire emprunté.
     Mais attention, une randonnée à moto en groupe nécessite une organisation pointue et une déclaration administrative, et non pas uniquement pour le plaisir de rouler.
     Faut-il déclarer une balade en groupe à moto ? À qui déclarer sa virée à moto à plusieurs ? Dans quels cas déclarer son road trip avec plusieurs pilotes est-ce une obligation ?</p>
 

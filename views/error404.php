@@ -1,3 +1,10 @@
+<?php
+$delai = 7;
+$url = 'home.php';
+header("Refresh: $delai;url=$url");
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -5,6 +12,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>404 page</title>
@@ -49,7 +57,7 @@
             font-weight: 300;
             font-family: Audiowide;
             text-shadow: 0px 0px 4px #12000a;
-            animation: fadeInText 3s ease-in 3.5s forwards, flicker4 5s linear 7.5s infinite, hueRotate 6s ease-in-out 3s infinite;
+            animation: fadeInText 1s ease-in 2s forwards, flicker4 3s linear 4s infinite, hueRotate 4s ease-in-out 3s infinite;
         }
 
         #svgWrap_1,
@@ -367,7 +375,9 @@
         </defs>
     </svg>
 
-    <h2>Page Non Trouvée</h2>
+
+    <h2 class="pt-5">Page Non Trouvée<br>Vous allez être rediriger vers l'accueil</h2>
+
 </body>
 
 </html>

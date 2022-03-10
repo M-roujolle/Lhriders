@@ -11,7 +11,7 @@ include "../templates/header.php";
 
 <div class="row text-center m-0">
     <h1 class=" selectColor pt-3 pb-3">Bienvenue sur LHRiders</h1>
-    <p class="pt-5 ps-5 pe-5 pb-5 fs-4">
+    <p class="pt-5 ps-5 pe-5 pb-5 fs-4 text-white">
         Besoin d’évasion ? Notre site te fournira le nécessaire pour partir en roadtrip moto l’esprit tranquille ! Que tu cherches une balade d’une heure à la mer ou une virée de deux jours en Normandie, LH Riders te met à disposition de nombreux itinériaires. Et si tu as l’âme d’un baroudeur-organisateur, tu peux créer ton propre itinéraire ! </p>
 </div>
 
@@ -19,7 +19,7 @@ include "../templates/header.php";
 <p class="text-center pb-2 selectColor pt-2 fs-4">A qui s'adresse ce site ? </p>
 <div class="row justify-content-evenly m-0">
     <?php foreach ($typeOfBikers as $key => $value) { ?>
-        <div class="card mb-3 mt-5 border border-white shadow" style="max-width: 600px;">
+        <div class="card mb-3 mt-5 border border-white shadow pt-2 pb-2" style="max-width: 600px;">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../<?= $value["pictures"] ?>" class="img-fluid rounded-start" alt="...">
@@ -72,7 +72,7 @@ include "../templates/header.php";
 <div class="row justify-content-evenly gy-3 m-0 text-center">
     <?php
     foreach ($showYourBike as $key => $value) { ?>
-        <div class="card border border-white" style="width: 20rem;">
+        <div class="card border border-white pt-2" style="width: 20rem;">
             <img src="../<?= $value["pictures"] ?>" class="card-img-top" alt="...">
             <div class="card-body">
                 <p class="card-text"><?= $value["model"] ?></p>

@@ -9,7 +9,7 @@ include "../templates/header.php";
 
 <!-- DECRIPTION DU SITE----------------------------------------------------------------------------------------------------------------->
 
-<div class="mt-5 row text-center m-0">
+<div class="mt-5 row text-center m-0 text-white">
 
     <div class="col col-lg-12">
         <h1 class="text-center  pb-5">Conditions Générales d'Utilisation</h1>

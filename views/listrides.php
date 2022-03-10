@@ -16,7 +16,7 @@ require '../controllers/controller_listrides.php';
     <script src="../assets/js/script.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css">
 
-    <title>Liste des utilisateurs</title>
+    <title>Liste des sorties moto</title>
 </head>
 
 <body>
@@ -25,7 +25,7 @@ require '../controllers/controller_listrides.php';
         <table class="table table-striped table-dark">
             <thead>
                 <tr>
-                    <th>ID BALADE</th>
+                    <th class="d-none d-lg-table-cell">ID BALADE</th>
                     <th>TITRE</th>
                     <th>VALIDATION</th>
                     <th>PLUS D'INFO</th>
@@ -37,7 +37,7 @@ require '../controllers/controller_listrides.php';
 
                 <?php foreach ($arrayride as $value) { ?>
                     <tr>
-                        <td scope="row"><?= $value['ride_id'] ?></td>
+                        <td class="d-none d-lg-table-cell" scope="row"><?= $value['ride_id'] ?></td>
                         <td><?= $value['ride_title'] ?></td>
                         <td>
                             <form method="POST" action="">
