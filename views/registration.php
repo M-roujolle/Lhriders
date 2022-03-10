@@ -51,6 +51,9 @@ include "../templates/header.php";
                                     </span>
                                     <input value="<?= isset($_POST["nom"]) ? htmlspecialchars($_POST["nom"]) : "" ?>" name="nom" type="text" class="form-control" id="nom" placeholder="Ex : Dupont">
                                 </div>
+
+                            </div>
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <!-- mail -->
                                     <label for="mail" class="form-label mt-1">Mail : </label><span class="text-danger">
@@ -60,8 +63,6 @@ include "../templates/header.php";
                                     </span>
                                     <input value="<?= isset($_POST["mail"]) ? htmlspecialchars($_POST["mail"]) : "" ?>" name=" mail" type="mail" class="form-control" id="mail" placeholder="Ex : nom.prénom@mail.fr">
                                 </div>
-                            </div>
-                            <div class="col-md-6">
                                 <div class="form-group">
                                     <!-- mot de passe -->
                                     <label for="motdepasse" class="form-label">Mot de passe : </label><span class="text-danger">
@@ -86,7 +87,7 @@ include "../templates/header.php";
                                 </span>
                                 <div class="g-recaptcha mt-3" data-sitekey="6LdvTZkeAAAAAODC1ihzB7MWwJZZ9vyhzVI59Q9P"></div>
                             </div>
-                            <button type="submit" class="buttongreen text-white mb-5 mt-4 ms-4 col-11">Valider</button>
+                            <button type="submit" class="buttongreen text-white mt-4 ms-4 col-11">Valider</button>
 
                         </div>
 

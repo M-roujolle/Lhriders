@@ -7,65 +7,66 @@ include "../templates/header.php";
 <div class="principalePictContact d-none d-lg-block">
 </div>
 
-<!-- Formulaire de contact-------------------------------------------------------------------------------------------->
+<h1 class="text-center text-white mt-5">Contact</h1>
+<form action="#" method="POST">
+    <div class="container mt-5 selectColor">
 
-<?php if (!empty($_POST) && empty($arrayError)) { ?>
-
-    <div class="text-center pt-5 ms-5 me-5">
-        <h1>Voici votre demande, nous vous en remercions. Nous allons vous contacter dans les plus bref délais :<h1><br>
-                <p>Votre nom : "<?= htmlspecialchars($_POST['nom']); ?>"</p>
-                <p>Votre prénom : "<?= htmlspecialchars($_POST['prenom']); ?>"</p>
-                <p>Votre mail : "<?= htmlspecialchars($_POST['mail']); ?>"</p>
-                <p>Votre demande : "<?= htmlspecialchars($_POST['select']); ?>"</p>
-                <p>Votre commentaire : "<?= htmlspecialchars($_POST['story']); ?>"</p>
-                <a class="btn btn-success mt-5" href="index.php">Retour à l'accueil</a>
-    </div>
-
-<?php } else { ?>
-
-    <h1 class="text-center pt-3 mb-3 text-white">Formulaire de Contact</h1>
-    <div class="row m-0">
-        <div class="d-flex justify-content-center">
-            <div class=" col-lg-6 mt-5">
-                <div class="navColor text-white d-flex justify-content-center">
-
-                    <form action="contact.php" method="POST" class="ps-3 pe-3">
-
-
-                        <div class="mb-3">
-                            <label for="nom" class="form-label">Nom : </label><span class="text-danger">
-                                <?=
-                                $arrayError["nom"] ?? " ";
-                                ?>
-                            </span>
-                            <input value="<?= isset($_POST["nom"]) ? htmlspecialchars($_POST["nom"]) : "" ?>" name="nom" type="text" class="form-control w-75" id="nom" placeholder="Ex : Dupont...">
-
-                            <label for="prenom" class="form-label mt-1">Prénom : </label><span class="text-danger">
-                                <?=
-                                $arrayError["prenom"] ?? " ";
-                                ?>
-                            </span>
-                            <input value="<?= isset($_POST["prenom"]) ? htmlspecialchars($_POST["prenom"]) : "" ?>" name=" prenom" type="text" class="form-control w-75" id="prenom" placeholder="Ex : Jean...">
-
-                            <label for="mail" class="form-label mt-1">Mail : </label><span class="text-danger">
-                                <?=
-                                $arrayError["mail"] ?? " ";
-                                ?>
-                            </span>
-                            <input value="<?= isset($_POST["mail"]) ? htmlspecialchars($_POST["mail"]) : "" ?>" name=" mail" type="mail" class="form-control w-75" id="mail" placeholder="Ex : nom.prénom@mail.fr...">
-                        </div>
-
-
-
-                        <button type="submit" class="buttondark col-6 mb-5 ms-1">Envoyer</button>
-                    </form>
+        <div class="row register-form">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <!-- nom -->
+                    <label for="nom" class="form-label">Nom : </label><span class="text-danger">
+                        <?=
+                        $arrayError["nom"] ?? " ";
+                        ?>
+                    </span>
+                    <input value="<?= isset($_POST["nom"]) ? htmlspecialchars($_POST["nom"]) : "" ?>" name="nom" type="text" class="form-control" id="nom" placeholder="Ex : Dupont">
                 </div>
+                <div class="form-group">
+                    <!--  prenom -->
+                    <label for="prenom" class="form-label">Prénom : </label><span class="text-danger">
+                        <?=
+                        $arrayError["prenom"] ?? " ";
+                        ?>
+                    </span>
+                    <input value="<?= isset($_POST["prenom"]) ? htmlspecialchars($_POST["prenom"]) : "" ?>" name=" prenom" type="text" class="form-control" id="prenom" placeholder="Ex : Jean">
+                </div>
+                <div class="form-group">
+                    <!-- mail -->
+                    <label for="mail" class="form-label mt-1">Mail : </label><span class="text-danger">
+                        <?=
+                        $arrayError["mail"] ?? " ";
+                        ?>
+                    </span>
+                    <input value="<?= isset($_POST["mail"]) ? htmlspecialchars($_POST["mail"]) : "" ?>" name=" mail" type="mail" class="form-control" id="mail" placeholder="Ex : nom.prénom@mail.fr">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label for="comment" class="form-label">Commentaire :</label><span class="text-danger">
+                    <?=
+                    $arrayError["comment"] ?? " ";
+                    ?>
+                </span>
+                <textarea name="comment" class="form-label" rows="9" id="comment" type="text" aria-describedby="emailHelp" placeholder="Veuillez décrire votre demande"><?= filter_input(INPUT_POST, 'comment') ?></textarea>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <span class="text-danger">
+                    <?=
+                    $arrayError["reCaptcha"] ?? " ";
+                    ?>
+                </span>
+                <div class="g-recaptcha mt-3" data-sitekey="6LdvTZkeAAAAAODC1ihzB7MWwJZZ9vyhzVI59Q9P"></div>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="buttondark col-2 mt-4 mb-3">Envoyer</button>
             </div>
         </div>
     </div>
-<?php } ?>
+</form>
 
-<!-- MODAL ------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- modal connexion -->
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

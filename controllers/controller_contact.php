@@ -43,8 +43,7 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
 }
 
 $regexNom = "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð '-]{2,30}$/u";
-// $rexgexMail = "/^([a-z.-]+)@([a-z]+).([a-z]){2,4}$/u";
-
+$regexCommentaire = "/^[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,._!:;?()\/@&'-=]{2,500}$/u";
 $arrayError = [];
 
 if (!empty($_POST)) {
@@ -72,18 +71,35 @@ if (!empty($_POST)) {
             $arrayError["mail"] = "Format invalide";
         }
     }
-    if (isset($_POST["select"])) {
-        if (empty($_POST["select"]) || $_POST["select"] == 0) {
-            $arrayError["select"] = "Veuillez saisir votre sujet";
-        }
-    }
-    if (isset($_POST["story"])) {
-        if (empty($_POST["story"])) {
-            $arrayError["story"] = "Veuillez saisir votre sujet";
-        }
-    }
 
-    if (!isset($_POST["checkBox"])) {
-        $arrayError["checkBox"] = "Veuillez valider les CGU";
+    if (isset($_POST["comment"])) {
+        if (empty($_POST["comment"])) {
+            $arrayError["comment"] = "Veuillez saisir un commentaire";
+        } elseif (!preg_match($regexCommentaire, $_POST["comment"])) {
+            $arrayError["comment"] = "Format invalide";
+        }
+    }
+    if (empty($_POST['g-recaptcha-response'])) {
+        $arrayError['reCaptcha'] = 'Veuillez valider le reCAPTCHA';
+    } else {
+        // Mise en place des paramètres pour l'analyse du reCaptcha
+        $captcha = $_POST['g-recaptcha-response'];
+        $secretKey = '6LdvTZkeAAAAAKJBUWNwAayKhV4SxH8jV1C7rX7V';
+        $ip = $_SERVER['REMOTE_ADDR'];
+
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+        $response = file_get_contents($url);
+        $responseKeys = json_decode($response, true);
+
+        if (!$responseKeys["success"]) {
+            $arrayError['reCaptcha'] = 'Bots interdit sur ce site';
+        }
+    }
+    if (empty($arrayError)) {
+        // je sécurise mes champs à l'aide d'un htmlspecialchars et j'enlève les espaces en trop avec trim avant de les stocker dans les variables
+        $nom = htmlspecialchars(trim($_POST["nom"]));
+        $prenom = htmlspecialchars(trim($_POST["prenom"]));
+        $mail = htmlspecialchars(trim($_POST["mail"]));
+        $comment = htmlspecialchars(trim($_POST["comment"]));
     }
 }

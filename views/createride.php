@@ -109,9 +109,9 @@ include "../templates/header.php";
                 </ul>
             </form>
         </div>
-        <div class="col-lg-6 d-none d-lg-block">
+        <div class="col-lg-6 d-none d-lg-block mt-5">
             <div class="card mt-5 border border-dark" style="width: 100%">
-                <img src="../assets/img/return.jpeg" class="card-img-top h-100" alt="motard">
+                <img src="../assets/img/return.jpeg" class="card-img-top" alt="motard">
             </div>
         </div>
     </div>

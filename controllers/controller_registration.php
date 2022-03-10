@@ -2,7 +2,7 @@
 require '../config.php';
 require '../models/DataBase.php';
 require '../models/Users.php';
-// var_dump($_POST);
+
 
 
 $regexNom = "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð '-]{2,30}$/u";
@@ -11,10 +11,10 @@ $regexPseudo = "/^([a-zA-Z0-9-_]{2,36})$/u";
 
 session_start();
 
-// on verifie si post login, password et connexikon sont dispo
+// on vérifie si post login, password et connexikon sont dispo
 if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
 
-    // si login et password ne sont pas vide
+    // si login et password sont remplis
     if (!empty($_POST["login"]) && !empty($_POST["password"])) {
         $user = new Users;
 

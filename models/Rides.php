@@ -6,14 +6,15 @@ class Rides extends DataBase
      * Méthode permettant de créer une balade 
      * 
      * @param string $iframe: iframe google map
-     * @param string $titre:
-     * @param string $description: 
-     * @param string $kilometre: 
-     * @param string $participants: 
-     * @param string $hours: 
-     * @param string $meeting:
-     * @param string $date: 
-     * @param int $iduser: il s'agit de l'id du user conecté
+     * @param string $titre
+     * @param string $description
+     * @param string $kilometre
+     * @param string $participants
+     * @param string $hours
+     * @param string $meeting
+     * @param string $date
+     * @param int $iduser: il s'agit de l'id du user connecté
+     * @return bool
      */
     public function insertRide(string $iframe, string $titre, string $description, string $kilometre, string $participants, string $hours, string $meeting, string $date, int $iduser)
     {
@@ -35,35 +36,62 @@ class Rides extends DataBase
         return $requete->execute();
     }
 
+    /**
+     * Méthode permettant d'afficher toutes les balades
+     * 
+     * @return array
+     */
     public function showRide()
     {
         $db = $this->connectDb();
         $requete = "SELECT `ride_id`,`ride_iframe`,`ride_title`,`ride_description`,`ride_kilometre`,`ride_participants`,`ride_hours`,`ride_meeting`, DATE_FORMAT(`ride_date`,'%d/%m/%Y') AS ride_date,`ride_validate` 
         FROM `pro_ride` WHERE `ride_validate` = 1";
         $result = $db->query($requete);
+
         return $result->fetchAll();
     }
 
-    public function getOneRide($id)
+    /**
+     * Méthode permettant de retourner une balade via son id
+     * 
+     * @param string $id
+     * @return array 
+     */
+    public function getOneRide(string $id)
     {
         $db = $this->connectDb();
         $requete = "SELECT * FROM `pro_ride` WHERE `ride_id`=:id";
         $insert = $db->prepare($requete);
         $insert->bindValue(":id", $id, PDO::PARAM_STR);
         $insert->execute();
+
         return $insert->fetch();
     }
 
-    public function deleteRide($id)
+    /**
+     * Méthode permettant de supprimer une balade via son id
+     * 
+     * @param string $id
+     * @return bool
+     */
+    public function deleteRide(string $id)
     {
         $db = $this->connectDb();
         $query = "DELETE FROM `pro_ride` WHERE `ride_id` = :id";
         $requete = $db->prepare($query);
         $requete->bindValue(":id", $id, PDO::PARAM_INT);
+
         return $requete->execute();
     }
 
-    public function changeStatusRide($idride, $ridestatus)
+    /**
+     * Méthode permettant de valider ou suspendre une balade
+     * 
+     * @param string $idride
+     * @param string $idstatus
+     * @return bool 
+     */
+    public function changeStatusRide(int $idride, int $ridestatus)
     {
         $db = $this->connectDb();
         $query = "UPDATE `pro_ride` 
@@ -72,10 +100,15 @@ class Rides extends DataBase
         $requete = $db->prepare($query);
         $requete->bindValue(":ridestatus", $ridestatus, PDO::PARAM_INT);
         $requete->bindValue(":idride", $idride, PDO::PARAM_INT);
+
         return $requete->execute();
     }
 
-
+    /**
+     * Méthode permettant d'afficher toutes les balades
+     * 
+     * @param array
+     */
     public function getAllRides()
     {
         //    je me co a la db a l'aide de la methode herité connectDb
@@ -90,7 +123,13 @@ class Rides extends DataBase
         return $result->fetchAll();
     }
 
-    public function showRideById($id)
+    /**
+     * Méthode permettant de retourner les balades par utilisateur
+     * 
+     * @param string $id
+     * @param array
+     */
+    public function showRideById(string $id)
     {
         $db = $this->connectDb();
         $query = "SELECT *
@@ -103,7 +142,21 @@ class Rides extends DataBase
         return $requete->fetchAll();
     }
 
-    public function modifRide($iframe, $titre, $description, $kilometre, $participants, $hours, $meeting, $date, $id)
+    /**
+     * Méthode permettant de modifier une balade
+     * 
+     * @param string $iframe: iframe google map
+     * @param string $titre:
+     * @param string $description: 
+     * @param string $kilometre: 
+     * @param string $participants: 
+     * @param string $hours: 
+     * @param string $meeting:
+     * @param string $date: 
+     * @param int $id: il s'agit de l'id de la balade
+     * @return bool
+     */
+    public function modifRide(string $iframe, string  $titre, string  $description, string  $kilometre, string  $participants, string  $hours, string  $meeting, string  $date, int $id)
     {
         $db = $this->connectDb();
         $query = "UPDATE `pro_ride`
@@ -122,8 +175,15 @@ class Rides extends DataBase
         return $requete->execute();
     }
 
-    // fonction qui permet de renvoyer true ou false, si l'id de ballade n'appartient pas à l'user on ne rentre pas dans la condition
-    public function verifBelongRideUser($idride, $iduser)
+
+    /**
+     *  Méthode qui permet de renvoyer true ou false, si l'id de ballade n'appartient pas à l'user on ne rentre pas dans la condition
+     * 
+     * @param int $idride
+     * @param int $iduser
+     * @return bool
+     */
+    public function verifBelongRideUser(int $idride, int $iduser)
     {
         $db = $this->connectDb();
         $query = "SELECT * 
