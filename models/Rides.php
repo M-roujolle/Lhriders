@@ -38,7 +38,8 @@ class Rides extends DataBase
     public function showRide()
     {
         $db = $this->connectDb();
-        $requete = "SELECT `ride_id`,`ride_iframe`,`ride_title`,`ride_description`,`ride_kilometre`,`ride_participants`,`ride_hours`,`ride_meeting`,`ride_date`,`ride_validate` FROM `pro_ride` WHERE `ride_validate` = 1";
+        $requete = "SELECT `ride_id`,`ride_iframe`,`ride_title`,`ride_description`,`ride_kilometre`,`ride_participants`,`ride_hours`,`ride_meeting`, DATE_FORMAT(`ride_date`,'%d/%m/%Y') AS ride_date,`ride_validate` 
+        FROM `pro_ride` WHERE `ride_validate` = 1";
         $result = $db->query($requete);
         return $result->fetchAll();
     }

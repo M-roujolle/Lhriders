@@ -25,7 +25,7 @@ include "../templates/header.php";
                         <?= $value["ride_iframe"] ?>
                     </div>
                     <h5 class="card-title text-center mt-2"><?= $value["ride_title"] ?></h5>
-                    <p class="card-text text-center mt-2">Démarre à <?= $value["ride_hours"] ?> le <?= $value["ride_date"] ?>, <?= $value["ride_kilometre"] ?> kilomètres </p>
+                    <p class="card-text text-center mt-2">Départ le <strong><?= $value["ride_date"] ?></strong> à <strong><?= $value["ride_hours"] ?></strong>.</p>
                     <div class="text-center">
                         <!-- Button trigger modal -->
                         <button type="button" class="cartoonbutton" data-bs-toggle="modal" data-bs-target="#modal-<?= $value["ride_id"] ?>">
@@ -35,15 +35,22 @@ include "../templates/header.php";
                         <!-- Modal -->
                         <div class="modal fade" id="modal-<?= $value["ride_id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
-                                <div class="card" style="width: 25rem;">
-                                    <div class="card-header bg-secondary text-white">
-                                        <?= $value["ride_title"] ?>
+                                <div class="modal-content">
+                                    <div class="modal-header bg-secondary text-white">
+                                        <h5 class="modal-title"><strong><?= $value["ride_title"] ?></strong></h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item"><?= $value["ride_description"] ?></li>
-                                        <li class="list-group-item">Point de départ: <?= $value["ride_meeting"] ?></li>
-                                        <li class="list-group-item">Nombre de participants: <?= $value["ride_participants"] ?></li>
-                                    </ul>
+                                    <div class="modal-body">
+
+                                        <p type="text"><strong>Point de départ:</strong> <?= $value["ride_meeting"] ?></p>
+                                        <p type="text"><strong>Nombre de participants:</strong> <?= $value["ride_participants"] ?></p>
+                                        <p type="text"><strong>Nombre de kilomètres:</strong> <?= $value["ride_kilometre"] ?> km</p>
+                                        <p type="text"><strong><?= $value["ride_description"] ?></strong></p>
+
+                                    </div>
+                                    <div class="modal-footer bg-secondary">
+                                        <button type="button" class="buttondelete" data-bs-dismiss="modal">Fermer</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

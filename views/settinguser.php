@@ -3,9 +3,6 @@ require '../controllers/controller_settinguser.php';
 include "../templates/header.php";
 ?>
 
-
-
-
 <div class="principalePictModifUser d-none d-lg-block">
 </div>
 
