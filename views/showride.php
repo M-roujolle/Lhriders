@@ -12,17 +12,19 @@ require '../controllers/controller_showride.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+
     <title>Modification d'une sortie</title>
 </head>
 
 <body>
-    <h1 class="text-center mb-5 mt-2">Vérification balade MODE ADMIN</h1>
+    <h1 class="text-center selectColor pt-3 pb-3 mb-5">Vérification balade MODE ADMIN</h1>
 
 
     <form action="" method="POST">
 
-        <div class="container bg-danger">
-            <p class="text-center">Id de la balade <?= $oneride['ride_id'] ?> </p>
+        <div class="container selectColor">
+            <h2 class="text-center">Id de la balade <?= $oneride['ride_id'] ?> </h2>
             <div class="mb-3 mt-5">
                 <label for="titre" class="form-label">Titre :</label>
                 <input disabled name="titre" value="<?= $oneride['ride_title'] ?>" type="text" class="form-control" id="titre">
@@ -37,7 +39,9 @@ require '../controllers/controller_showride.php';
                 <label for="iframe" class="form-label">Iframe :</label>
                 <textarea disabled name="iframe" class="form-control" id="iframe" aria-describedby="emailHelp"><?= $oneride['ride_iframe'] ?></textarea>
                 <div class="text-center mt-3">
-                    <?= $oneride['ride_iframe'] ?>
+                    <div class="row">
+                        <?= $oneride['ride_iframe'] ?>
+                    </div>
                 </div>
             </div>
 
@@ -46,14 +50,12 @@ require '../controllers/controller_showride.php';
                     <div class="form-floating">
                         <input disabled name="kilometre" type="number" class="form-control" id="kilometre" value="<?= $oneride['ride_kilometre'] ?>">
                         <label for="kilometre">Kilomètres :</label>
-
                     </div>
                 </div>
                 <div class="col-md text-dark">
                     <div class="form-floating">
                         <input disabled name="heure" type="time" class="form-control" id="heure" value="<?= $oneride['ride_hours'] ?>">
                         <label for="heure">Heure de départ :</label>
-
                     </div>
                 </div>
             </div>
@@ -71,8 +73,8 @@ require '../controllers/controller_showride.php';
                     </div>
                 </div>
                 <div class="col-md text-dark">
-                    <div class="form-floating mb-5">
-                        <input disabled name="date" value="<?= $oneride['ride_date'] ?>" type="date" class="form-control" id="titre">
+                    <div class="form-floating">
+                        <input disabled name="date" value="<?= $oneride['ride_date'] ?>" type="date" class="form-control mt-2" id="titre">
                         <label for="date" class="form-label">Date de départ</label>
                     </div>
                 </div>
@@ -80,7 +82,7 @@ require '../controllers/controller_showride.php';
         </div>
     </form>
     <div class="text-center">
-        <a class="btn btn-danger mt-5 mb-5 ms-2" href="listrides.php"></i>Retour</a>
+        <a class="buttondark mt-5 mb-5 ms-2" href="listrides.php"></i>Retour</a>
     </div>
 </body>
 

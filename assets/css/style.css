@@ -82,6 +82,14 @@
     color: orangered;
 }
 
+.principalePictModifride {
+    background: no-repeat center/100% url("../img/modifride.jpeg");
+    height: 30rem;
+    background-attachment: fixed;
+    background-size: cover;
+    color: orangered;
+}
+
 .logo {
     height: 4rem;
 }
@@ -141,10 +149,10 @@
     display: block;
     color: rgb(231, 74, 17);
     background-color: white;
-    border-radius: 5rem;
-    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    padding: 0.2rem 0.4rem;
     text-decoration: none;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 
 
@@ -202,9 +210,6 @@
 
 
 .buttonorange {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 6px 14px;
     font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
     border-radius: 6px;
@@ -234,7 +239,7 @@
     cursor: pointer;
     display: inline-block;
     font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     line-height: 2.5;
     outline: transparent;
@@ -256,10 +261,39 @@
     box-shadow: 0 0 .10rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(48, 46, 46, 0.5), .125rem .125rem 1rem rgba(95, 92, 90, 0.5);
 }
 
+
+.buttonblue {
+    background: linear-gradient(to bottom right, #2767f3, #363636);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+}
+
+.buttonblue:not([disabled]):focus {
+    box-shadow: 0 0 .10rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(68, 64, 64, 0.5), .125rem .125rem 1rem rgba(56, 54, 53, 0.5);
+}
+
+.buttonblue:not([disabled]):hover {
+    box-shadow: 0 0 .10rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(48, 46, 46, 0.5), .125rem .125rem 1rem rgba(95, 92, 90, 0.5);
+}
+
+
 .buttongreen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 6px 14px;
     font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
     border-radius: 6px;
@@ -277,6 +311,48 @@
 
 .buttongreen:focus {
     box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+    outline: 0;
+}
+
+.buttondelete {
+    padding: 6px 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    border-radius: 6px;
+    border: none;
+
+    color: #fff;
+    background: linear-gradient(180deg, rgb(238, 14, 14) 0%, rgb(238, 14, 14) 100%);
+    background-origin: border-box;
+    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    text-decoration: none;
+}
+
+.buttondelete:focus {
+    /* box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5); */
+    outline: 0;
+}
+
+.buttonreturn {
+    padding: 6px 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    border-radius: 6px;
+    border: none;
+
+    color: #fff;
+    background: linear-gradient(180deg, rgb(10, 10, 10) 0%, rgb(0, 0, 0) 100%);
+    background-origin: border-box;
+    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    text-decoration: none;
+}
+
+.buttonreturn:focus {
+    /* box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5); */
     outline: 0;
 }
 
@@ -623,6 +699,10 @@ textarea {
 
 .container {
     border-radius: 5px;
-    background-color: #e4e4e4;
+    background-color: #000000;
     padding: 20px;
+}
+
+.buttonblue {
+    background-color: blue;
 }

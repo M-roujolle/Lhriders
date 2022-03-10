@@ -1,6 +1,5 @@
 <?php
 require '../controllers/controller_listusers.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -15,22 +14,23 @@ require '../controllers/controller_listusers.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../assets/js/script.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
     <title>Liste des utilisateurs</title>
 </head>
 
 <body>
-    <h1 class="text-center mb-5 mt-2">Liste des utilisateurs</h1>
+    <h1 class="selectColor pt-3 pb-3 text-center">Liste des utilisateurs</h1>
     <div class="row m-0 p-0 col-lg-12">
-        <table class="table table-striped table-dark">
+        <table class="table table-striped table-dark mt-5">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th class="d-none d-lg-table-cell">ID</th>
                     <th>PSEUDO</th>
-                    <th>PRENOM</th>
-                    <th>NOM</th>
-                    <th>MAIL</th>
+                    <th class="d-none d-lg-table-cell">PRENOM</th>
+                    <th class="d-none d-lg-table-cell">NOM</th>
+                    <th class="d-none d-lg-table-cell">MAIL</th>
                     <th>VALIDATION</th>
-                    <th>ROLE</th>
+                    <th class="d-none d-lg-table-cell">ROLE</th>
                     <th>MODIFIER</th>
                     <th>SUPPRIMER</th>
                 </tr>
@@ -38,25 +38,25 @@ require '../controllers/controller_listusers.php';
             <tbody>
                 <?php foreach ($allUsersArray as $users) { ?>
                     <tr>
-                        <td scope="row"><?= $users['user_id'] ?></td>
+                        <td class="d-none d-lg-table-cell" scope="row"><?= $users['user_id'] ?></td>
                         <td><?= $users['user_pseudo'] ?></td>
-                        <td><?= $users['user_firstname'] ?></td>
-                        <td><?= $users['user_lastname'] ?></td>
-                        <td><?= $users['user_mail'] ?></td>
+                        <td class="d-none d-lg-table-cell"><?= $users['user_firstname'] ?></td>
+                        <td class="d-none d-lg-table-cell"><?= $users['user_lastname'] ?></td>
+                        <td class="d-none d-lg-table-cell"><?= $users['user_mail'] ?></td>
                         <td>
                             <form method="POST" action="">
                                 <input type="hidden" name="userstatus" value="<?= $users['user_validate'] ?>">
                                 <input name="idvalider" type="hidden" value="<?= $users['user_id'] ?>">
-                                <button name="valider" class="btn btn-primary" type="submit"><?= $users['user_validate'] == 0 ? "Valider" : "Suspendre" ?></button>
+                                <button name="valider" class="buttonblue" type="submit"><?= $users['user_validate'] == 0 ? "Valider" : "Suspendre" ?></button>
                             </form>
                         </td>
-                        <td><?= $users['role_id'] == 2 ? "User" : "Admin" ?></td>
-                        <td><a class="btn btn-primary" href="modifuser.php?id=<?= $users["user_id"] ?>">
+                        <td class="d-none d-lg-table-cell"><?= $users['role_id'] == 2 ? "User" : "Admin" ?></td>
+                        <td><a class="buttonblue" href="modifuser.php?id=<?= $users["user_id"] ?>">
                                 Modifier
                             </a></td>
                         <td>
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $users["user_id"] ?>">
+                            <button type="button" class="buttonred" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $users["user_id"] ?>">
                                 <i class="bi bi-trash"></i> </button>
                         </td>
 
@@ -74,9 +74,9 @@ require '../controllers/controller_listusers.php';
                                     <div class="modal-footer">
                                         <form action="" method="POST">
                                             <input type="hidden" value="<?= $users["user_id"] ?>" name="user_id">
-                                            <button type="submit" name="idsupp" class="btn btn-danger">Supprimer</button>
+                                            <button type="submit" name="idsupp" class="buttondelete">Supprimer</button>
                                         </form>
-                                        <a href="listusers.php" class="buttondark btn-sm">Retour</a>
+                                        <a href="listusers.php" class="buttonreturn">Retour</a>
                                     </div>
                                 </div>
                             </div>
@@ -86,9 +86,9 @@ require '../controllers/controller_listusers.php';
             </tbody>
         </table>
     </div>
-    <div class="text-center">
-        <a class="btn btn-danger mt-2 ms-2" href="admincontrol.php"> Retour panel controle</a>
-        <a class="btn btn-danger mt-2 ms-2" href="home.php"> Retour à l'accueil</a>
+    <div class="text-center mb-5">
+        <a class="buttondark mt-2 ms-2" href="admincontrol.php"> Retour panel controle</a>
+        <a class="buttondark mt-2 ms-2" href="home.php"> Retour à l'accueil</a>
     </div>
 </body>
 

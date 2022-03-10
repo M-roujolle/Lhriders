@@ -40,7 +40,7 @@ include "../templates/header.php";
                 <!-- !-- Button trigger modal -->
                 <!-- on laisse un button type button ici, on recupere l'info plus bas -->
                 <div class="mt-5">
-                    <button type="button mt-5" class="buttondark text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="buttondark text-white mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Modifier
                     </button>
                 </div>
@@ -55,8 +55,8 @@ include "../templates/header.php";
                             <div class="modal-footer">
                                 <!-- l'input va recuperer les valeurs, le mettre en type submit et une value -->
                                 <form action="settinguser.php" method="POST">
-                                    <input type="submit" name="saveuser" value="Enregistrer" class="buttonorange text-white"></input>
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
+                                    <input type="submit" name="saveuser" value="Enregistrer" class="buttongreen text-white"></input>
+                                    <button type="button" class="buttonreturn" data-bs-dismiss="modal">Retour</button>
                                 </form>
                             </div>
                         </div>
@@ -97,9 +97,9 @@ include "../templates/header.php";
                                         <div class="modal-footer">
                                             <form action="settinguser.php" method="POST">
                                                 <input type="hidden" value="<?= $value["ride_id"] ?>" name="rideid">
-                                                <button type="submit" name="suppride" class="buttonred">Supprimer</button>
+                                                <button type="submit" name="suppride" class="buttondelete">Supprimer</button>
                                             </form>
-                                            <a href="settinguser.php" class="buttondark text-white btn-sm">Retour</a>
+                                            <a href="settinguser.php" class="buttonreturn text-white">Retour</a>
                                         </div>
                                     </div>
                                 </div>

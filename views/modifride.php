@@ -3,7 +3,8 @@ require '../controllers/controller_modifride.php';
 include "../templates/header.php";
 ?>
 
-
+<div class="principalePictModifride d-none d-lg-block">
+</div>
 <!-- <form action="" method="POST">
 
     <p><?= $arrayError["belong"] ?? "" ?></p>
@@ -138,35 +139,35 @@ include "../templates/header.php";
 
         <p><?= $arrayError["belong"] ?? "" ?></p>
 
-        <label for="titre" class="form-label">Titre :</label><span class="text-danger">
+        <label for="titre" class="form-label colorOrange">Titre :</label><span class="text-danger">
             <?=
             $arrayError["titre"] ?? " ";
             ?>
         </span>
         <input name="titre" value="<?= $modifride['ride_title'] ?>" type="text" class="form-control" id="titre">
 
-        <label for="iframe" class="form-label">Iframe :</label><span class="text-danger">
+        <label for="iframe" class="form-label colorOrange">Iframe :</label><span class="text-danger">
             <?=
             $arrayError["iframe"] ?? " ";
             ?>
         </span>
-        <textarea name="iframe" class="form-control" id="iframe" aria-describedby="emailHelp"><?= $modifride['ride_iframe'] ?></textarea>
+        <textarea name="iframe" class="form-label" id="iframe" aria-describedby="emailHelp"><?= $modifride['ride_iframe'] ?></textarea>
 
-        <label for="kilometre">Kilomètres :</label><span class="text-danger">
+        <label for="kilometre" class="form-label colorOrange">Kilomètres :</label><span class="text-danger">
             <?=
             $arrayError["kilometre"] ?? " ";
             ?>
         </span>
         <input name="kilometre" type="number" class="form-control" id="kilometre" value="<?= $modifride['ride_kilometre'] ?>">
 
-        <label for="select">Choix du nombre de participants (min 2 - max 50) :</label><span class="text-danger">
+        <label for="select" class="form-label colorOrange mt-3">Choix du nombre de participants (min 2 - max 50) :</label><span class="text-danger">
             <?=
             $arrayError["select"] ?? " ";
             ?>
         </span>
 
-        <select name="select" class="form-select form-select mt-4 mb-4" aria-label="form-select-sm example">
-            <option selected value="0">Nombre de participants</option>
+        <select name="select" class="form-select form-select" aria-label="form-select-sm example">
+            <option selected value="0" class="form-label colorOrange">Nombre de participants</option>
             <option <?= $modifride['ride_participants'] == "De 2 à 5" ? "selected" : "" ?>>De 2 à 5</option>
             <option <?= $modifride['ride_participants'] == "De 5 à 10" ? "selected" : "" ?>>De 5 à 10</option>
             <option <?= $modifride['ride_participants'] == "De 10 à 20" ? "selected" : "" ?>>De 10 à 20</option>
@@ -175,28 +176,28 @@ include "../templates/header.php";
             <option <?= $modifride['ride_participants'] == "De 40 à 50" ? "selected" : "" ?>>De 40 à 50 </option>
         </select>
 
-        <label for="rdv">Point de rendez-vous :</label><span class="text-danger">
+        <label for="rdv" class="form-label colorOrange">Point de rendez-vous :</label><span class="text-danger">
             <?=
             $arrayError["rdv"] ?? " ";
             ?>
         </span>
         <input name="rdv" type="text" class="form-control" id="rdv" value="<?= $modifride['ride_meeting'] ?>">
 
-        <label for="date" class="form-label">Date de départ</label><span class="text-danger">
+        <label for="date" class="form-label colorOrange">Date de départ</label><span class="text-danger">
             <?=
             $arrayError["date"] ?? " ";
             ?>
         </span>
         <input name="date" value="<?= $modifride['ride_date'] ?>" type="date" class="form-control" id="titre">
 
-        <label for="heure">Heure de départ :</label><span class="text-danger">
+        <label for="heure" class="form-label colorOrange mt-3">Heure de départ :</label><span class="text-danger">
             <?=
             $arrayError["heure"] ?? " ";
             ?>
         </span>
         <input name="heure" type="time" class="form-control" id="heure" value="<?= $modifride['ride_hours'] ?>">
 
-        <label for="description" class="form-label">Description :</label><span class="text-danger">
+        <label for="description" class="form-label colorOrange mt-3">Description :</label><span class="text-danger">
             <?=
             $arrayError["description"] ?? " ";
             ?>
@@ -210,7 +211,7 @@ include "../templates/header.php";
         <!-- Button trigger modal -->
         <!-- on laisse un button type button ici, on recupere l'info plus bas -->
         <div class="text-center mt-5">
-            <button type="button" class="buttondark text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="buttongreen text-white col-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Modifier
             </button>
         </div>
@@ -224,9 +225,9 @@ include "../templates/header.php";
                     </div>
                     <div class="modal-footer">
                         <form action="" method="POST">
-                            <input type="submit" value="Enregistrer" class="buttondark"></input>
+                            <input type="submit" value="Enregistrer" class="buttongreen"></input>
                             <input type="hidden" name="idride" value="<?= $_GET["id"] ?>"></input>
-                            <button type="button" class="buttonred text-white" data-bs-dismiss="modal">Annuler</button>
+                            <button type="button" class="buttondelete text-white" data-bs-dismiss="modal">Annuler</button>
                         </form>
                     </div>
                 </div>
@@ -252,7 +253,7 @@ include "../templates/header.php";
 
 
 <div class="text-center">
-    <a class="buttonred text-white mt-5 mb-5 ms-2" href="settinguser.php"></i>Retour au profil</a>
+    <a class="buttondark text-white mt-5 mb-5" href="settinguser.php"></i>Retour au profil</a>
 </div>
 
 <?php

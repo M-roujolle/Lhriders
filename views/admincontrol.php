@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="text-center">
-        <a class="btn btn-danger mt-2 ms-2" href="home.php"> Retour à l'accueil</a>
+        <a class="buttondark mt-2 ms-2" href="home.php"> Retour à l'accueil</a>
     </div>
 </body>
 
