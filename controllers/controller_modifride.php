@@ -48,10 +48,6 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
 $modifRideObj = new Rides;
 $modifride = $modifRideObj->getOneRide($_GET["id"]);
 
-
-// var_dump($_POST);
-// var_dump($_SESSION);
-
 ////////////////////////////////////////////
 // controle de formulaire 
 ////////////////////////////////////////////

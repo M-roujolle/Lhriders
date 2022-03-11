@@ -1,6 +1,5 @@
 <?php
 require '../controllers/controller_modifuser.php';
-// var_dump($_POST);
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +23,7 @@ require '../controllers/controller_modifuser.php';
         <div class="col-lg-4">
             <h5 class="card-title text-center pb-1 colorOrange">N°d'id: <?= $oneUser["user_id"] ?></h5>
             <div class="center border border-dark">
-                <form action="#" method="POST">
+                <form action="" method="POST">
                     Pseudo: <label for="nom" class="form-label"></label><span class="text-danger">
                         <?=
                         $arrayError["pseudo"] ?? " ";

@@ -119,7 +119,7 @@ include "../templates/header.php";
 <?php } else { ?>
     <div class="row text-center justify-content-center mt-5 mb-5 m-0 p-0">
         <div class="card border border-white shadow pt-2" style="width: 50rem;">
-            <img src="../assets/img/etreinscri.jpeg" class="card-img-top" alt="...">
+            <img src="../assets/img/etreinscri.jpeg" class="card-img-top" alt="inscription">
             <div class="card-body">
                 <h4 class="card-text mt-2">Vous devez vous inscrire pour pouvoir créer votre tracé !</h4>
                 <a class="buttondark " type="button" href="../views/registration.php">S'inscrire</a>

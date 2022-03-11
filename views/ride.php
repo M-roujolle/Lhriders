@@ -2,7 +2,6 @@
 require "../controllers/controller_ride.php";
 require "../controllers/controller_users.php";
 include "../templates/header.php";
-// var_dump($arrayride);
 ?>
 
 <div class="principalePictRide d-none d-lg-block">

@@ -49,6 +49,12 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
     }
 }
 
+
+
+////////////////////////////////////////////
+// controle de formulaire 
+////////////////////////////////////////////
+
 $arrayError = [];
 
 if (!empty($_POST)) {

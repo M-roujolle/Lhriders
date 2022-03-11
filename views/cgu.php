@@ -12,30 +12,30 @@ include "../templates/header.php";
 <div class="mt-5 row text-center m-0 text-white">
 
     <div class="col col-lg-12">
-        <h1 class="text-center  pb-5">Conditions Générales d'Utilisation</h1>
+        <h1 class="text-center pb-5">Conditions Générales d'Utilisation</h1>
 
-        <div class="text-center  pb-5">
-            <p>Les présentes conditions générales d'utilisation dites « CGU » ont pour objet l'encadrement juridique
-                des modalités de mise à disposition du site et des services par http://lhriders.fr/ et de définir les
-                conditions d’accès et d’utilisation des services par « l'Utilisateur ».
-                Les présentes CGU sont accessibles sur le site à la rubrique «Conditions Générale d'Utilisation».
-                Toute inscription ou utilisation du site implique l'acceptation sans aucune réserve ni restriction des
-                présentes CGU par l’utilisateur. Lors de l'inscription sur le site via le Formulaire d’inscription, chaque
-                utilisateur accepte expressément les présentes CGU en cochant la case précédant le texte suivant : «
-                Je reconnais avoir lu et compris les CGU et je les accepte ».
-                En cas de non-acceptation des CGU stipulées dans le présent contrat, l'Utilisateur se doit de renoncer
-                à l'accès des services proposés par le site.
-                http://lhriders.fr/ se réserve le droit de modifier unilatéralement et à tout moment le contenu des
-                présentes CGU.
-            </p>
-        </div>
-        <div class="text-center pb-5 fw-bold"> Article 1 - LES MENTIONS LEGALES :<br>
+
+        <p class="text-center pb-5">Les présentes conditions générales d'utilisation dites « CGU » ont pour objet l'encadrement juridique
+            des modalités de mise à disposition du site et des services par http://lhriders.fr/ et de définir les
+            conditions d’accès et d’utilisation des services par « l'Utilisateur ».
+            Les présentes CGU sont accessibles sur le site à la rubrique «Conditions Générale d'Utilisation».
+            Toute inscription ou utilisation du site implique l'acceptation sans aucune réserve ni restriction des
+            présentes CGU par l’utilisateur. Lors de l'inscription sur le site via le Formulaire d’inscription, chaque
+            utilisateur accepte expressément les présentes CGU en cochant la case précédant le texte suivant : «
+            Je reconnais avoir lu et compris les CGU et je les accepte ».
+            En cas de non-acceptation des CGU stipulées dans le présent contrat, l'Utilisateur se doit de renoncer
+            à l'accès des services proposés par le site.
+            http://lhriders.fr/ se réserve le droit de modifier unilatéralement et à tout moment le contenu des
+            présentes CGU.
+        </p>
+
+        <p class="text-center pb-5"> Article 1 - LES MENTIONS LEGALES :<br>
             L’édition et la direction de la publication du site http://lhriders.fr/ est assurée par Maxime Roujolle,
             domicilié 1295 Route du Hameau d'Enfer.
             Le numéro de téléphone est 0660769121
-            Adresse e-mail roujolle.maxime@gmail.com.</div>
+            Adresse e-mail roujolle.maxime@gmail.com.</p>
 
-        <div class="text-center  pb-5 fw-bold"> ARTICLE 2 - ACCES AU SITE :<br>
+        <p class="text-center pb-5"> ARTICLE 2 - ACCES AU SITE :<br>
             Le site http://lhriders.fr/ permet à l'Utilisateur un accès gratuit aux services suivants :
             Organisation d'un itinéraire de balades pour motards.
             Le site est accessible gratuitement en tout lieu à tout Utilisateur ayant un accès à Internet. Tous les
@@ -54,13 +54,13 @@ include "../templates/header.php";
             la responsabilité de http://lhriders.fr/. Dans ces cas, l’Utilisateur accepte ainsi ne pas tenir rigueur à
             l’éditeur de toute interruption ou suspension de service, même sans préavis.
             L'Utilisateur a la possibilité de contacter le site par messagerie électronique à l’adresse email de
-            l’éditeur communiqué à l’ARTICLE 1.</div>
+            l’éditeur communiqué à l’ARTICLE 1.</p>
 
-        <div class="text-center  pb-5 fw-bold"> ARTICLE 3 - COLLECTE DES DONNEES :<br>
+        <p class="text-center pb-5"> ARTICLE 3 - COLLECTE DES DONNEES :<br>
             Le site est exempté de déclaration à la Commission Nationale Informatique et Libertés (CNIL) dans la
-            mesure où il ne collecte aucune donnée concernant les Utilisateurs.</div>
+            mesure où il ne collecte aucune donnée concernant les Utilisateurs.</p>
 
-        <div class="text-center  pb-5 fw-bold"> ARTICLE 4 - PROPRIETE INTELLECTUELLE :<br>
+        <p class="text-center pb-5"> ARTICLE 4 - PROPRIETE INTELLECTUELLE :<br>
             Les marques, logos, signes ainsi que tous les contenus du site (textes, images, son…) font l'objet
             d'une protection par le Code de la propriété intellectuelle et plus particulièrement par le droit d'auteur.
             L'Utilisateur doit solliciter l'autorisation préalable du site pour toute reproduction, publication, copie des
@@ -71,8 +71,9 @@ include "../templates/header.php";
             et suivants du Code de la propriété intellectuelle.
             Il est rappelé conformément à l’article L122-5 du Code de propriété intellectuelle que l’Utilisateur qui
             reproduit, copie ou publie le contenu protégé doit citer l’auteur et sa source.
-        </div>
-        <div class="text-center  pb-5 fw-bold"> ARTICLE 5 - RESPONSABILITE :<br>
+        </p>
+
+        <p class="text-center pb-5"> ARTICLE 5 - RESPONSABILITE :<br>
             Les sources des informations diffusées sur le site http://lhriders.fr/ sont réputées fiables mais le site
             ne garantit pas qu’il soit exempt de défauts, d’erreurs ou d’omissions.
             Les informations communiquées sont présentées à titre indicatif et général sans valeur contractuelle.
@@ -88,15 +89,17 @@ include "../templates/header.php";
             téléchargement provenant de ce site.
             La responsabilité du site ne peut être engagée en cas de force majeure ou du fait imprévisible et
             insurmontable d'un tiers.
-        </div>
-        <div class="text-center  pb-5 fw-bold"> ARTICLE 6 - LIENS HYPERTEXTES :<br>
+        </p>
+
+        <p class="text-center pb-5"> ARTICLE 6 - LIENS HYPERTEXTES :<br>
             Des liens hypertextes peuvent être présents sur le site. L’Utilisateur est informé qu’en cliquant sur ces
             liens, il sortira du site http://lhriders.fr/. Ce dernier n’a pas de contrôle sur les pages web sur
             lesquelles aboutissent ces liens et ne saurait, en aucun cas, être responsable de leur contenu.
-        </div>
-        <div class="text-center  pb-5 fw-bold"> ARTICLE 7 - PUBLICATIONS PAR L'UTILISATEUR :<br>
+        </p>
+
+        <p class="text-center pb-5"> ARTICLE 7 - PUBLICATIONS PAR L'UTILISATEUR :<br>
             Le site permet aux membres de publier les contenus suivants :
-            <li>Itinéraires soerties motos</li>
+            <li>Itinéraires sorties motos</li>
             Dans ses publications, le membre s’engage à respecter les règles de la Netiquette (règles de bonne
             conduite de l’internet) et les règles de droit en vigueur.
             Le site peut exercer une modération sur les publications et se réserve le droit de refuser leur mise en
@@ -114,12 +117,13 @@ include "../templates/header.php";
             recours en justice engagé par un tiers lésé contre le site sera pris en charge par l'Utilisateur.
             Le contenu de l'Utilisateur peut être à tout moment et pour n'importe quelle raison supprimé ou modifié
             par le site, sans préavis.
-        </div>
-        <div class="text-center  pb-5 fw-bold"> ARTICLE 8 - DROIT APPLICABLE ET JURUDICTION COMPETENTE :<br>
+        </p>
+
+        <p class="text-center pb-5"> ARTICLE 8 - DROIT APPLICABLE ET JURUDICTION COMPETENTE :<br>
             La législation française s'applique au présent contrat. En cas d'absence de résolution amiable d'un
             litige né entre les parties, les tribunaux français seront seuls compétents pour en connaître.
             Pour toute question relative à l’application des présentes CGU, vous pouvez joindre l’éditeur aux
-            coordonnées inscrites à l’ARTICLE 1</div>
+            coordonnées inscrites à l’ARTICLE 1</p>
 
         <p>
             <a href="http://legalplace.fr">Rédigé sur legalplace</a>

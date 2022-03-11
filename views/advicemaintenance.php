@@ -13,14 +13,14 @@ include "../templates/header.php";
     </div>
 </div>
 
-<h1 class=" selectColor pt-3 pb-3 text-center">Conseils pour bien débuter et entretien</h1>
+<h1 class="selectColor pt-3 pb-3 text-center">Conseils pour bien débuter et entretien</h1>
 <p class="pt-5 ps-5 pe-5 pb-5 fs-4 text-center text-white">Tout motard qui se respect menage sa monture ! Tu trouveras ici des astuces et conseils pour organiser, préparer et anticiper au mieux tes promenades. N'oublies jamais que le risque zéro n'existe pas ! </p>
 
 <h2 class="text-center pt-2 pb-2 selectColor">10 conseils pour rouler serein</h2>
 <div class="row justify-content-evenly gy-5 m-0 text-center">
     <?php foreach ($consEnt as $key => $value) { ?>
         <div class="card shadow pt-2" style="width: 18rem;">
-            <img src="../<?= $value["pictures"] ?>" class="card-img-top" alt="...">
+            <img src="../<?= $value["pictures"] ?>" class="card-img-top" alt="numéro conseils">
             <div class="card-body">
                 <h5 class="card-title"><?= $value["name"] ?></h5>
                 <p class="card-text"><?= $value["description"] ?></p>

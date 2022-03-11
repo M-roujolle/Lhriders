@@ -6,6 +6,7 @@ require '../models/Rides.php';
 session_start();
 if ($_SESSION["role"] != 1 || !isset($_SESSION["id"])) {
     header('Location: home.php');
+    exit();
 }
 
 
@@ -23,9 +24,6 @@ if (isset($_POST["idvalider"], $_POST["valider"], $_POST["ridestatus"])) {
         $rideObj->changeStatusRide($idride, $status);
     }
 }
-
-
-
 
 $arrayride = $rideObj->getAllRides();
 

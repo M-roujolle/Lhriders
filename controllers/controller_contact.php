@@ -42,10 +42,15 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
     }
 }
 
+
+// rexeg du formulaire de contact
 $regexNom = "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð '-]{2,30}$/u";
 $regexCommentaire = "/^[a-zA-Z0-9àáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,._!:;?()\/@&'-=]{2,500}$/u";
-$arrayError = [];
 
+$arrayError = [];
+$sendMessageOk = false;
+
+// controle des verifications du formulaire de contact
 if (!empty($_POST)) {
 
     if (isset($_POST["nom"])) {

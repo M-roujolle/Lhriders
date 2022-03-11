@@ -1,6 +1,5 @@
 <?php
 
-// page index les type de motards
 $typeOfBikers = [
     [
         "id" => 1,
@@ -30,7 +29,7 @@ $typeOfBikers = [
 
 ];
 
-// page index photos motos
+
 $showYourBike = [
     [
         "id" => 1,
@@ -71,7 +70,7 @@ $showYourBike = [
     ],
 ];
 
-// page legislation 
+
 $legis = [
     [
         "id" => 1,
@@ -133,7 +132,6 @@ $legis = [
     ],
 ];
 
-// page conseils et entretient les 10 conseils
 $consEnt = [
     [
         "id" => 1,
@@ -199,7 +197,7 @@ $consEnt = [
     ],
 ];
 
-// page conseils et entretient videos
+
 $vidConsEnt = [
     [
         "id" => 1,

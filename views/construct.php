@@ -114,21 +114,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-
-
     <title>En construction</title>
 </head>
 
 <body>
-
     <h1 class="block-effect" style="--td: 1.2s">
         <div class="block-reveal" style="--bc: #030303; --d: .1s">En cours</div>
         <div class="block-reveal" style="--bc: #ff5703; --d: .5s">de construction</div>
     </h1>
-
-
-
     <a class="text-center buttondark" href="admincontrol.php" class="abs-site-link" rel="nofollow noreferrer">Retour</a>
 
 </body>

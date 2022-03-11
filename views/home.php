@@ -22,7 +22,7 @@ include "../templates/header.php";
         <div class="card mb-3 mt-5 border border-white shadow pt-2 pb-2" style="max-width: 600px;">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="../<?= $value["pictures"] ?>" class="img-fluid rounded-start" alt="...">
+                    <img src="../<?= $value["pictures"] ?>" class="img-fluid rounded-start" alt="catégorie de motard">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -73,7 +73,7 @@ include "../templates/header.php";
     <?php
     foreach ($showYourBike as $key => $value) { ?>
         <div class="card border border-white pt-2" style="width: 20rem;">
-            <img src="../<?= $value["pictures"] ?>" class="card-img-top" alt="...">
+            <img src="../<?= $value["pictures"] ?>" class="card-img-top" alt="motos des membres">
             <div class="card-body">
                 <p class="card-text"><?= $value["model"] ?></p>
             </div>

@@ -6,6 +6,7 @@ require '../models/Rides.php';
 session_start();
 if ($_SESSION["role"] != 1 || !isset($_SESSION["id"])) {
     header('Location: home.php');
+    exit();
 }
 
 $oneRideObj = new Rides;

@@ -10,7 +10,9 @@ session_start();
 $regexNom = "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð '-]{2,30}$/u";
 $regexPseudo = "/^([a-zA-Z0-9-_]{2,36})$/u";
 
-
+////////////////////////////////////////////
+// controle identité du user 
+////////////////////////////////////////////
 $arrayError = [];
 
 
@@ -62,7 +64,15 @@ $rideObj = new Rides;
 
 if (isset($_POST["rideid"])) {
     $id = $_POST["rideid"];
-    $rideObj->deleteRide($id);
+    $insert = new Rides;
+
+    // si la méthode renvoie false, on ne continue pas le script, donc pas de modification via l'url
+    if (!$insert->verifBelongRideUser($id, $_SESSION["id"])) {
+        $arrayError["belong"] = "pas autorisé";
+    }
+    if (!isset($arrayError)) {
+        $rideObj->deleteRide($id);
+    }
 }
 
 $id = $_SESSION["id"];

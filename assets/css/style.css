@@ -135,7 +135,7 @@
 
 }
 
-.abutton {
+/* .abutton {
     display: block;
     color: white;
     background-color: orangered;
@@ -153,9 +153,10 @@
     padding: 0.2rem 0.4rem;
     text-decoration: none;
     margin-right: 0.5rem;
-}
+} */
 
 
+/* boutton ride */
 .cartoonbutton {
     background-color: rgb(238, 89, 34);
     border: 0 solid #E5E7EB;
@@ -208,6 +209,7 @@
     }
 }
 
+/* ---------------------------------------------- */
 
 .buttonorange {
     padding: 6px 14px;
@@ -230,6 +232,7 @@
     outline: 0;
 }
 
+/* ------------------------------------------------------ */
 
 .buttondark {
     background: linear-gradient(to bottom right, #000000, #616161);
@@ -261,6 +264,7 @@
     box-shadow: 0 0 .10rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(48, 46, 46, 0.5), .125rem .125rem 1rem rgba(95, 92, 90, 0.5);
 }
 
+/* ------------------------------------------------------ */
 
 .buttonblue {
     background: linear-gradient(to bottom right, #2767f3, #363636);
@@ -292,6 +296,7 @@
     box-shadow: 0 0 .10rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(48, 46, 46, 0.5), .125rem .125rem 1rem rgba(95, 92, 90, 0.5);
 }
 
+/* ------------------------------------------------------ */
 
 .buttongreen {
     padding: 6px 14px;
@@ -314,6 +319,8 @@
     outline: 0;
 }
 
+/* ------------------------------------------------------ */
+
 .buttondelete {
     padding: 6px 14px;
     font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
@@ -335,6 +342,8 @@
     outline: 0;
 }
 
+/* ------------------------------------------------------ */
+
 .buttonreturn {
     padding: 6px 14px;
     font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
@@ -355,6 +364,8 @@
     /* box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5); */
     outline: 0;
 }
+
+/* ------------------------------------------------------ */
 
 .buttonred {
     display: flex;
@@ -380,7 +391,7 @@
     outline: 0;
 }
 
-/* -------------------------------FORMULAIRE CSS-------------------------------------------------------- */
+/* -------------------------------FORMULAIRE INSCRIPTION-------------------------------------------------------- */
 
 .form-style-9 {
     max-width: 450px;
@@ -553,7 +564,7 @@
     color: #495057;
 }
 
-/* CREATE RIDE CSS ----------------------------------------------------------------*/
+/* FORMULAIRE CREATE RIDE CSS ----------------------------------------------------------------*/
 
 .form-style-9 {
     max-width: 100%;
@@ -709,6 +720,7 @@ textarea {
 
 
 /* bg header ---------------------------*/
+
 .backgroundheader {
     background-color: rgb(83, 82, 82);
 }

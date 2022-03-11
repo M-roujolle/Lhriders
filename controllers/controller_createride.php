@@ -6,12 +6,10 @@ require '../models/DataBase.php';
 require '../models/Users.php';
 require '../models/Rides.php';
 
-
-// var_dump($_POST);
-
 /////////////////////////////////////////////////////////////////
 // on verifie si post login, password et connexion sont dispo
 /////////////////////////////////////////////////////////////////
+
 if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
 
     // si login et password ne sont pas vide
@@ -168,6 +166,7 @@ if (!empty($_POST)) {
         // j'utilise la methode insertride pour créer la balade
         $insert->insertRide($iframe, $titre, $description, $kilometre, $participants, $hours, $meeting, $date, $iduser);
         $alertride = "";
+        // unset permet de nettoyer le formulaire après validation
         unset($_POST);
     }
 }

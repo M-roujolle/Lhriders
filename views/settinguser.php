@@ -12,7 +12,8 @@ include "../templates/header.php";
     <div class="col-lg-4">
         <div class="center border border-dark">
             <h1>Bonjour <?= $_SESSION["pseudo"] ?></h1>
-            <p>Votre N° d'identification : <?= $_SESSION["id"] ?></p>
+            <p>Votre N° d'identification : <?= $_SESSION["id"] ?></p>g
+
             <form action="settinguser.php" method="POST">
                 Pseudo: <label for="nom" class="form-label"></label><span class="text-danger">
                     <?=

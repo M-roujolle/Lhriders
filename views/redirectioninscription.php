@@ -8,12 +8,12 @@ include "../templates/header.php";
 <div class="principalePictRedirection d-none d-lg-block">
 </div>
 
-<h1 class=" selectColor pt-3 pb-3 text-center"> En attente</h1>
+<h1 class="selectColor pt-3 pb-3 text-center"> En attente</h1>
 <div class="row m-0 p-0 justify-content-center text-center">
     <div class="card mt-5" style="width: 50rem;">
         <h5 class="card-header">VOTRE COMPTE EST EN COURS DE VALIDATION</h5>
         <div class="card-body">
-            <p class="card-text">Veuillez recommencer ultérieurement.</p>
+            <p class="card-text">Veuillez réessayer ultérieurement.</p>
             <a href="../views/home.php" class="buttondark text-white">Retour à l'accueil</a>
         </div>
     </div>

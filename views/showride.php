@@ -1,6 +1,5 @@
 <?php
 require '../controllers/controller_showride.php';
-// var_dump($_POST);
 ?>
 
 <!DOCTYPE html>

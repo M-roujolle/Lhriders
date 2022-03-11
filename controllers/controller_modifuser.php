@@ -6,9 +6,14 @@ require '../models/Users.php';
 session_start();
 if ($_SESSION["role"] != 1 || !isset($_SESSION["id"])) {
     header('Location: home.php');
+    exit();
 }
 // var_dump($_POST);
 
+
+////////////////////////////////////////////
+// controle de modification d'un utilisateur 
+////////////////////////////////////////////
 $regexNom = "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð '-]{2,30}$/u";
 $regexPseudo = "/^([a-zA-Z0-9-_]{2,36})$/u";
 

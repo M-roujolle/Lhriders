@@ -4,7 +4,7 @@ require '../models/DataBase.php';
 require '../models/Users.php';
 
 session_start();
-// on verifie si post login, password et connexikon sont dispo
+// on verifie si post login, password et connexion sont dispo
 if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
 
     // si login et password ne sont pas vide

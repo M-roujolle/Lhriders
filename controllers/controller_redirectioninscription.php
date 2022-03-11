@@ -10,8 +10,7 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
         $existUser = $user->verifUserExist($_POST["login"])["utilisateur"];
 
         if ($existUser === "1") {
-            // header('Location: ../views/home.php');
-            // exit();
+
             // on stock notre mdp dans $userPassword
             $userPassword = $user->verifPassword($_POST["login"])["user_password"];
 

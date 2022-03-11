@@ -8,7 +8,7 @@ include "../templates/header.php";
 </div>
 
 <h1 class="text-center text-white mt-5">Contact</h1>
-<form action="#" method="POST">
+<form action="" method="POST">
     <div class="container mt-5 selectColor">
 
         <div class="row register-form">
@@ -48,7 +48,7 @@ include "../templates/header.php";
                     $arrayError["comment"] ?? " ";
                     ?>
                 </span>
-                <textarea name="comment" class="form-label" rows="9" id="comment" type="text" aria-describedby="emailHelp" placeholder="Veuillez décrire votre demande"><?= filter_input(INPUT_POST, 'comment') ?></textarea>
+                <textarea name="comment" class="form-label" rows="9" id="comment" type="text" aria-describedby="emailHelp" placeholder="Veuillez décrire votre demande"><?= isset($_POST["comment"]) ? htmlspecialchars($_POST["comment"]) : "" ?></textarea>
             </div>
 
             <div class="d-flex justify-content-center">
@@ -60,7 +60,7 @@ include "../templates/header.php";
                 <div class="g-recaptcha mt-3" data-sitekey="6LdvTZkeAAAAAODC1ihzB7MWwJZZ9vyhzVI59Q9P"></div>
             </div>
             <div class="text-center">
-                <button type="submit" class="buttondark col-2 mt-4 mb-3">Envoyer</button>
+                <button type="submit" name="idsubmit" class="buttondark col-2 mt-4 mb-3">Envoyer</button>
             </div>
         </div>
     </div>
