@@ -1,5 +1,5 @@
 .principalePict {
-    background: no-repeat center/100% url("../img/pexels-photo-379419.jpeg");
+    background: no-repeat center/100% url("../img/home.jpg");
     color: orangered;
     height: 30rem;
     background-attachment: fixed;
@@ -67,7 +67,7 @@
 }
 
 .principalePictCreateRide {
-    background: no-repeat center/100% url("../img/create_ride.jpeg");
+    background: no-repeat center/100% url("../img/createride.jpg");
     height: 30rem;
     background-attachment: fixed;
     background-size: cover;
@@ -135,7 +135,7 @@
 
 }
 
-/* .abutton {
+.abutton {
     display: block;
     color: white;
     background-color: orangered;
@@ -153,7 +153,7 @@
     padding: 0.2rem 0.4rem;
     text-decoration: none;
     margin-right: 0.5rem;
-} */
+}
 
 
 /* boutton ride */

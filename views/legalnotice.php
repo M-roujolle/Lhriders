@@ -49,9 +49,8 @@ include "../templates/header.php";
                 d'accès, de rectification, de suppression et d'opposition de ses données personnelles. L'Utilisateur
                 exerce ce droit :
 
-                <li>par mail à l'adresse email roujolle.maxime@gmail.com;</li>
-                <li>via un formulaire de contact ;</li>
-                <li>via son espace personnel ;</li>
+                <li>par mail à l'adresse email roujolle.maxime@gmail.com</li>
+                <li>via un formulaire de contact</li>
 
                 Toute utilisation, reproduction, diffusion, commercialisation, modification de toute ou partie du
                 Site,

@@ -7,35 +7,34 @@ include "../templates/header.php";
 
 <div class="principalePictRegistration d-none d-lg-block">
 </div>
-<h1 class=" selectColor pt-3 pb-3 text-center">Inscrivez vous ici pour pouvoir créer vos propres balades !</h1>
+<h1 class=" selectColor pt-3 pb-3 text-center">Inscription</h1>
 
 <!-- Formulaire de contact-------------------------------------------------------------------------------------------->
 <form action="registration.php" method="POST" class="ps-3 pe-3">
     <div class="container register">
         <div class="row">
             <div class="col-md-3 register-left">
-                <i class="bi bi-person-circle"></i>
                 <h3 class="colorOrange">Bienvenue</h3>
-                <p class="">Créer ton profil ici pour pouvoir éditer ta balade !</p>
+                <p class="">Créer votre profil pour partager votre balade !</p>
             </div>
             <div class="col-md-9 register-right">
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <h3 class="register-heading">Inscription</h3>
+                        <h3 class="register-heading mt-2"></h3>
                         <div class="row register-form">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <!-- pseudo -->
-                                    <label for="pseudo" class="form-label">Pseudo : </label><span class="text-danger">
+                                    <label for="pseudo" class="form-label">Pseudo* : </label><span class="text-danger">
                                         <?=
                                         $arrayError["pseudo"] ?? " ";
                                         ?>
                                     </span>
-                                    <input value="<?= isset($_POST["pseudo"]) ? htmlspecialchars($_POST["pseudo"]) : "" ?>" name="pseudo" type="text" class="form-control" id="pseudo" placeholder="Ex : Jean414">
+                                    <input value="<?= isset($_POST["pseudo"]) ? htmlspecialchars($_POST["pseudo"]) : "" ?>" name="pseudo" type="text" class="form-control" id="pseudo" placeholder="Ex : Pierre24">
                                 </div>
                                 <div class="form-group">
                                     <!--  prenom -->
-                                    <label for="prenom" class="form-label mt-1">Prénom : </label><span class="text-danger">
+                                    <label for="prenom" class="form-label mt-1">Prénom* : </label><span class="text-danger">
                                         <?=
                                         $arrayError["prenom"] ?? " ";
                                         ?>
@@ -44,7 +43,7 @@ include "../templates/header.php";
                                 </div>
                                 <div class="form-group">
                                     <!-- nom -->
-                                    <label for="nom" class="form-label">Nom : </label><span class="text-danger">
+                                    <label for="nom" class="form-label">Nom* : </label><span class="text-danger">
                                         <?=
                                         $arrayError["nom"] ?? " ";
                                         ?>
@@ -56,16 +55,16 @@ include "../templates/header.php";
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <!-- mail -->
-                                    <label for="mail" class="form-label mt-1">Mail : </label><span class="text-danger">
+                                    <label for="mail" class="form-label mt-1">Mail* : </label><span class="text-danger">
                                         <?=
                                         $arrayError["mail"] ?? " ";
                                         ?>
                                     </span>
                                     <input value="<?= isset($_POST["mail"]) ? htmlspecialchars($_POST["mail"]) : "" ?>" name=" mail" type="mail" class="form-control" id="mail" placeholder="Ex : nom.prénom@mail.fr">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group mt-4">
                                     <!-- mot de passe -->
-                                    <label for="motdepasse" class="form-label">Mot de passe : </label><span class="text-danger">
+                                    <label for="motdepasse" class="form-label">Mot de passe* : </label><span class="text-danger">
                                         <?=
                                         $arrayError["motdepasse"] ?? " ";
                                         ?>
@@ -74,7 +73,7 @@ include "../templates/header.php";
                                 </div>
                                 <div class="form-check ms-1 mt-3">
                                     <input type="checkbox" class="form-check-input" name="checkBox" id="checkBox">
-                                    <label class="form-check-label" for="checkBox">Accepter les CGU</label><span class="text-danger">
+                                    <label class="form-check-label" for="checkBox">Accepter les CGU*</label><span class="text-danger">
                                         <?=
                                         $arrayError["checkBox"] ?? " ";
                                         ?>

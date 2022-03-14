@@ -6,7 +6,7 @@ include "../templates/header.php";
 <div class="principalePictModifride d-none d-lg-block">
 </div>
 
-<h1 class="selectColor pt-3 pb-3 text-center">Modification du tracé</h1>
+<h1 class="selectColor pt-3 pb-3 text-center">Modifier son tracé</h1>
 
 <div class="container mt-5">
     <form action="" method="POST">

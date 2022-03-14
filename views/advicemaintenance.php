@@ -13,8 +13,9 @@ include "../templates/header.php";
     </div>
 </div>
 
-<h1 class="selectColor pt-3 pb-3 text-center">Conseils pour bien débuter et entretien</h1>
-<p class="pt-5 ps-5 pe-5 pb-5 fs-4 text-center text-white">Tout motard qui se respect menage sa monture ! Tu trouveras ici des astuces et conseils pour organiser, préparer et anticiper au mieux tes promenades. N'oublies jamais que le risque zéro n'existe pas ! </p>
+<h1 class="selectColor pt-3 pb-3 text-center">Conseils et entretien</h1>
+<p class="pt-5 fs-4 text-center text-white">Tout motard qui se respect ménage sa monture.</p>
+<p class="fs-4 text-center text-white pb-5">Ici se trouvent des astuces et conseils pour organiser, préparer et anticiper au mieux vos promenades.</p>
 
 <h2 class="text-center pt-2 pb-2 selectColor">10 conseils pour rouler serein</h2>
 <div class="row justify-content-evenly gy-5 m-0 text-center">

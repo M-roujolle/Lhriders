@@ -6,13 +6,13 @@ include "../templates/header.php";
 <div class="principalePictModifUser d-none d-lg-block">
 </div>
 
-<h1 class="text-center selectColor pt-3 pb-3 mb-5">Modifie ton profil ici </h1>
+<h1 class="text-center selectColor pt-3 pb-3 mb-5">Modifier son profil</h1>
 
 <div class="row m-0 p-0 justify-content-evenly">
     <div class="col-lg-4">
         <div class="center border border-dark">
             <h1>Bonjour <?= $_SESSION["pseudo"] ?></h1>
-            <p>Votre N° d'identification : <?= $_SESSION["id"] ?></p>g
+            <p>Votre N° d'identification : <?= $_SESSION["id"] ?></p>
 
             <form action="settinguser.php" method="POST">
                 Pseudo: <label for="nom" class="form-label"></label><span class="text-danger">
