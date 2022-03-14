@@ -8,7 +8,7 @@ include "../templates/header.php";
 
 <h1 class="text-center selectColor pt-3 pb-3 mb-5">Modifier son profil</h1>
 
-<div class="row m-0 p-0 justify-content-evenly">
+<div class="row m-0 justify-content-evenly">
     <div class="col-lg-4">
         <div class="center border border-dark">
             <h1>Bonjour <?= $_SESSION["pseudo"] ?></h1>
@@ -113,13 +113,14 @@ include "../templates/header.php";
             </div>
         </div>
     </div>
+</div>
 
 
-    <div class="text-center">
-        <a class="buttondark text-white mt-5 ms-2" href="home.php">Retour à l'accueil</a>
-    </div>
+<div class="text-center">
+    <a class="buttondark text-white mt-5" href="home.php">Retour à l'accueil</a>
+</div>
 
 
-    <?php
-    include "../templates/footer.php";
-    ?>
+<?php
+include "../templates/footer.php";
+?>
