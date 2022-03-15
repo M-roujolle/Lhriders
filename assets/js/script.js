@@ -19,3 +19,9 @@ window.addEventListener("DOMContentLoaded", function () {
     Swal.fire("Déconnexion", "A bientôt", "info");
   }
 });
+
+window.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("alertride")) {
+    Swal.fire("Tracé crée", "En attente de validation", "success");
+  }
+});

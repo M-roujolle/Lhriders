@@ -8,8 +8,6 @@ include "../templates/header.php";
 
 <div class="principalePictAdvicemaintenance d-none d-lg-block">
     <div class="text-center pt-4 text-white">
-
-
     </div>
 </div>
 

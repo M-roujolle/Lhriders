@@ -27,7 +27,7 @@ include "../templates/header.php";
 <p class="text-center pb-2 selectColor pt-2 fs-4">A qui s'adresse ce site ? </p>
 <div class="row justify-content-evenly m-0">
     <?php foreach ($typeOfBikers as $key => $value) { ?>
-        <div class="card mb-3 mt-5 border border-white shadow pt-2 pb-2" style="max-width: 600px;">
+        <div class="card mb-3 mt-5 border border-white shadow pt-2 pb-2" style="max-width: 700px;">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../<?= $value["pictures"] ?>" class="img-fluid rounded-start" alt="catégorie de motard">

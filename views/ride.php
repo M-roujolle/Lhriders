@@ -17,7 +17,7 @@ include "../templates/header.php";
 
 <div class="row m-0">
     <?php foreach ($arrayride as $value) { ?>
-        <div class="d-flex justify-content-evenly col-lg-3">
+        <div class="justify-content-evenly col-lg-3">
             <div class="card mt-5 shadow">
                 <div class="card-body">
                     <div class="row p-0">
@@ -32,7 +32,6 @@ include "../templates/header.php";
                             Plus d'infos
                         </button>
 
-
                         <!-- Modal -->
                         <div class="modal fade" id="modal-<?= $value["ride_id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -46,7 +45,7 @@ include "../templates/header.php";
                                         <p type="text"><strong>Point de départ:</strong> <?= $value["ride_meeting"] ?></p>
                                         <p type="text"><strong>Nombre de participants:</strong> <?= $value["ride_participants"] ?></p>
                                         <p type="text"><strong>Nombre de kilomètres:</strong> <?= $value["ride_kilometre"] ?> km</p>
-                                        <p type="text"><strong><?= $value["ride_description"] ?></strong></p>
+                                        <p type="text"><?= $value["ride_description"] ?></p>
 
                                     </div>
                                     <div class="modal-footer color">

@@ -149,6 +149,8 @@ if (!empty($_POST)) {
             unset($_POST["checkbox"]);
         }
     }
+
+
     if (empty($arrayError)) {
         // je sécurise mes champs à l'aide d'un htmlspecialchars et j'enlève les espaces en trop avec trim avant de les stocker dans les variables
         $titre = htmlspecialchars(trim($_POST["titre"]));
