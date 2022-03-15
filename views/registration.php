@@ -63,13 +63,22 @@ include "../templates/header.php";
                                     <input value="<?= isset($_POST["mail"]) ? htmlspecialchars($_POST["mail"]) : "" ?>" name=" mail" type="mail" class="form-control" id="mail" placeholder="Ex : nom.prénom@mail.fr">
                                 </div>
                                 <div class="form-group mt-4">
+
                                     <!-- mot de passe -->
                                     <label for="motdepasse" class="form-label">Mot de passe* : </label><span class="text-danger">
                                         <?=
                                         $arrayError["motdepasse"] ?? " ";
                                         ?>
                                     </span>
-                                    <input value="<?= isset($_POST["motdepasse"]) ? htmlspecialchars($_POST["motdepasse"]) : "" ?>" name=" motdepasse" type="password" class="form-control" id="motdepasse" placeholder="Saisissez votre mot de passe">
+                                    <input value="<?= isset($_POST["motdepasse"]) ? htmlspecialchars($_POST["motdepasse"]) : "" ?>" name=" motdepasse" type="password" class="form-control" id="motdepasse" placeholder="Mot de passe">
+
+                                    <!-- confirmation mot de passe -->
+                                    <label for="confmotdepasse" class="form-labe mt-4">Confirmation mot de passe* : </label><span class="text-danger">
+                                        <?=
+                                        $arrayError["confmotdepasse"] ?? " ";
+                                        ?>
+                                    </span>
+                                    <input value="<?= isset($_POST["confmotdepasse"]) ? htmlspecialchars($_POST["confmotdepasse"]) : "" ?>" name=" confmotdepasse" type="password" class="form-control mt-2" id="confmotdepasse" placeholder="Confirmez votre mot de passe">
                                 </div>
                                 <div class="form-check ms-1 mt-3">
                                     <input type="checkbox" class="form-check-input" name="checkBox" id="checkBox">
@@ -79,13 +88,16 @@ include "../templates/header.php";
                                         ?>
                                     </span>
                                 </div>
-                                <span class="text-danger">
-                                    <?=
-                                    $arrayError["reCaptcha"] ?? " ";
-                                    ?>
-                                </span>
+                            </div>
+                            <span class="text-danger">
+                                <?=
+                                $arrayError["reCaptcha"] ?? " ";
+                                ?>
+                            </span>
+                            <div class="d-flex justify-content-center">
                                 <div class="g-recaptcha mt-3" data-sitekey="6LdvTZkeAAAAAODC1ihzB7MWwJZZ9vyhzVI59Q9P"></div>
                             </div>
+
 
                             <button type="submit" class="buttongreen text-white mt-4 ms-4 col-11">Valider</button>
 

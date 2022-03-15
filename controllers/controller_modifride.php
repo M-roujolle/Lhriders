@@ -174,4 +174,8 @@ if (!empty($_POST)) {
 
 
 $modifRideObj = new Rides;
-$modifride = $modifRideObj->getOneRide($_GET["id"]);
+if (ctype_digit($_GET["id"]) && $modifRideObj->verifBelongRideUser($_GET["id"], $_SESSION["id"])) {
+    $modifride = $modifRideObj->getOneRide($_GET["id"]);
+} else {
+    header('Location: ../views/modifride');
+}

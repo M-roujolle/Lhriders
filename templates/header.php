@@ -64,7 +64,6 @@
                 <?php } ?>
 
                 <!-- <?php if (isset($_SESSION["id"]) && $_SESSION["role"] == "1") { ?>
-                    <a class="bbutton ms-2" href="admincontrol.php"><i class="bi bi-gear"></i></a>
                 <?php } ?> -->
             </div>
         </div>

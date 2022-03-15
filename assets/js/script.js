@@ -1,14 +1,14 @@
 window.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("alertconnexion")) {
-    Swal.fire("Connexion réussie !", "", "success");
+    Swal.fire("Vous êtes connecté", "", "success");
   }
 });
 
 window.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("alertconfirm")) {
     Swal.fire(
-      "Félicitations votre compte à été crée avec succès, il sera bientôt validé par notre équipe",
-      "Une fois votre compte validé, vous pourrez créer vos balades !",
+      "Compte crée avec succès, en attente de validation",
+      "Une fois validé, vous pourrez créer vos balades !",
       "success"
     );
   }
@@ -17,11 +17,5 @@ window.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("alertlogout")) {
     Swal.fire("Déconnexion", "A bientôt", "info");
-  }
-});
-
-window.addEventListener("DOMContentLoaded", function () {
-  if (document.getElementById("alertride")) {
-    Swal.fire("Tracé crée avec succès", "En attente de validation", "success");
   }
 });

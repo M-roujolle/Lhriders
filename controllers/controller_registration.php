@@ -83,6 +83,17 @@ if (!empty($_POST)) {
         }
     }
 
+    if (isset($_POST["confmotdepasse"])) {
+        if (empty($_POST["confmotdepasse"])) {
+            $arrayError["confmotdepasse"] = "Veuillez confirmer votre mot de passe";
+        } elseif (!preg_match($regexPseudo, $_POST["confmotdepasse"])) {
+            $arrayError["confmotdepasse"] = "Format invalide / Caractères spéciaux interdit";
+        } elseif ($_POST["motdepasse"] != $_POST["confmotdepasse"]) {
+            $arrayError["confmotdepasse"] = "Les mots de passe ne sont pas identiques ! ";
+        }
+    }
+
+
     if (!isset($_POST["checkBox"])) {
         $arrayError["checkBox"] = "Veuillez valider les CGU";
     }
@@ -134,5 +145,6 @@ if (!empty($_POST)) {
         $motdepasse = password_hash($_POST["motdepasse"], PASSWORD_BCRYPT);
         $insert->insertUser($pseudo, $prenom, $nom, $mail, $motdepasse);
         $alertregistration = "";
+        unset($_POST);
     }
 }

@@ -12,7 +12,7 @@ class Users extends DataBase
         //    je me connecte à la db à l'aide de la méthode heritée connectDb
         $db = $this->connectDb();
         // je stock ma requete sql dans une variable 
-        $requete = "SELECT * FROM `pro_users`";
+        $requete = "SELECT * FROM `pro_users` ORDER BY `user_id` DESC";
         // j'execute ma requete à l'aide de la méthode query que je stock dans result
         $result = $db->query($requete);
         // j'effectue un fetchAll pour récupérer les données sous forme de tableau

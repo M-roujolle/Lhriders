@@ -44,8 +44,9 @@ class Rides extends DataBase
     public function showRide()
     {
         $db = $this->connectDb();
-        $requete = "SELECT `ride_id`,`ride_iframe`,`ride_title`,`ride_description`,`ride_kilometre`,`ride_participants`,`ride_hours`,`ride_meeting`, DATE_FORMAT(`ride_date`,'%d/%m/%Y') AS ride_date,`ride_validate` 
-        FROM `pro_ride` WHERE `ride_validate` = 1";
+        $requete = "SELECT `ride_id`,`ride_iframe`,`ride_title`,`ride_description`,`ride_kilometre`,`ride_participants`,`ride_hours`,`ride_meeting`, `ride_date`,`ride_validate` 
+        FROM `pro_ride` WHERE `ride_validate` = 1
+        ORDER BY `ride_date`";
         $result = $db->query($requete);
 
         return $result->fetchAll();
@@ -116,7 +117,8 @@ class Rides extends DataBase
         // je stock ma requete sql sdans une variable 
         $requete = "SELECT *
         FROM pro_users
-        INNER JOIN pro_ride ON pro_users.user_id = pro_ride.user_id;";
+        INNER JOIN pro_ride ON pro_users.user_id = pro_ride.user_id
+        ORDER BY `ride_id` DESC";
         // j'execute ma requete à l'aide de la methode query que je stock dans result
         $result = $db->query($requete);
         // j'effectue un fetchAll pour récupérer les données sous forme de tableau

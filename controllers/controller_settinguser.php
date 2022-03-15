@@ -6,7 +6,6 @@ require '../models/Rides.php';
 
 session_start();
 
-
 $regexNom = "/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð '-]{2,30}$/u";
 $regexPseudo = "/^([a-zA-Z0-9-_]{2,36})$/u";
 
@@ -70,7 +69,7 @@ if (isset($_POST["rideid"])) {
     if (!$insert->verifBelongRideUser($id, $_SESSION["id"])) {
         $arrayError["belong"] = "pas autorisé";
     }
-    if (!isset($arrayError)) {
+    if (empty($arrayError)) {
         $rideObj->deleteRide($id);
     }
 }

@@ -17,7 +17,7 @@ require '../controllers/controller_showride.php';
 </head>
 
 <body>
-    <h1 class="text-center selectColor pt-3 pb-3 mb-5">Vérification balade MODE ADMIN</h1>
+    <h1 class="text-center selectColor pt-3 pb-3 mb-5">Vérification d'un tracé</h1>
 
 
     <form action="" method="POST">
