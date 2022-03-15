@@ -32,6 +32,7 @@ include "../templates/header.php";
                             Plus d'infos
                         </button>
 
+
                         <!-- Modal -->
                         <div class="modal fade" id="modal-<?= $value["ride_id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
