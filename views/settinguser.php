@@ -9,7 +9,7 @@ include "../templates/header.php";
 <h1 class="text-center selectColor pt-3 pb-3 mb-5">Modifier son profil</h1>
 
 <div class="row m-0 justify-content-evenly">
-    <div class="col-lg-4">
+    <div class="col-lg-4 mb-4">
         <div class="center border border-dark">
             <h1>Bonjour <?= $_SESSION["pseudo"] ?></h1>
             <p>Votre N° d'identification : <?= $_SESSION["id"] ?></p>

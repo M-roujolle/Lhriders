@@ -16,7 +16,7 @@ class Rides extends DataBase
      * @param int $iduser: il s'agit de l'id du user connecté
      * @return bool
      */
-    public function insertRide(string $iframe, string $titre, string $description, string $kilometre, string $participants, string $hours, string $meeting, string $date, int $iduser)
+    public function insertRide(string $iframe, string $titre, string $description, string $kilometre, string $participants, string $hours, string $meeting, string $date, int $iduser): bool
     {
         $db = $this->connectDb();
         $requete = "INSERT INTO pro_ride (`ride_iframe`,`ride_title`,`ride_description`,`ride_kilometre`,`ride_participants`,`ride_hours`,`ride_meeting`,`ride_date`,`ride_validate`,`user_id`) 
@@ -41,7 +41,7 @@ class Rides extends DataBase
      * 
      * @return array
      */
-    public function showRide()
+    public function showRide(): array
     {
         $db = $this->connectDb();
         $requete = "SELECT `ride_id`,`ride_iframe`,`ride_title`,`ride_description`,`ride_kilometre`,`ride_participants`,`ride_hours`,`ride_meeting`, `ride_date`,`ride_validate` 
@@ -58,7 +58,7 @@ class Rides extends DataBase
      * @param string $id
      * @return array 
      */
-    public function getOneRide(string $id)
+    public function getOneRide(string $id): array
     {
         $db = $this->connectDb();
         $requete = "SELECT * FROM `pro_ride` WHERE `ride_id`=:id";
@@ -75,7 +75,7 @@ class Rides extends DataBase
      * @param string $id
      * @return bool
      */
-    public function deleteRide(string $id)
+    public function deleteRide(string $id): bool
     {
         $db = $this->connectDb();
         $query = "DELETE FROM `pro_ride` WHERE `ride_id` = :id";
@@ -92,7 +92,7 @@ class Rides extends DataBase
      * @param string $idstatus
      * @return bool 
      */
-    public function changeStatusRide(int $idride, int $ridestatus)
+    public function changeStatusRide(int $idride, int $ridestatus): bool
     {
         $db = $this->connectDb();
         $query = "UPDATE `pro_ride` 
@@ -110,7 +110,7 @@ class Rides extends DataBase
      * 
      * @param array
      */
-    public function getAllRides()
+    public function getAllRides(): array
     {
         //    je me co a la db a l'aide de la methode herité connectDb
         $db = $this->connectDb();
@@ -131,7 +131,7 @@ class Rides extends DataBase
      * @param string $id
      * @param array
      */
-    public function showRideById(string $id)
+    public function showRideById(string $id): array
     {
         $db = $this->connectDb();
         $query = "SELECT *
@@ -158,7 +158,7 @@ class Rides extends DataBase
      * @param int $id: il s'agit de l'id de la balade
      * @return bool
      */
-    public function modifRide(string $iframe, string  $titre, string  $description, string  $kilometre, string  $participants, string  $hours, string  $meeting, string  $date, int $id)
+    public function modifRide(string $iframe, string  $titre, string  $description, string  $kilometre, string  $participants, string  $hours, string  $meeting, string  $date, int $id): bool
     {
         $db = $this->connectDb();
         $query = "UPDATE `pro_ride`
@@ -185,7 +185,7 @@ class Rides extends DataBase
      * @param int $iduser
      * @return bool
      */
-    public function verifBelongRideUser(int $idride, int $iduser)
+    public function verifBelongRideUser(int $idride, int $iduser): bool
     {
         $db = $this->connectDb();
         $query = "SELECT * 

@@ -42,15 +42,15 @@
                     </li>
                 </ul>
 
-                <?php if (isset($_SESSION["id"])) { ?>
+                <!-- <?php if (isset($_SESSION["id"])) { ?>
                     <p class="text-white mt-3 me-1 d-none d-lg-block">Bonjour <?= $_SESSION["pseudo"] ?></p>
-                <?php } ?>
+                <?php } ?> -->
                 <?php if (isset($_SESSION["id"])) { ?>
                     <form action="" method="POST">
-                        <a href="settinguser.php" class="fs-3 text-white mb-1 pe-1"><i class="bi bi-person-circle"></i></a>
+                        <a href="settinguser.php" class="fs-3 text-white mb-1 pe-1 ms-5"><i class="bi bi-person-circle"></i></a>
                     </form>
                     <?php if (isset($_SESSION["id"]) && $_SESSION["role"] == "1") { ?>
-                        <a class="bbutton ms-2" href="admincontrol.php"><i class="bi bi-gear"></i></a>
+                        <a class="text-white fs-3 ms-2" href="admincontrol.php"><i class="bi bi-gear"></i></a>
                     <?php } ?>
                     <a class="buttonred text-white ms-1" href="logout.php"><i class="bi bi-power"></i></a>
 

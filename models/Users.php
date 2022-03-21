@@ -7,7 +7,7 @@ class Users extends DataBase
      * 
      * @return array tableau associatif
      */
-    public function getAllUsers()
+    public function getAllUsers(): array
     {
         //    je me connecte à la db à l'aide de la méthode heritée connectDb
         $db = $this->connectDb();
@@ -22,14 +22,14 @@ class Users extends DataBase
     /**
      * Méthode permettant de créer un user
      * 
-     * @param strin $pseudo 
-     * @param strin $prenom
-     * @param strin $nom
-     * @param strin $mail
-     * @param strin $motdepasse
+     * @param string $pseudo 
+     * @param string $prenom
+     * @param string $nom
+     * @param string $mail
+     * @param string $motdepasse
      * @return bool
      */
-    public function insertUser(string $pseudo, string $prenom, string $nom, string $mail, string $motdepasse)
+    public function insertUser(string $pseudo, string $prenom, string $nom, string $mail, string $motdepasse): bool
     {
         $db = $this->connectDb();
         $requete = "INSERT INTO `pro_users` (`user_pseudo`,`user_firstname`,`user_lastname`,`user_mail`,`user_password`) VALUES (:pseudo,:firstname,:lastname,:mail,:password)";
@@ -92,7 +92,7 @@ class Users extends DataBase
      * @param string $id
      * @return bool
      */
-    public function deleteUser(int $id)
+    public function deleteUser(int $id): bool
     {
         $db = $this->connectDb();
         $query = "DELETE FROM `pro_users` WHERE `user_id` = :id";
@@ -107,7 +107,7 @@ class Users extends DataBase
      * @param string
      * @return array
      */
-    public function getOneUser(string $id)
+    public function getOneUser(string $id): array
     {
         $db = $this->connectDb();
         $query = "SELECT `user_id`,`user_pseudo`,`user_firstname`,`user_lastname`,`user_mail` FROM `pro_users` WHERE `user_id` = :id";
@@ -124,7 +124,7 @@ class Users extends DataBase
      * @return array
      */
 
-    public function getUser(string $pseudo)
+    public function getUser(string $pseudo): array
     {
         $db = $this->connectDb();
         $query = "SELECT user_id AS 'id',user_pseudo AS 'pseudo',user_firstname AS 'prénom',user_lastname AS 'nom',user_mail AS 'mail',user_validate AS 'validation',role_id AS 'role' FROM `pro_users` WHERE `user_pseudo` = :pseudo";
@@ -144,7 +144,7 @@ class Users extends DataBase
      * @param int $id
      * @return bool
      */
-    public function modifyUser(string $pseudo, string $prenom, string $nom, string  $mail, int $id)
+    public function modifyUser(string $pseudo, string $prenom, string $nom, string  $mail, int $id): bool
     {
         $db = $this->connectDb();
         $query = 'UPDATE `pro_users` 
@@ -165,7 +165,7 @@ class Users extends DataBase
      * @param string $pseudo
      * @return array
      */
-    public function verifUserExist(string $pseudo)
+    public function verifUserExist(string $pseudo): array
     {
         $db = $this->connectDb();
         // count permet de retourner 1 ou 0 - 1 l'user exist et 0 il n'existe pas 
@@ -183,7 +183,7 @@ class Users extends DataBase
      * @param string $pseudo
      * @return array
      */
-    public function verifPassword(string $pseudo)
+    public function verifPassword(string $pseudo): array
     {
         $db = $this->connectDb();
         $query = "SELECT user_password FROM pro_users
@@ -202,7 +202,7 @@ class Users extends DataBase
      * @param int $id
      * @return bool
      */
-    public function insertSettingUser(string $pseudo, string $mail, int $id)
+    public function insertSettingUser(string $pseudo, string $mail, int $id): bool
     {
         $db = $this->connectDb();
         $query = "UPDATE `pro_users`
@@ -222,7 +222,7 @@ class Users extends DataBase
      * @param int $userstatus
      * @return bool
      */
-    public function changeStatusUser(int $iduser, int $userstatus)
+    public function changeStatusUser(int $iduser, int $userstatus): bool
     {
         $db = $this->connectDb();
         $query = "UPDATE `pro_users` 

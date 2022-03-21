@@ -6,21 +6,21 @@ $typeOfBikers = [
         "pictures" => "./assets/img/lessportifs.jpeg",
         "name" => "Pour les sportifs",
         "descriptif" => "La moto est une passion et s'enivre d'aller rouler. Les \"sportifs\" ont une idéntité motarde forte. Ils aiment la vitesse, se sentent puissant et cherche à dominer le risque. Les \"sportifs\" font ainsi parti d'une communauté et assimile la moto à un sport.  Ils ont tendance à rouler sur des sportives ou des roadsters.",
-        // Carénages fuselés, position de conduite en limande ou en grenouille (poignets cassés sur les demi-guidons bracelets, fesses presque plus hautes que la tête, nuque cassée en deux pour regarder devant), absence totale de confort, peu ou pas de place pour un passager : elles sont faites pour les circuits, mais peu de « pilotes » s’y aventurent, ne serait-ce que pour des raisons de coût (un carénage réplica rayé, ça coûte cher à remplacer !).
+
     ],
     [
         "id" => 2,
         "pictures" => "./assets/img/lesvoyageurs.jpeg",
         "name" => "Pour les voyageurs",
         "descriptif" => "Ils conduisent quotidiennement leur moto et respectent le code de la route. La moto est pour eux un mode de transport fréquent. Ils ont une meilleure anticipation des difficultés de conduire une moto et adaptent leur vitesse dans toutes circonstances. L'usage régulier de la moto leur offre une grande expérience de la route",
-        // Voilà les motos des grands espaces, des longs voyages et des horizons lointains, dans un confort qui n’exclut pas la performance, car certaines aiment aussi les petites routes viroleuses.
+
     ],
     [
         "id" => 3,
         "pictures" => "./assets/img/lesclassiques.jpeg",
         "name" => "Pour les classiques",
-        "descriptif" => "Ils ne conduisent leur moto de lors des weeks end et en vacances. La moto symbolise pour eux un mode de transport accessoire. La moto est un loisir et synonyme de repos. Elle leur permet de se changer les idées et de s'évader.",
-        // Caractéristique de la catégorie, la position de conduite est très détendue, avec le haut du corps droit et les jambes légèrement orientées vers l’avant. Les larges selles offrent une assise basse qui permet à chacun de facilement poser les pieds sur le sol. L’angle de la fourche avant est grand, de telle sorte que ces motos sont longues et basses.
+        "descriptif" => "Ils conduisent leur moto lors des weeks end et des vacances. La moto symbolise pour eux un mode de transport accessoire. La moto est un loisir et synonyme de repos. Elle leur permet de se changer les idées et de s'évader.",
+
     ],
     [
         "id" => 4,
