@@ -9,13 +9,13 @@ include "../templates/header.php";
 
 <h1 class="text-center text-white mt-5">Contact</h1>
 <form action="" method="POST">
-    <div class="container mt-5 selectColor">
+    <div class="container mt-5 colorBlack">
 
         <div class="row register-form">
             <div class="col-md-6">
                 <div class="form-group">
                     <!-- nom -->
-                    <label for="nom" class="form-label">Nom : </label><span class="text-danger">
+                    <label for="nom" class="form-label text-white">Nom : </label><span class="text-danger">
                         <?=
                         $arrayError["nom"] ?? " ";
                         ?>
@@ -24,7 +24,7 @@ include "../templates/header.php";
                 </div>
                 <div class="form-group">
                     <!--  prenom -->
-                    <label for="prenom" class="form-label">Prénom : </label><span class="text-danger">
+                    <label for="prenom" class="form-label text-white">Prénom : </label><span class="text-danger">
                         <?=
                         $arrayError["prenom"] ?? " ";
                         ?>
@@ -33,7 +33,7 @@ include "../templates/header.php";
                 </div>
                 <div class="form-group">
                     <!-- mail -->
-                    <label for="mail" class="form-label mt-1">Mail : </label><span class="text-danger">
+                    <label for="mail" class="form-label mt-1 text-white">Mail : </label><span class="text-danger">
                         <?=
                         $arrayError["mail"] ?? " ";
                         ?>
@@ -43,7 +43,7 @@ include "../templates/header.php";
             </div>
 
             <div class="col-md-6">
-                <label for="comment" class="form-label">Commentaire :</label><span class="text-danger">
+                <label for="comment" class="form-label text-white">Commentaire :</label><span class="text-danger">
                     <?=
                     $arrayError["comment"] ?? " ";
                     ?>

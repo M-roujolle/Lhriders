@@ -5,7 +5,7 @@
                 <a class="nav-link active text-white" aria-current="page" href="../views/contact.php">Contact</a>
             </li>
             <li class="list-inline-item">
-                <a class="nav-link active text-white" aria-current="page" href="../views/cgu.php">Conditions génerales d'utilisation</a>
+                <a class="nav-link active text-white" aria-current="page" href="../views/cgu.php" target="_blank">Conditions génerales d'utilisation</a>
             </li>
             <li class="list-inline-item">
                 <a class="nav-link active text-white" aria-current="page" href="../views/legalnotice.php">Mentions Légales</a>

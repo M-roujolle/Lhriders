@@ -17,7 +17,7 @@ include "../templates/header.php";
                 <h2 class="text-center">Création du tracé</h2>
                 <ul>
                     <li>
-                        <label for="titre" class="form-label colorOrange">Titre* :</label><span class="text-danger">
+                        <label for="titre" class="form-label colorDark">Titre* :</label><span class="text-danger">
                             <?=
                             $arrayError["titre"] ?? " ";
                             ?>
@@ -27,7 +27,7 @@ include "../templates/header.php";
 
                     </li>
                     <li>
-                        <label for="description" class="form-label colorOrange">Description* :</label><span class="text-danger">
+                        <label for="description" class="form-label colorDark">Description* :</label><span class="text-danger">
                             <?=
                             $arrayError["description"] ?? " ";
                             ?>
@@ -36,7 +36,7 @@ include "../templates/header.php";
                         <div id="emailHelp" class="form-text ">Décrivez en quelques mots votre tracé. Points d'intérets, types de routes, temps de route etc...</div>
                     </li>
                     <li>
-                        <label for="iframe" class="form-label colorOrange">Iframe* :</label><span class="text-danger">
+                        <label for="iframe" class="form-label colorDark">Iframe* :</label><span class="text-danger">
                             <?=
                             $arrayError["iframe"] ?? " ";
                             ?>
@@ -44,7 +44,7 @@ include "../templates/header.php";
                         <input name="iframe" type="text" value="<?= isset($_POST["iframe"]) ? htmlspecialchars($_POST["iframe"]) : "" ?>" class="form-control" id="iframe" aria-describedby="emailHelp" placeholder="<iframe src='https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d165407.58526710264!2d0.128765300210693!3d49.626152441086234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x47e02f2395218b7d%3A0x5bc1867aaf33af12!2sLe%20Havre!3m2!1d49.494369999999996!2d0.107929!4m5!1s0x47e06b69133e1681%3A0x57434975e5d89613!2zRsOpY2FtcA!3m2!1d49.755601!2d0.380774!5e0!3m2!1sfr!2sfr!4v1645183233975!5m2!1sfr!2sfr' width='600' height='450' style='border:0;' allowfullscreen=' loading='lazy'></iframe>">
                         <div id="iframe" class="form-text "><a href="https://alphadesign.fr/blog/comment-creer-une-google-map-responsive-pour-n-importe-quel-site.html" target="_blank"> Comment recupérer un iframe sur google ?</a></div>
                     </li>
-                    <li> <label for="kilometre" class="colorOrange">Kilomètres* :</label><span class="text-danger">
+                    <li> <label for="kilometre" class="colorDark">Kilomètres* :</label><span class="text-danger">
                             <?=
                             $arrayError["kilometre"] ?? " ";
                             ?>
@@ -53,7 +53,7 @@ include "../templates/header.php";
                         <div id="kilometre" class="form-text ">Indiquez le kilometrage du tracé</div>
                     </li>
                     <li>
-                        <label for="heure" class="colorOrange">Heure de départ* :</label><span class="text-danger">
+                        <label for="heure" class="colorDark">Heure de départ* :</label><span class="text-danger">
                             <?=
                             $arrayError["heure"] ?? " ";
                             ?>
@@ -62,7 +62,7 @@ include "../templates/header.php";
                         <div id="heure" class="form-text ">Indiquez l'heure de départ de votre balade</div>
                     </li>
                     <li>
-                        <label for="select" class="colorOrange">Participants* :</label><span class="text-danger">
+                        <label for="select" class="colorDark">Participants* :</label><span class="text-danger">
                             <?=
                             $arrayError["select"] ?? " ";
                             ?>
@@ -78,7 +78,7 @@ include "../templates/header.php";
                         </select>
                     </li>
                     <li>
-                        <label for="rdv" class="colorOrange">Point de rendez-vous* :</label><span class="text-danger">
+                        <label for="rdv" class="colorDark">Point de rendez-vous* :</label><span class="text-danger">
                             <?=
                             $arrayError["rdv"] ?? " ";
                             ?>
@@ -86,7 +86,7 @@ include "../templates/header.php";
                         <input name="rdv" value="<?= isset($_POST["rdv"]) ? htmlspecialchars($_POST["rdv"]) : "" ?>" type="text" class="form-control" id="rdv" placeholder="Ex : Stade océane">
                         <div id="rdv" class="form-text ">Indiquez aux membres où se rendre</div>
                     </li>
-                    <li><label for="date" class="form-label colorOrange">Date de départ* :</label><span class="text-danger">
+                    <li><label for="date" class="form-label colorDark">Date de départ* :</label><span class="text-danger">
                             <?=
                             $arrayError["date"] ?? " ";
                             ?>
@@ -97,7 +97,7 @@ include "../templates/header.php";
                     </li>
                     <li>
                         <input name="checkbox" type="checkbox" class="form-check-input" id="checkbox" <?= isset($_POST["checkbox"]) ? "checked" : "" ?>>
-                        <label class="form-check-label colorOrange" for="checkbox">Valider les CGU*</label>
+                        <label class="form-check-label colorDark" for="checkbox">Valider les CGU*</label>
                         <span class="text-danger">
                             <?=
                             $arrayError["checkbox"] ?? " ";

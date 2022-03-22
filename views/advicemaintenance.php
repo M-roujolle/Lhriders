@@ -28,7 +28,7 @@ include "../templates/header.php";
     <?php } ?>
 </div>
 <p class="text-center pt-5">
-    <a href="https://www.motoblouz.com/enjoytheride/conseils-moto/10459-conseils-jeune-permis-moto-2017-04-14">Source: Motoblouz</a>
+    <a class="colorWhite" href="https://www.motoblouz.com/enjoytheride/conseils-moto/10459-conseils-jeune-permis-moto-2017-04-14" target="_blank">Source: Motoblouz</a>
 </p>
 
 <h3 class="text-center mt-5 pt-2 pb-2 selectColor">Sélections de vidéos présentées par High Side</h3>
@@ -49,7 +49,7 @@ include "../templates/header.php";
     <?php } ?>
 </div>
 <p class="text-center">
-    <a href="https://www.youtube.com/c/HighSide-officiel">Source: High side</a>
+    <a class="colorWhite" href="https://www.youtube.com/c/HighSide-officiel" target="_blank">Source: High side</a>
 </p>
 
 <!-- MODAL ------------------------------------------------------------------------------------------------------------------------------------------->

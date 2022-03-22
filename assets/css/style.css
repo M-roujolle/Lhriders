@@ -135,6 +135,14 @@
 
 }
 
+.colorWhite {
+    color: white;
+}
+
+.colorDark {
+    color: black;
+}
+
 .abutton {
     display: block;
     color: white;
