@@ -32,6 +32,14 @@ include "../templates/header.php";
                             Plus d'infos
                         </button>
 
+                        <!-- button addthis --------------------------------------------->
+                        <div class="mt-5">
+                            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-623ad7cbdc059f0a"></script>
+                            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                            <div class="addthis_inline_share_toolbox_6rlk" data-url="http://lhriders/Lhriders/views/ride.php" data-title="<?= $value["ride_title"] ?>"></div>
+                        </div>
+
 
                         <!-- Modal -->
                         <div class="modal fade" id="modal-<?= $value["ride_id"] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

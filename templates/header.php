@@ -42,9 +42,6 @@
                     </li>
                 </ul>
 
-                <!-- <?php if (isset($_SESSION["id"])) { ?>
-                    <p class="text-white mt-3 me-1 d-none d-lg-block">Bonjour <?= $_SESSION["pseudo"] ?></p>
-                <?php } ?> -->
                 <?php if (isset($_SESSION["id"])) { ?>
                     <form action="" method="POST">
                         <a href="settinguser.php" class="fs-3 text-white mb-1 pe-1 ms-5"><i class="bi bi-person-circle"></i></a>
@@ -59,12 +56,8 @@
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <a class="nav-link active text-white ms-2 ps-4">Connexion / Inscription</a>
                     </button>
-
-
                 <?php } ?>
 
-                <!-- <?php if (isset($_SESSION["id"]) && $_SESSION["role"] == "1") { ?>
-                <?php } ?> -->
             </div>
         </div>
     </nav>

@@ -26,12 +26,13 @@
 </script>
 
 <script>
-    if (<?= $errorConnect ?? false ?>)
+    if (<?= $errorConnect ?? 0 ?>) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: '<?= $errormessage ?>',
         })
+    }
 </script>
 
 </body>

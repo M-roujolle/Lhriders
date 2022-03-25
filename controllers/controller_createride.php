@@ -32,7 +32,6 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
                 }
                 $_SESSION = $user->getUser($_POST["login"]);
                 $alert = "";
-                // var_dump($_SESSION);
             } else {
                 $errormessage = "Pseudo ou mot de passe invalide";
                 $errorConnect = true;
@@ -155,7 +154,7 @@ if (!empty($_POST)) {
         // je sécurise mes champs à l'aide d'un htmlspecialchars et j'enlève les espaces en trop avec trim avant de les stocker dans les variables
         $titre = htmlspecialchars(trim($_POST["titre"]));
         $description = htmlspecialchars(trim($_POST["description"]));
-        $iframe = $_POST["iframe"];
+        $iframe = strip_tags($_POST["iframe"], "<iframe>");
         $kilometre = htmlspecialchars(trim($_POST["kilometre"]));
         $hours = htmlspecialchars(trim($_POST["heure"]));
         $participants = htmlspecialchars(trim($_POST["select"]));
