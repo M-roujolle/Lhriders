@@ -21,7 +21,7 @@ require '../controllers/controller_modifuser.php';
 
     <div class="container d-flex justify-content-center mt-5">
         <div class="col-lg-4">
-            <h5 class="card-title text-center pb-1 colorOrange">N°d'id: <?= $oneUser["user_id"] ?></h5>
+            <h5 class="card-title text-center pb-1 colorOrange">N° identification: <?= $oneUser["user_id"] ?></h5>
             <div class="center border border-dark">
                 <form action="" method="POST">
                     Pseudo: <label for="nom" class="form-label"></label><span class="text-danger">

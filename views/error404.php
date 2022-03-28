@@ -376,7 +376,7 @@ header("Refresh: $delai;url=$url");
     </svg>
 
 
-    <h2 class="pt-5">Page Non Trouvée<br>Vous allez être rediriger vers l'accueil</h2>
+    <h2 class="pt-5">Page Non Trouvée<br>Vous allez être redirigé vers l'accueil</h2>
 
 </body>
 

@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("alertconfirm")) {
     Swal.fire(
-      "Compte crée avec succès, en attente de validation",
+      "Compte créé avec succès, en attente de validation",
       "Une fois validé, vous pourrez créer vos balades !",
       "success"
     );
@@ -22,6 +22,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener("DOMContentLoaded", function () {
   if (document.getElementById("alertride")) {
-    Swal.fire("Tracé crée", "En attente de validation", "success");
+    Swal.fire("Tracé créé", "En attente de validation", "success");
   }
 });

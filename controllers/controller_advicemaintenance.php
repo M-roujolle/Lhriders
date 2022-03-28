@@ -28,11 +28,11 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
                 $_SESSION = $user->getUser($_POST["login"]);
                 $alert = "";
             } else {
-                $errormessage = "Pseudo ou mot de passe invalide";
+                $errormessage = "Pseudo / mot de passe invalide ou compte inexistant";
                 $errorConnect = true;
             }
         } else {
-            $errormessage = "Pseudo ou mot de passe invalide";
+            $errormessage = "Pseudo / mot de passe invalide ou compte inexistant";
             $errorConnect = true;
         }
     } else {

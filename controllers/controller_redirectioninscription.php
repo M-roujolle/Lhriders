@@ -25,11 +25,11 @@ if (isset($_POST["login"], $_POST["password"], $_POST["connexion"])) {
                 header('Location: ../views/home.php');
                 exit();
             } else {
-                $errormessage = "Pseudo ou mot de passe invalide";
+                $errormessage = "Pseudo / mot de passe invalide ou compte inexistant";
                 $errorConnect = true;
             }
         } else {
-            $errormessage = "Pseudo ou mot de passe invalide";
+            $errormessage = "Pseudo / mot de passe invalide ou compte inexistant";
             $errorConnect = true;
         }
     } else {

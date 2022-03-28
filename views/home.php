@@ -12,7 +12,7 @@ include "../templates/header.php";
 <div class="row text-center m-0">
     <h1 class=" selectColor pt-3 pb-3">Bienvenue sur LHRiders</h1>
 
-    <p class="pt-5 ps-5 pe-5 pb-5 fs-4 text-white">Besoin d’un bon bol d’air ? LHRiders et ses membres mettent à disposition des itinéraires pour ceux qui veulent se mettre au vert tout en se faisant plaisir au guidon de leur deux roues.</p>
+    <p class="pt-5 ps-5 pe-5 pb-5 fs-4 text-white">Besoin d’un bon bol d’air ? LHRiders et ses membres mettent à disposition des itinéraires pour ceux qui veulent se faire plaisir au guidon de leur deux roues.</p>
 
 </div>
 

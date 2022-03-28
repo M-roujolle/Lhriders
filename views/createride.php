@@ -50,7 +50,7 @@ include "../templates/header.php";
                             ?>
                         </span>
                         <input name="kilometre" type="number" class="form-control" id="kilometre" placeholder="Ex : 24 km" value="<?= isset($_POST["kilometre"]) ? htmlspecialchars($_POST["kilometre"]) : "" ?>">
-                        <div id="kilometre" class="form-text ">Indiquez le kilometrage du tracé</div>
+                        <div id="kilometre" class="form-text ">Indiquez le kilométrage du tracé</div>
                     </li>
                     <li>
                         <label for="heure" class="colorDark">Heure de départ* :</label><span class="text-danger">
